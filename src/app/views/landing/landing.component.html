@@ -6,73 +6,68 @@
     <div class="container mx-auto items-center flex flex-wrap">
       <div class="w-full md:w-8/12 lg:w-6/12 xl:w-6/12 px-4">
         <div class="pt-32 sm:pt-0">
+          <img src="./assets/img/Logo.png" alt="logo" width="70%" class="m-8"/>
           <h2 class="font-bold text-5xl text-blueGray-600">
-            Welcome te e-covid19
+            Welcome to e-covid19
           </h2>
-          <p class=" font-semibold text-xl mt-16 text-blueGray-600 "> 
+          <p class=" font-semibold text-xl mt-16 text-blueGray-600 ml-2"> 
             A moroccan platform for covid19 management
 
           </p>
-          <p class="mt-4 text-lg leading-relaxed text-blueGray-500">
+          <p class="mt-4 ml-2  text-lg leading-relaxed text-blueGray-500">
             The e-covid19 platform is a moroccan platform for covid-19 management. It presents a decision-making assistance
         tool based on AI aimed to provide real-time social media analysis, automated sentiment analysis and topic
         modeling.
-            <a
-              href="https://tailwindcss.com/?ref=creativetim"
-              class="text-blueGray-600"
-              target="_blank"
-            >
-              For mere details.
-            </a>
             
           </p>
           <div class="mt-12">
-            <a
-              href="https://www.creative-tim.com/learning-lab/tailwind/angular/overview/notus?ref=na-index-page"
-              target="_blank"
-              class="get-started text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-red-600 active:bg-red-700 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
-            >
-              Check Document
-            </a>
-            <a
-              href="https://github.com/creativetimofficial/notus-angular?ref=creativetim"
-              class="github-star ml-1 text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-blueGray-700 active:bg-blueGray-600 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
-              target="_blank"
-            >
+            <button
+               class="github-star ml-1 text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-blueGray-700 active:bg-blueGray-600 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150" type="button" data-modal-toggle="defaultModal"
+               >
               View Video
-            </a>
+            </button>
+            <!-- Modal toggle -->
+             
+            
+
+            <!-- Main modal -->
+            <div id="defaultModal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full">
+              <div class="relative p-4 w-full max-w-2xl">
+                <!-- Modal content -->
+                <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                  <!-- Modal header -->
+                  <div class="flex justify-between items-start p-4 rounded-t border-b dark:border-gray-600">
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                      e-covid19 Presentation
+                    </h3>
+                    <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-toggle="defaultModal">
+                      <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                      <span class="sr-only">Close modal</span>
+                    </button>
+                  </div>
+                  <!-- Modal body -->
+                  <div class="p-6 space-y-6">
+                    <video controls>
+                      <source src="./assets/videos/Clip.mp4" />
+                    </video>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   
     <img
-      class="absolute top-0 b-auto right-0 pt-16 sm:w-6/12 -mt-48 sm:mt-0 w-10/12 max-h-860-px"
+      class="absolute top-50 b-auto right-0 pt-16 sm:w-6/12 -mt-48 sm:mt-0 w-10/12 max-h-860-px"
       src="../../../assets/img/covidBackground.png"
       alt="..."
     />
   </section>
 
-  <div
-    class="relative pt-16 pb-32 flex content-center items-center justify-center min-h-screen-75"
-  >
-    <div
-      class="absolute top-0 w-full  h-full bg-cover bg-center"
-      style="
-        background: url('../../../assets/img/cv.jpg');
-        background-position: inherit;
-        background-size: cover;
-        background-repeat: inherit;
-        
-      "
-    >
-      <span
-        id="blackOverlay"
-        style="opacity: 0.1;"
-        class="w-full h-full absolute  bg-black"
-      ></span>
-    </div>
-    <div class="container relative mx-auto">
+  
+    <div class="container relative mx-auto mt-24">
       <div class="items-center flex flex-wrap">
         <div class="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
           <div class="pr-12">
@@ -80,40 +75,58 @@
             
           </div>
         </div>
-      </div>
-    </div>
-    <div
-      class="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden h-70-px"
-      style="transform: translateZ(0)"
-    >
-      <svg
-        class="absolute bottom-0 overflow-hidden"
-        xmlns="http://www.w3.org/2000/svg"
-        preserveAspectRatio="none"
-        version="1.1"
-        viewBox="0 0 2560 100"
-        x="0"
-        y="0"
-      >
-        <polygon
-          class="text-blueGray-200 fill-current"
-          points="2560 0 2560 100 0 100"
-        ></polygon>
-      </svg>
     </div>
   </div>
 
   <section class="pb-20 bg-blueGray-200 -mt-24">
     <div class="container mx-auto px-4">
+
+      <div style="    margin-top: 2rem; padding-top:50px; padding-bottom:100px;      " class="flex flex-wrap items-center ">
+        <div class="w-full md:w-5/12 px-4 mr-auto ml-auto">
+          <div class="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white">
+            <i class="fas  fa-triangle-exclamation text-xl"></i>
+          </div>
+          <h3 class="text-3xl mb-2 font-semibold leading-normal">
+            maladie infectieuse due au virus SARS-CoV-2.
+          </h3>
+          <p class="text-lg font-light leading-relaxed mt-4 mb-4 text-blueGray-600">
+            Most of the symptoms that infected people show are respiratory issues, from simple to severe, and tend to recover without needing medication. Old people and people with chronic illnesses, such as cardiovascular illnesses, diabetes, respiratory issues or cancer have a higher risk of showing sever symptoms and are urged to seek medical help. Anyone, from all ages, can contract COVID-19 and get seriously ill, or worse, lose their life.
+
+          </p>
+
+          <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019" target="_blank" class="font-bold text-blueGray-700 mt-8">
+            Checkthis article!
+          </a>
+        </div>
+
+        <div class="w-full md:w-4/12 px-4 mr-auto ml-auto mt-4">
+          <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-red-600">
+            <img alt="..."
+                 src="https://www.lopinion.ma/photo/art/grande/66808364-47389447.jpg?v=1660922181"
+                 class="w-full align-middle rounded-t-lg" />
+            <blockquote class="relative p-8 mb-4">
+              <svg preserveAspectRatio="none"
+                   xmlns="http://www.w3.org/2000/svg"
+                   viewBox="0 0 583 95"
+                   class="absolute left-0 w-full block h-95-px -top-94-px">
+                <polygon points="-30,95 583,95 583,65"
+                         class="text-red-600 fill-current"></polygon>
+              </svg>
+              <h4 class="text-xl font-bold text-white">E-COVID-19</h4>
+              <p class="text-md font-light mt-4 text-white">
+                The virus can spread from an infected person’s mouth or nose in small liquid particles when they cough, sneeze, speak, sing or breathe. These particles range from larger respiratory droplets to smaller aerosols.
+                You can be infected by breathing in the virus if you are near someone who has COVID-19, or by touching a contaminated surface and then your eyes, nose or mouth. The virus spreads more easily indoors and in crowded settings.
+              </p>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+
       <div class="flex flex-wrap">
         <div class="lg:pt-12 pt-6 h-full w-full md:w-4/12 px-5 text-center">
-          <div
-            class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg"
-          >
+          <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
             <div class="px-4 py-5 flex-auto">
-              <div
-                class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400"
-              >
+              <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400">
                 <i class="fas fa-award"></i>
               </div>
               <h6 class="text-xl font-semibold">Real time social media analysis</h6>
@@ -125,13 +138,9 @@
         </div>
 
         <div class="w-full md:w-4/12 px-4 text-center">
-          <div
-            class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg"
-          >
+          <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
             <div class="px-4 py-5 flex-auto">
-              <div
-                class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-lightBlue-400"
-              >
+              <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-lightBlue-400">
                 <i class="fas fa-retweet"></i>
               </div>
               <h6 class="text-xl font-semibold">Data collection</h6>
@@ -143,13 +152,9 @@
         </div>
 
         <div class="pt-6 w-full md:w-4/12 px-4 text-center">
-          <div
-            class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg"
-          >
+          <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
             <div class="px-4 py-5 flex-auto">
-              <div
-                class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-emerald-400"
-              >
+              <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-emerald-400">
                 <i class="fas fa-fingerprint"></i>
               </div>
               <h6 class="text-xl font-semibold">Sentiment analysis and topic modeling</h6>
@@ -162,58 +167,7 @@
         </div>
       </div>
 
-      <div style="    margin-top: 12rem;      " class="flex flex-wrap items-center          ">
-        <div class="w-full md:w-5/12 px-4 mr-auto ml-auto">
-          <div
-            class="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white"
-          >
-            <i class="fas  fa-triangle-exclamation text-xl"></i>
-          </div>
-          <h3 class="text-3xl mb-2 font-semibold leading-normal">
-            maladie infectieuse due au virus SARS-CoV-2.          </h3>
-          <p
-            class="text-lg font-light leading-relaxed mt-4 mb-4 text-blueGray-600"
-          >
-          La plupart des personnes infectées par le virus présentent une maladie respiratoire d’intensité légère à modérée et se rétablissent sans avoir besoin d’un traitement particulier. Certaines, cependant, tombent gravement malades et ont besoin de soins médicaux. Les personnes âgées et celles qui ont un problème médical sous-jacent, tel qu’une maladie cardiovasculaire, un diabète, une maladie respiratoire chronique ou un cancer, ont plus de risques de présenter une forme grave. N’importe qui, à n’importe quel âge, peut contracter la COVID-19 et tomber gravement malade ou en mourir.
 
-
-          </p>
-         
-          <a [routerLink]="['/']" class="font-bold text-blueGray-700 mt-8">
-            Checkthis article!
-          </a>
-        </div>
-
-        <div class="w-full md:w-4/12 px-4 mr-auto ml-auto">
-          <div
-            class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-red-600"
-          >
-            <img
-              alt="..."
-              src="https://www.lopinion.ma/photo/art/grande/66808364-47389447.jpg?v=1660922181"
-              class="w-full align-middle rounded-t-lg"
-            />
-            <blockquote class="relative p-8 mb-4">
-              <svg
-                preserveAspectRatio="none"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 583 95"
-                class="absolute left-0 w-full block h-95-px -top-94-px"
-              >
-                <polygon
-                  points="-30,95 583,95 583,65"
-                  class="text-red-600 fill-current"
-                ></polygon>
-              </svg>
-              <h4 class="text-xl font-bold text-white">E-COVID-19</h4>
-              <p class="text-md font-light mt-4 text-white">
-                The virus can spread from an infected person’s mouth or nose in small liquid particles when they cough, sneeze, speak, sing or breathe. These particles range from larger respiratory droplets to smaller aerosols.
-You can be infected by breathing in the virus if you are near someone who has COVID-19, or by touching a contaminated surface and then your eyes, nose or mouth. The virus spreads more easily indoors and in crowded settings.
-              </p>
-            </blockquote>
-          </div>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -386,12 +340,12 @@ You can be infected by breathing in the virus if you are near someone who has CO
         <i class="fas fa-hand-holding-medical text-xl"></i>
       </div>
       <h3 class="text-3xl mb-2 font-semibold leading-normal">
-        NOS SERVICES
+        OUR SERVICES
       </h3>
       <p
         class="text-lg font-light leading-relaxed mt-4 mb-4 text-blueGray-600"
       >
-      our platform provide multiple services our platform provide multiple services our platform provide multiple services our platform provide multiple services our platform provide multiple services our platform provide multiple services
+      Our platform provides multiple services our platform provide multiple services our platform provide multiple services our platform provide multiple services our platform provide multiple services our platform provide multiple services
       </p>
       <p
         class="text-lg font-light leading-relaxed mt-4 mb-4 text-blueGray-600"
