@@ -30,8 +30,10 @@ import { IndexComponent } from './views/index/index.component';
 import { LandingComponent } from './views/landing/landing.component';
 import { ProfileComponent } from './views/profile/profile.component';
 import { StatsComponent } from './stats/stats.component';
-import { ChartComponent } from './chart/chart.component';
+import { ChartComponent } from './chart/chart.component'
 import { NgChartsModule } from 'ng2-charts';
+import { SachartComponent } from './sachart/sachart.component';
+import { TachartComponent } from './tachart/tachart.component';
 
 @NgModule({
   declarations: [AppComponent,
@@ -63,6 +65,8 @@ import { NgChartsModule } from 'ng2-charts';
     ProfileComponent,
     StatsComponent,
     ChartComponent,
+    SachartComponent,
+    TachartComponent,
   ],
   imports: [
     BrowserModule,

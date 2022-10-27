@@ -1,21 +1,21 @@
 import { Component, OnInit } from '@angular/core';
 import { Chart } from 'chart.js';
 @Component({
-  selector: 'app-chart',
-  templateUrl: './chart.component.html',
-  styleUrls: ['./chart.component.css']
+  selector: 'app-tachart',
+  templateUrl: './tachart.component.html',
+  styleUrls: ['./tachart.component.css']
 })
-export class ChartComponent implements OnInit {
+export class TachartComponent implements OnInit {
 
   constructor() { }
-  public chart: any;
+  public tachart: any;
   ngOnInit(): void {
-    this.createChart();
+    this.createTachart();
   }
-  createChart() {
+  createTachart() {
 
-    this.chart = new Chart("MyChart", {
-      type: 'bar', //this denotes tha type of chart
+    this.tachart = new Chart("MyTachart", {
+      type: 'line', //this denotes tha type of chart
 
       data: {// values on X-Axis
         labels: ['2022-05-10', '2022-05-11', '2022-05-12', '2022-05-13',
