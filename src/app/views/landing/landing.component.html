@@ -1,38 +1,33 @@
 <app-index-navbar ></app-index-navbar>
 
 <main>
-  
-  <section class="header relative pt-16 items-center flex h-screen max-h-860-px">
+  <!--Welcome-->
+  <section class="header relative pt-16 items-center flex h-screen max-h-860-px" id="welcomepart">
     <div class="container mx-auto items-center flex flex-wrap">
       <div class="w-full md:w-8/12 lg:w-6/12 xl:w-6/12 px-4">
         <div class="pt-32 sm:pt-0">
-          <img src="./assets/img/Logo.png" alt="logo" width="70%" class="m-8"/>
+          <img src="./assets/img/Logo.png" alt="logo" width="70%" class="m-8" />
           <h2 class="font-bold text-5xl text-blueGray-600">
             Welcome to e-covid19
           </h2>
-          <p class=" font-semibold text-xl mt-16 text-blueGray-600 ml-2"> 
+          <p class=" font-semibold text-xl mt-16 text-blueGray-600 ml-2">
             A moroccan platform for covid19 management
 
           </p>
           <p class="mt-4 ml-2  text-lg leading-relaxed text-blueGray-500">
             The e-covid19 platform is a moroccan platform for covid-19 management. It presents a decision-making assistance
-        tool based on AI aimed to provide real-time social media analysis, automated sentiment analysis and topic
-        modeling.
-            
+            tool based on AI aimed to provide real-time social media analysis, automated sentiment analysis and topic
+            modeling.
+
           </p>
           <div class="mt-12">
-            <button
-               class="github-star ml-1 text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-blueGray-700 active:bg-blueGray-600 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150" type="button" data-modal-toggle="defaultModal"
-               >
+            <button class="github-star ml-1 text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-blueGray-700 active:bg-blueGray-600 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150" type="button" data-modal-toggle="videoModal">
               View Video
             </button>
-            <!-- Modal toggle -->
-             
-            
-
             <!-- Main modal -->
-            <div id="defaultModal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full">
+            <div id="videoModal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full">
               <div class="relative p-4 w-full max-w-2xl">
+
                 <!-- Modal content -->
                 <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
                   <!-- Modal header -->
@@ -40,7 +35,7 @@
                     <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
                       e-covid19 Presentation
                     </h3>
-                    <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-toggle="defaultModal">
+                    <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-toggle="videoModal">
                       <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
                       <span class="sr-only">Close modal</span>
                     </button>
@@ -58,44 +53,43 @@
         </div>
       </div>
     </div>
-  
-    <img
-      class="absolute top-50 b-auto right-0 pt-16 sm:w-6/12 -mt-48 sm:mt-0 w-10/12 max-h-860-px"
-      src="../../../assets/img/covidBackground.png"
-      alt="..."
-    />
+
+    <img class="absolute top-50 b-auto right-0 pt-16 sm:w-6/12 -mt-48 sm:mt-0 w-10/12 max-h-860-px"
+         src="../../../assets/img/covidBackground.png"
+         alt="..." />
   </section>
 
-  
+
+
+  <!--About-->
+  <section class="bg-blueGray-200 -mt-24" id="aboutpart">
+
     <div class="container relative mx-auto mt-24">
       <div class="items-center flex flex-wrap">
         <div class="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
           <div class="pr-12">
-           
-            
           </div>
         </div>
+      </div>
     </div>
-  </div>
 
-  <section class="pb-20 bg-blueGray-200 -mt-24">
     <div class="container mx-auto px-4">
-
-      <div style="    margin-top: 2rem; padding-top:50px; padding-bottom:100px;      " class="flex flex-wrap items-center ">
+      <!--Article-->
+      <div style="margin-top: 2rem; padding-top:50px; padding-bottom:100px;" class="flex flex-wrap items-center ">
         <div class="w-full md:w-5/12 px-4 mr-auto ml-auto">
           <div class="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white">
             <i class="fas  fa-triangle-exclamation text-xl"></i>
           </div>
           <h3 class="text-3xl mb-2 font-semibold leading-normal">
-            maladie infectieuse due au virus SARS-CoV-2.
+            An infectious disease caused by the SARS-CoV-2 virus.
           </h3>
           <p class="text-lg font-light leading-relaxed mt-4 mb-4 text-blueGray-600">
             Most of the symptoms that infected people show are respiratory issues, from simple to severe, and tend to recover without needing medication. Old people and people with chronic illnesses, such as cardiovascular illnesses, diabetes, respiratory issues or cancer have a higher risk of showing sever symptoms and are urged to seek medical help. Anyone, from all ages, can contract COVID-19 and get seriously ill, or worse, lose their life.
 
           </p>
 
-          <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019" target="_blank" class="font-bold text-blueGray-700 mt-8">
-            Checkthis article!
+          <a href="https://www.who.int/health-topics/coronavirus#tab=tab_1" target="_blank" class="font-bold text-blueGray-700 mt-8">
+            Check out the WHO article!
           </a>
         </div>
 
@@ -121,12 +115,12 @@
           </div>
         </div>
       </div>
-
+      <!--What the app does-->
       <div class="flex flex-wrap">
         <div class="lg:pt-12 pt-6 h-full w-full md:w-4/12 px-5 text-center">
           <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
             <div class="px-4 py-5 flex-auto">
-              <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400">
+              <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-blue-800">
                 <i class="fas fa-award"></i>
               </div>
               <h6 class="text-xl font-semibold">Real time social media analysis</h6>
@@ -140,7 +134,7 @@
         <div class="w-full md:w-4/12 px-4 text-center">
           <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
             <div class="px-4 py-5 flex-auto">
-              <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-lightBlue-400">
+              <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-blue-800">
                 <i class="fas fa-retweet"></i>
               </div>
               <h6 class="text-xl font-semibold">Data collection</h6>
@@ -154,7 +148,7 @@
         <div class="pt-6 w-full md:w-4/12 px-4 text-center">
           <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
             <div class="px-4 py-5 flex-auto">
-              <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-emerald-400">
+              <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-blue-800">
                 <i class="fas fa-fingerprint"></i>
               </div>
               <h6 class="text-xl font-semibold">Sentiment analysis and topic modeling</h6>
@@ -166,409 +160,393 @@
           </div>
         </div>
       </div>
+      <!--Platform users-->
+      <section class="pt-20 pb-20">
+        <div class="container mx-auto px-3">
+          <div class="flex flex-wrap justify-center text-center mb-5">
+            <div class="w-full lg:w-6/12 px-4">
+              <h2 class="text-4xl font-semibold">Our platform is available for three types of users</h2>
+              <p class="text-lg leading-relaxed m-4 text-blueGray-500">
+                Visitor, Data Reviewers and Administrators
+              </p>
+            </div>
+          </div>
 
+          <div class="flex flex-row">
+            <div class="w-full basis-1/4 md:basis-1/3 md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-3">
+              <div class="px-6">
+                <img alt="..."
+                     src="assets/img/visitor.png"
+                     class="shadow-lg rounded-full mx-auto max-w-120-px" />
+                <div class="pt-6 text-center">
+                  <h5 class="text-xl font-bold">Visitor</h5>
+                  <div class="mt-6">
+                    <button class="bg-blueGray-600 text-white active:bg-blue-400 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 ease-linear transition-all duration-150" data-modal-toggle="visitorModal"
+                            type="button">
+                      Learn more
+                    </button>
+                    <!-- Main modal -->
+                    <div id="visitorModal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full">
+                      <div class="relative p-4 w-full max-w-2xl">
+                        <!-- Modal content -->
+                        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                          <!-- Modal header -->
+                          <div class="flex justify-between items-start p-4 rounded-t border-b dark:border-gray-600">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                              Visitors can access and view
+                            </h3>
+                            <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-toggle="visitorModal">
+                              <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                              <span class="sr-only">Close modal</span>
+                            </button>
+                          </div>
+                          <!-- Modal body -->
+                          <div class="p-6 space-y-6">
+                            <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400 text-left">
+                              - Public graphs and statistics such as percentages of comments by topic and emotion, as well as the most dominant topics and the collective emotional response.
+                            </p>
+                            <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400 text-left">
+                              - Contact administrators.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="w-full md:w-6/12  basis-1/4 md:basis-1/3lg:w-3/12 lg:mb-0 mb-12 px-4">
+              <div class="px-6">
+                <img alt="..."
+                     src="assets/img/datarev.png"
+                     class="shadow-lg rounded-full mx-auto max-w-120-px" />
+                <div class="pt-6 text-center">
+                  <h5 class="text-xl font-bold">Data Reviewers</h5>
+                  <div class="mt-6">
+                    <button class="bg-blueGray-600 text-white active:bg-blue-400 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 ease-linear transition-all duration-150" data-modal-toggle="datarevModal"
+                            type="button">
+                      Learn more
+                    </button>
+                    <!-- Main modal -->
+                    <div id="datarevModal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full">
+                      <div class="relative p-4 w-full max-w-2xl">
+                        <!-- Modal content -->
+                        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                          <!-- Modal header -->
+                          <div class="flex justify-between items-start p-4 rounded-t border-b dark:border-gray-600">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                              Data Reviewers can access and view
+                            </h3>
+                            <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-toggle="datarevModal">
+                              <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                              <span class="sr-only">Close modal</span>
+                            </button>
+                          </div>
+                          <!-- Modal body -->
+                          <div class="p-6 space-y-6">
+                            <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400 text-left">
+                              - Temporal evolution of Covid-19 related social mediacomments.
+                            </p>
+                            <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400 text-left">
+                              - Detailed statistics and graphs on emotion analysis during Covid-19: Number of comments by emotion, evolution of emotions in time, and distribution of emotions over topics.
+                            </p>
+                            <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400 text-left">
+                              - Detailed statistics and graphs on topic analysis during Covid-19: Number of comments by topic, distribution of topics and evolution of topics in times.
+                            </p>
+                            <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400 text-left">
+                              - Filtered results by date.
+                            </p>
+                            <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400 text-left">
+                              - Detailed description of the source, topic class and emotion class of comments, with the possibility to exctract this data in various formats (.csv, .pdf, .xlsx...).
+                            </p>
+                            <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400 text-left">
+                              - Data annotation.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="w-full md:w-6/12 basis-1/4 md:basis-1/3 lg:w-3/12 lg:mb-0 mb-12 px-4">
+              <div class="px-6">
+                <img alt="..."
+                     src="assets/img/admin.png"
+                     class="shadow-lg rounded-full mx-auto max-w-120-px" />
+                <div class="pt-6 text-center">
+                  <h5 class="text-xl font-bold">Administrators</h5>
+                  <div class="mt-6">
+                    <button class="bg-blueGray-600 text-white active:bg-blue-400 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 ease-linear transition-all duration-150" data-modal-toggle="adminModal"
+                            type="button">
+                      Learn more
+                    </button>
+                    <!-- Main modal -->
+                    <div id="adminModal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full">
+                      <div class="relative p-4 w-full max-w-2xl">
+                        <!-- Modal content -->
+                        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                          <!-- Modal header -->
+                          <div class="flex justify-between items-start p-4 rounded-t border-b dark:border-gray-600">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                              Administrators can access and view
+                            </h3>
+                            <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-toggle="adminModal">
+                              <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                              <span class="sr-only">Close modal</span>
+                            </button>
+                          </div>
+                          <!-- Modal body -->
+                          <div class="p-6 space-y-6">
+                            <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400 text-left">
+                              - Temporal evolution of Covid-19 related social mediacomments.
+                            </p>
+                            <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400 text-left">
+                              - Detailed statistics and graphs on emotion analysis during Covid-19: Number of comments by emotion, evolution of emotions in time, and distribution of emotions over topics.
+                            </p>
+                            <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400 text-left">
+                              - Detailed statistics and graphs on topic analysis during Covid-19: Number of comments by topic, distribution of topics and evolution of topics in times.
+                            </p>
+                            <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400 text-left">
+                              - Filtered results by date.
+                            </p>
+                            <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400 text-left">
+                              - Detailed description of the source, topic class and emotion class of comments, with the possibility to exctract this data in various formats (.csv, .pdf, .xlsx...).
+                            </p>
+                            <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400 text-left">
+                              - Data annotation.
+                            </p>
+                            <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400 text-left">
+                              - Create user accounts and view usage statistics such as the number of users and visitors.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
+          </div>
+        </div>
+      </section>
+      <!--Stats display-->
+      <div class="flex flex-wrap">
+
+        <div class="lg:pt-12 pt-6 h-full w-full md:w-4/12 px-5 text-center">
+          <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
+            <div class="px-4 py-5 flex-auto">
+              <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-lightBlue-600">
+                <i class="fas fa-comment"></i>
+              </div>
+              <h6 class="text-xl font-bold">
+                Analysed comments
+              </h6>
+              <h4 class="mt-4 text-xl font-semibold">
+                13650
+              </h4>
+              <p class="text-blueGray-500">
+                comment
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:pt-12 pt-6 h-full w-full md:w-4/12 px-5 text-center">
+          <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
+            <div class="px-4 py-5 flex-auto">
+              <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-lightBlue-600">
+                <i class="fas fa-percent"></i>
+              </div>
+              <h6 class="text-xl font-bold">
+                Positive comments rate
+              </h6>
+              <h4 class="mt-4 text-xl font-semibold">
+                7%
+              </h4>
+              <p class="text-blueGray-500">
+                in 13650 comments
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:pt-12 pt-6 h-full w-full md:w-4/12 px-5 text-center">
+          <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
+            <div class="px-4 py-5 flex-auto">
+              <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-lightBlue-600">
+                <i class="fas fa-fingerprint"></i>
+              </div>
+              <h6 class="text-xl font-bold">
+                Most dominant topic
+              </h6>
+              <h4 class="mt-4 text-xl font-semibold">
+                Statistics
+              </h4>
+              <p class="text-blueGray-500">
+                36%
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
   </section>
 
-  <div class="container mx-auto px-4 pb-32 pt-48">
-    <div class="items-center flex flex-wrap">
-      <div class="w-full md:w-5/12 ml-auto px-12 md:px-4">
-        <div class="md:pr-12">
-          <div
-            class="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white"
-          >
-            <i class="fas fa-database text-xl"></i>
-          </div>
-          <h3 class="text-3xl font-semibold">Data Annotation</h3>
-          <p class="mt-4 text-lg leading-relaxed text-blueGray-500">
-            Data annotation is the process of labeling data in various formats such as video, images, or text so that machines can understand it. For supervised machine learning, labeled datasets are crucial because ML models need to understand input patterns to process them and produce accurate results.  Supervised ML models (see Figure 1) train and learn from correctly annotated data and solve problems such as:
-          </p>
-          <ul class="list-none mt-6">
-            <li class="py-2">
-              <div class="flex items-center">
-                <div>
-                  <span
-                    class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-blueGray-50 mr-3"
-                  >
-                    <i class="fas fa-fingerprint"></i>
-                  </span>
-                </div>
-                <div>
-                  <h4 class="text-blueGray-500">
-                    Classification
-                  </h4>
-                </div>
-              </div>
-            </li>
-            <li class="py-2">
-              <div class="flex items-center">
-                <div>
-                  <span
-                    class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-blueGray-50 mr-3"
-                  >
-                    <i class="fab fa-user-friends"></i>
-                  </span>
-                </div>
-                <div>
-                  <h4 class="text-blueGray-500">
-                    Regression
-                  </h4>
-                </div>
-              </div>
-            </li>
-          
-          </ul>
-        </div>
-      </div>
-
-      <div class="w-full md:w-6/12 mr-auto px-4 pt-24 md:pt-0">
-        <img
-          alt="..."
-          class="max-w-full rounded-lg shadow-xl"
-          style="
-            transform: scale(1) perspective(1040px) rotateY(-11deg)
-              rotateX(2deg) rotate(2deg);
-          "
-          src="https://i0.wp.com/www.datalabeler.com/wp-content/uploads/2021/01/select-img.png?fit=686%2C599&ssl=1"
-        />
-      </div>
-    </div>
-  </div>
-
   
-  <div class="flex flex-wrap items-center pt-32">
+  <!--Services-->
+  <div class="flex flex-wrap items-center pt-20 pb-20" id="servicespart">
+    <!--Images-->
     <div class="w-full md:w-6/12 px-4 mr-auto ml-auto ">
       <div class="justify-center flex flex-wrap relative">
         <div class="my-4 w-full lg:w-6/12 px-4">
-          <a
-            href="https://www.creative-tim.com/learning-lab/tailwind/svelte/alerts/notus?ref=vtw-index"
-            target="_blank"
-          >
-            <div   style="background-color: #29C2C4 ;" class=" shadow-lg rounded-lg text-center p-8">
-              <img
-                alt="..."
-                class="shadow-md rounded-full max-w-full w-36 mx-auto p-2 bg-white"
-                src="https://media-exp1.licdn.com/dms/image/C4D12AQH_a9yfJ_d52Q/article-cover_image-shrink_720_1280/0/1650366246976?e=2147483647&v=beta&t=lnqtGTA4yzWCSaIj3LRQav6w1tP-qKjTGjH7F0AFU2k"
-              />
+
+            <div class="shadow-2xl rounded-lg text-center p-8 bg-gray-400">
+              <img alt="DataAnn"
+                   class="shadow-2xl rounded-full max-w-full w-38 mx-auto p-2 bg-white"
+                   src="https://media-exp1.licdn.com/dms/image/C4D12AQH_a9yfJ_d52Q/article-cover_image-shrink_720_1280/0/1650366246976?e=2147483647&v=beta&t=lnqtGTA4yzWCSaIj3LRQav6w1tP-qKjTGjH7F0AFU2k" />
               <p class="text-lg text-white mt-4 font-semibold">Data Annotation</p>
             </div>
-          </a>
-          <a
-            href="https://www.creative-tim.com/learning-lab/tailwind/react/alerts/notus?ref=vtw-index"
-            target="_blank"
-          >
-            <div
-              class="bg-lightBlue-500 shadow-lg rounded-lg text-center p-8 mt-8"
-            >
-              <img
-                alt="..."
-                class="shadow-md rounded-full max-w-full w-38 mx-auto p-2 bg-white"
-                src="https://info.varonis.com/hubfs/Imported_Blog_Media/hero-data-classification.png"
-              />
+         
+            <div class="shadow-lg rounded-lg text-center p-8 mt-8 bg-gray-800">
+              <img alt="DataClass"
+                   class="shadow-2xl rounded-full max-w-full w-40 mx-auto p-2 bg-white"
+                   src="https://info.varonis.com/hubfs/Imported_Blog_Media/hero-data-classification.png" />
               <p class="text-lg text-white mt-4 font-semibold">Data Classification</p>
             </div>
-          </a>
-          <a
-            href="https://www.creative-tim.com/learning-lab/tailwind/nextjs/alerts/notus?ref=vtw-index"
-            target="_blank"
-          >
-            <div
-            style="background-color: #20D7B9 ;"
-              class="shadow-lg rounded-lg text-center p-8 mt-8"
-            >
-              <img
-                alt="..."
-                class="shadow-md rounded-full max-w-full w-36 mx-auto p-2 bg-white"
-                src="https://www.sarvisolutions.com/wp-content/uploads/2018/08/Services-2.png"
-              />
+
+            <div class="shadow-2xl rounded-lg text-center p-8 mt-8 bg-gray-400">
+              <img alt="RTSMA"
+                   class="shadow-2xl rounded-full max-w-full w-40 mx-auto p-2 bg-white"
+                   src="https://www.sarvisolutions.com/wp-content/uploads/2018/08/Services-2.png" />
               <p class="text-lg text-white mt-4 font-semibold">Real Time Social media Analyse</p>
             </div>
-          </a>
         </div>
+
         <div class="my-4 w-full lg:w-6/12 px-4 lg:mt-16">
-          <a
-            href="https://www.creative-tim.com/learning-lab/tailwind/js/alerts/notus?ref=vtw-index"
-            target="_blank"
-          >
-            <div class="bg-blue-500 shadow-lg rounded-lg text-center p-8">
-              <img
-                alt="..."
-                class="shadow-md rounded-full max-w-full w-38 mx-auto p-2 bg-white"
-                src="https://www.pathwaysinternational.com/wp-content/uploads/2018/09/data-automation-technology.png"
-              />
+
+            <div class="shadow-2xl rounded-lg text-center p-8 bg-gray-800">
+              <img alt="DataAuto"
+                   class="shadow-2xl rounded-full max-w-full w-38 mx-auto p-2 bg-white"
+                   src="https://www.pathwaysinternational.com/wp-content/uploads/2018/09/data-automation-technology.png" />
               <p class="text-lg text-white mt-4 font-semibold">Data Automation</p>
             </div>
-          </a>
-          <a
-            href="https://www.creative-tim.com/learning-lab/tailwind/angular/alerts/notus?ref=vtw-index"
-            target="_blank"
-          >
-            <div style="background-color: #29C4B4 ;" class=" shadow-lg rounded-lg text-center p-8 mt-8">
-              <img
-                alt="..."
-                class="shadow-md rounded-full max-w-full w-36 mx-auto p-2 bg-white"
-                src="https://d33wubrfki0l68.cloudfront.net/1f3dbd0539883b3bd57333af237effb62813283b/5012f/static/85fa3827b21282d87e27c13c801c8f67/12fd3/normal.png"
-              />
-              <p class="text-lg text-white mt-4 font-semibold">IA</p>
+
+            <div class="shadow-2xl rounded-lg text-center p-8 mt-8 bg-gray-400">
+              <img alt="AI"
+                   class="shadow-2xl rounded-full max-w-full w-38 mx-auto p-2 bg-white"
+                   src="https://d33wubrfki0l68.cloudfront.net/1f3dbd0539883b3bd57333af237effb62813283b/5012f/static/85fa3827b21282d87e27c13c801c8f67/12fd3/normal.png" />
+              <p class="text-lg text-white mt-4 font-semibold">Artificial Intelligence</p>
             </div>
-          </a>
-          <a
-            href="https://www.creative-tim.com/learning-lab/tailwind/vue/alerts/notus?ref=vtw-index"
-            target="_blank"
-          >
-            <div
-            style="background-color: #446CD7 ;"
-              class=" shadow-lg rounded-lg text-center p-8 mt-8"
-            >
-              <img
-                alt="..."
-                class="shadow-md rounded-full max-w-full w-32 mx-auto p-2 bg-white"
-                src="https://sfmagazine.com/wp-content/uploads/11_2019_tech_practices-530x395.jpg"
-              />
+
+            <div class="shadow-2xl rounded-lg text-center p-8 mt-8 bg-gray-800">
+              <img alt="Modeling"
+                   class="shadow-2xl rounded-full max-w-full w-38 mx-auto p-2 bg-white"
+                   src="https://assets.website-files.com/60df2522e0f2ed1b5c5adcea/618256348b041f5106fe9b1b_13.%20Data%20modelling%20techniques%20explained.-2.jpg" />
               <p class="text-lg text-white mt-4 font-semibold">Modeling</p>
             </div>
-          </a>
         </div>
       </div>
     </div>
-
+    <!--Services presentation-->
     <div class="w-full md:w-4/12 px-12 md:px-0 ml-auto mr-auto ">
-      <div
-        class="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white"
-      >
+      <div class="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white">
         <i class="fas fa-hand-holding-medical text-xl"></i>
       </div>
       <h3 class="text-3xl mb-2 font-semibold leading-normal">
         OUR SERVICES
       </h3>
-      <p
-        class="text-lg font-light leading-relaxed mt-4 mb-4 text-blueGray-600"
-      >
-      Our platform provides multiple services our platform provide multiple services our platform provide multiple services our platform provide multiple services our platform provide multiple services our platform provide multiple services
+      <p class="text-lg font-light leading-relaxed mt-4 mb-4 text-blueGray-600">
+        Our platform provides services that span from Real Time Social Media Analysis to Data Classification, through Artificial Intelligence and Modeling, we are able to extract data from comments on different social media websites, run that data through our data analysis models, and classify it accordingly.
+        All the information is stored, from the date the comment was posted, to what emotion and topic were extracted from said comment.
       </p>
-      <p
-        class="text-lg font-light leading-relaxed mt-4 mb-4 text-blueGray-600"
-      >
+      <p class="text-lg font-light leading-relaxed mt-4 mb-4 text-blueGray-600">
       </p>
       <div class="block pb-6">
-        <span
-          class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2"
-        >
-          SocialMedia
+        <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2">
+          Data Annotation
         </span>
-        <span
-          class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2"
-        >
-          Data
+        <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2">
+          Data Automation
         </span>
-        <span
-          class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2"
-        >
-          Annotation
+        <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2">
+          Data Classification
         </span>
-        <span
-          class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2"
-        >
-          Classification
+        <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2">
+          Artifical Intelligence
         </span>
-        <span
-          class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2"
-        >
-          Modals
+        <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2">
+          Real Time Social Media Analysis
         </span>
-        <span
-          class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2"
-        >
-          IA
-        </span>
-        <span
-          class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2"
-        >
-          BLABLA
-        </span>
-        <span
-          class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2"
-        >
-          BLALBA
+        <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2">
+          Modeling
         </span>
       </div>
-      <a
-        href="https://www.creative-tim.com/learning-lab/tailwind/angular/alerts/notus?ref=na-index-page"
-        target="_blank"
-        class="font-bold text-blueGray-700 hover:text-blueGray-500 ease-linear transition-all duration-150"
-      >
-        View all
-        <i class="fa fa-angle-double-right ml-1 leading-relaxed"></i>
-      </a>
     </div>
   </div>
 
-
-<section class="px-10 pl-5 pr-4 py-10 mt-32">
-
-  <app-stats></app-stats>
-
-
-</section>
-
-  <section class="pt-20 pb-48">
-    <div class="container mx-auto px-3">
-      <div class="flex flex-wrap justify-center text-center mb-24">
-        <div class="w-full lg:w-6/12 px-4">
-          <h2 class="text-4xl font-semibold">Here are our Plateform User</h2>
-          <p class="text-lg leading-relaxed m-4 text-blueGray-500">
-            The plateform can be used by 3 type of user 
-          </p>
-        </div>
-      </div>
-      <div class="flex flex-row">
-        <div class="w-full basis-1/4 md:basis-1/3 md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-3">
-          <div class="px-6">
-            <img
-              alt="..."
-              src="https://www.shareicon.net/data/2016/12/12/862839_people_512x512.png"
-              class="shadow-lg rounded-full mx-auto max-w-120-px"
-            />
-            <div class="pt-6 text-center">
-              <h5 class="text-xl font-bold"> Utilisateur Privé</h5>
-              <p class="mt-1 text-sm text-blueGray-400 uppercase font-semibold">
-                Espace user
-              </p>
-              <div class="mt-6">
-                <button
-                  class="bg-lightBlue-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                  type="button"
-                >
-                  <i class="fas fa-link"></i>
-                </button>
-               
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="w-full md:w-6/12  basis-1/4 md:basis-1/3lg:w-3/12 lg:mb-0 mb-12 px-4">
-          <div class="px-6">
-            <img
-              alt="..."
-              src="https://image.shutterstock.com/shutterstock/photos/1730974153/display_1500/stock-vector-man-with-the-inscription-admin-icon-outline-man-with-the-inscription-admin-vector-icon-for-web-1730974153.jpg"
-              class="shadow-lg rounded-full mx-auto max-w-120-px"
-            />
-            <div class="pt-6 text-center">
-              <h5 class="text-xl font-bold">Administrateur</h5>
-              <p class="mt-1 text-sm text-blueGray-400 uppercase font-semibold">
-                Espace Admin
-              </p>
-              <div class="mt-6">
-                <button
-                  class="bg-red-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                  type="button"
-                >
-                  <i class="fas fa-link"></i>
-                </button>
-                
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="w-full md:w-6/12 basis-1/4 md:basis-1/3 lg:w-3/12 lg:mb-0 mb-12 px-4">
-          <div class="px-6">
-            <img
-              alt="..."
-              src="data:image/png;base64,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"
-              class="shadow-lg rounded-full mx-auto max-w-120-px"
-            />
-            <div class="pt-6 text-center">
-              <h5 class="text-xl font-bold">Citoyen</h5>
-              <p class="mt-1 text-sm text-blueGray-400 uppercase font-semibold">
-                Espace Visiteur
-              </p>
-              <div class="mt-6">
-                <button
-                  class="bg-lightBlue-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                  type="button"
-                >
-                  <i class="fas fa-link"></i>
-                </button>
-               
-              </div>
-            </div>
-          </div>
-        </div>
-        
-      </div>
-    </div>
-  </section>
-
-  <section class="pb-20 relative block bg-blueGray-800">
-    <div
-      class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20 h-20"
-      style="transform: translateZ(0)"
-    >
-      <svg
-        class="absolute bottom-0 overflow-hidden"
-        xmlns="http://www.w3.org/2000/svg"
-        preserveAspectRatio="none"
-        version="1.1"
-        viewBox="0 0 2560 100"
-        x="0"
-        y="0"
-      >
-        <polygon
-          class="text-blueGray-800 fill-current"
-          points="2560 0 2560 100 0 100"
-        ></polygon>
+  <!--Contact-->
+  <section class="pb-20 relative block bg-blueGray-800" id="contactpart">
+    <div class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20 h-20"
+         style="transform: translateZ(0)">
+      <svg class="absolute bottom-0 overflow-hidden"
+           xmlns="http://www.w3.org/2000/svg"
+           preserveAspectRatio="none"
+           version="1.1"
+           viewBox="0 0 2560 100"
+           x="0"
+           y="0">
+        <polygon class="text-blueGray-800 fill-current"
+                 points="2560 0 2560 100 0 100"></polygon>
       </svg>
     </div>
 
     <div class="container mx-auto px-4 lg:pt-24 lg:pb-64">
       <div class="flex flex-wrap text-center justify-center">
         <div class="w-full lg:w-6/12 px-4">
-          <h2 class="text-4xl font-semibold text-white">Get Contact With Us</h2>
+          <h2 class="text-4xl font-semibold text-white">Get In Touch With Us</h2>
           <p class="text-lg leading-relaxed mt-4 mb-4 text-blueGray-400">
-            Put the potentially record low maximum sea ice extent tihs year down
-            to low ice. According to the National Oceanic and Atmospheric
-            Administration, Ted, Scambos.
+            Send us your request to join the team of data reviewers so you can help us manage the large flux of data we get daily and if your profile fits, you will receive a personal account with access to all the data and the option to annote data.
           </p>
         </div>
       </div>
       <div class="flex flex-wrap mt-12 justify-center">
         <div class="w-full lg:w-3/12 px-4 text-center">
-          <div
-            class="text-blueGray-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center"
-          >
+          <div class="text-blueGray-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
             <i class="fas fa-phone text-xl"></i>
           </div>
           <h6 class="text-xl mt-5 font-semibold text-white">
-            CONTACT
+            PHONE
           </h6>
           <p class="mt-2 mb-4 text-blueGray-400">
-            +212 6 12 34 56 78
+            +212 (0)530-103000
 
           </p>
         </div>
         <div class="w-full lg:w-3/12 px-4 text-center">
-          <div
-            class="text-blueGray-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center"
-          >
+          <div class="text-blueGray-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
             <i class="fas fa-location text-xl"></i>
           </div>
           <h5 class="text-xl mt-5 font-semibold text-white">
-           ADRESSE
+            ADDRESS
           </h5>
-          <p class="mt-2 mb-4 text-blueGray-400">
-            UIR Technopolis rocade Rabat Salé      11000 Sala Al Jadida
-          </p>
+          <a href="https://goo.gl/maps/WPQAxovq43HCsovr5" target="_blank">
+            <p class="mt-2 mb-4 text-blueGray-400">
+              Université Internationale de Rabat Technopolis Rabat-Shore Rocade Rabat-Salé      11000 Sala Al Jadida
+            </p>
+          </a>
         </div>
         <div class="w-full lg:w-3/12 px-4 text-center">
-          <div
-            class="text-blueGray-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center"
-          >
+          <div class="text-blueGray-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
             <i class="fas fa-envelope text-xl"></i>
           </div>
           <h5 class="text-xl mt-5 font-semibold text-white">EMAIL</h5>
           <p class="mt-2 mb-4 text-blueGray-400">
-            BLABLA@UIR.AC.MA
+            contact@uir.ac.ma
           </p>
         </div>
       </div>
@@ -578,61 +556,45 @@
     <div class="container mx-auto px-4">
       <div class="flex flex-wrap justify-center lg:-mt-64 -mt-48">
         <div class="w-full lg:w-6/12 px-4">
-          <div
-            class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-blueGray-200"
-          >
+          <div class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-blueGray-200">
             <div class="flex-auto p-5 lg:p-10">
               <h4 class="text-2xl font-semibold">Want to work with us?</h4>
               <p class="leading-relaxed mt-1 mb-4 text-blueGray-500">
-                Complete this form and we will get back to you in 24 hours.
+                Complete this form and we will get back to you as soon as possible.
               </p>
               <div class="relative w-full mb-3 mt-8">
-                <label
-                  class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
-                  htmlFor="full-name"
-                >
+                <label class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                       htmlFor="full-name">
                   Full Name
                 </label>
-                <input
-                  type="text"
-                  class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                  placeholder="Full Name"
-                />
+                <input type="text"
+                       class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                       placeholder="Full Name" />
               </div>
 
               <div class="relative w-full mb-3">
-                <label
-                  class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
-                  htmlFor="email"
-                >
+                <label class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                       htmlFor="email">
                   Email
                 </label>
-                <input
-                  type="email"
-                  class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                  placeholder="Email"
-                />
+                <input type="email"
+                       class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                       placeholder="Email" />
               </div>
 
               <div class="relative w-full mb-3">
-                <label
-                  class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
-                  htmlFor="message"
-                >
+                <label class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                       htmlFor="message">
                   Message
                 </label>
-                <textarea
-                  rows="4"
-                  cols="80"
-                  class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full"
-                  placeholder="Type a message..."
-                ></textarea>
+                <textarea rows="4"
+                          cols="80"
+                          class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full"
+                          placeholder="Type a message..."></textarea>
               </div>
               <div class="text-center mt-6">
-                <button
-                  class="bg-blueGray-800 text-white active:bg-blueGray-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-                  type="button"
-                >
+                <button class="bg-blueGray-800 text-white active:bg-blueGray-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                        type="button">
                   Send Message
                 </button>
               </div>
