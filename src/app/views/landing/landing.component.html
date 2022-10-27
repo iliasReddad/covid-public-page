@@ -2,7 +2,7 @@
 
 <main>
   <!--Welcome-->
-  <section class="header relative pt-16 items-center flex h-screen max-h-860-px" id="welcomepart">
+  <section class="header relative pt-16 items-center flex " id="welcomepart">
     <div class="container mx-auto items-center flex flex-wrap">
       <div class="w-full md:w-8/12 lg:w-6/12 xl:w-6/12 px-4">
         <div class="pt-32 sm:pt-0">
@@ -10,54 +10,54 @@
           <h2 class="font-bold text-5xl text-blueGray-600">
             Welcome to e-covid19
           </h2>
-          <p class=" font-semibold text-xl mt-16 text-blueGray-600 ml-2">
+          <p class="font-semibold text-xl mt-16 text-blueGray-600 ml-2">
             A moroccan platform for covid19 management
-
           </p>
           <p class="mt-4 ml-2  text-lg leading-relaxed text-blueGray-500">
             The e-covid19 platform is a moroccan platform for covid-19 management. It presents a decision-making assistance
             tool based on AI aimed to provide real-time social media analysis, automated sentiment analysis and topic
             modeling.
-
           </p>
-          <div class="mt-12">
-            <button class="github-star ml-1 text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-blueGray-700 active:bg-blueGray-600 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150" type="button" data-modal-toggle="videoModal">
-              View Video
-            </button>
-            <!-- Main modal -->
-            <div id="videoModal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full">
-              <div class="relative p-4 w-full max-w-2xl">
+          <button class="github-star ml-1 text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mt-6 mb-12 mr-1 mb-1 bg-blueGray-700 active:bg-blueGray-600 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150" type="button" data-modal-toggle="videoModal">
+            View Video
+          </button>
+          <!-- Main modal -->
+          <div id="videoModal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full">
+            <div class="relative p-4 w-full max-w-2xl">
 
-                <!-- Modal content -->
-                <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
-                  <!-- Modal header -->
-                  <div class="flex justify-between items-start p-4 rounded-t border-b dark:border-gray-600">
-                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-                      e-covid19 Presentation
-                    </h3>
-                    <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-toggle="videoModal">
-                      <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                      <span class="sr-only">Close modal</span>
-                    </button>
-                  </div>
-                  <!-- Modal body -->
-                  <div class="p-6 space-y-6">
-                    <video controls>
-                      <source src="./assets/videos/Clip.mp4" />
-                    </video>
-                  </div>
+              <!-- Modal content -->
+              <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                <!-- Modal header -->
+                <div class="flex justify-between items-start p-4 rounded-t border-b dark:border-gray-600">
+                  <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                    e-covid19 Presentation
+                  </h3>
+                  <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-toggle="videoModal">
+                    <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    <span class="sr-only">Close modal</span>
+                  </button>
+                </div>
+                <!-- Modal body -->
+                <div class="p-6 space-y-6">
+                  <video controls>
+                    <source src="./assets/videos/Clip.mp4" />
+                  </video>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+      <div class="w-full md:w-8/12 lg:w-6/12 xl:w-6/12 px-4">
+          <img class=" relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start"
+               src="../../../assets/img/covidBackground.png"
+               alt="..." />
+        </div>
+      </div>
 
-    <img class="absolute top-50 b-auto right-0 pt-16 sm:w-6/12 -mt-48 sm:mt-0 w-10/12 max-h-860-px"
-         src="../../../assets/img/covidBackground.png"
-         alt="..." />
-  </section>
+
+
+</section>
 
 
 
@@ -397,7 +397,7 @@
     </div>
   </section>
 
-  
+
   <!--Services-->
   <div class="flex flex-wrap items-center pt-20 pb-20" id="servicespart">
     <!--Images-->
@@ -405,50 +405,50 @@
       <div class="justify-center flex flex-wrap relative">
         <div class="my-4 w-full lg:w-6/12 px-4">
 
-            <div class="shadow-2xl rounded-lg text-center p-8 bg-gray-400">
-              <img alt="DataAnn"
-                   class="shadow-2xl rounded-full max-w-full w-38 mx-auto p-2 bg-white"
-                   src="https://media-exp1.licdn.com/dms/image/C4D12AQH_a9yfJ_d52Q/article-cover_image-shrink_720_1280/0/1650366246976?e=2147483647&v=beta&t=lnqtGTA4yzWCSaIj3LRQav6w1tP-qKjTGjH7F0AFU2k" />
-              <p class="text-lg text-white mt-4 font-semibold">Data Annotation</p>
-            </div>
-         
-            <div class="shadow-lg rounded-lg text-center p-8 mt-8 bg-gray-800">
-              <img alt="DataClass"
-                   class="shadow-2xl rounded-full max-w-full w-40 mx-auto p-2 bg-white"
-                   src="https://info.varonis.com/hubfs/Imported_Blog_Media/hero-data-classification.png" />
-              <p class="text-lg text-white mt-4 font-semibold">Data Classification</p>
-            </div>
+          <div class="shadow-2xl rounded-lg text-center p-8 bg-gray-400">
+            <img alt="DataAnn"
+                 class="shadow-2xl rounded-full max-w-full w-38 mx-auto p-2 bg-white"
+                 src="https://media-exp1.licdn.com/dms/image/C4D12AQH_a9yfJ_d52Q/article-cover_image-shrink_720_1280/0/1650366246976?e=2147483647&v=beta&t=lnqtGTA4yzWCSaIj3LRQav6w1tP-qKjTGjH7F0AFU2k" />
+            <p class="text-lg text-white mt-4 font-semibold">Data Annotation</p>
+          </div>
 
-            <div class="shadow-2xl rounded-lg text-center p-8 mt-8 bg-gray-400">
-              <img alt="RTSMA"
-                   class="shadow-2xl rounded-full max-w-full w-40 mx-auto p-2 bg-white"
-                   src="https://www.sarvisolutions.com/wp-content/uploads/2018/08/Services-2.png" />
-              <p class="text-lg text-white mt-4 font-semibold">Real Time Social media Analyse</p>
-            </div>
+          <div class="shadow-lg rounded-lg text-center p-8 mt-8 bg-gray-800">
+            <img alt="DataClass"
+                 class="shadow-2xl rounded-full max-w-full w-40 mx-auto p-2 bg-white"
+                 src="https://info.varonis.com/hubfs/Imported_Blog_Media/hero-data-classification.png" />
+            <p class="text-lg text-white mt-4 font-semibold">Data Classification</p>
+          </div>
+
+          <div class="shadow-2xl rounded-lg text-center p-8 mt-8 bg-gray-400">
+            <img alt="RTSMA"
+                 class="shadow-2xl rounded-full max-w-full w-40 mx-auto p-2 bg-white"
+                 src="https://www.sarvisolutions.com/wp-content/uploads/2018/08/Services-2.png" />
+            <p class="text-lg text-white mt-4 font-semibold">Real Time Social media Analyse</p>
+          </div>
         </div>
 
         <div class="my-4 w-full lg:w-6/12 px-4 lg:mt-16">
 
-            <div class="shadow-2xl rounded-lg text-center p-8 bg-gray-800">
-              <img alt="DataAuto"
-                   class="shadow-2xl rounded-full max-w-full w-38 mx-auto p-2 bg-white"
-                   src="https://www.pathwaysinternational.com/wp-content/uploads/2018/09/data-automation-technology.png" />
-              <p class="text-lg text-white mt-4 font-semibold">Data Automation</p>
-            </div>
+          <div class="shadow-2xl rounded-lg text-center p-8 bg-gray-800">
+            <img alt="DataAuto"
+                 class="shadow-2xl rounded-full max-w-full w-38 mx-auto p-2 bg-white"
+                 src="https://www.pathwaysinternational.com/wp-content/uploads/2018/09/data-automation-technology.png" />
+            <p class="text-lg text-white mt-4 font-semibold">Data Automation</p>
+          </div>
 
-            <div class="shadow-2xl rounded-lg text-center p-8 mt-8 bg-gray-400">
-              <img alt="AI"
-                   class="shadow-2xl rounded-full max-w-full w-38 mx-auto p-2 bg-white"
-                   src="https://d33wubrfki0l68.cloudfront.net/1f3dbd0539883b3bd57333af237effb62813283b/5012f/static/85fa3827b21282d87e27c13c801c8f67/12fd3/normal.png" />
-              <p class="text-lg text-white mt-4 font-semibold">Artificial Intelligence</p>
-            </div>
+          <div class="shadow-2xl rounded-lg text-center p-8 mt-8 bg-gray-400">
+            <img alt="AI"
+                 class="shadow-2xl rounded-full max-w-full w-38 mx-auto p-2 bg-white"
+                 src="https://d33wubrfki0l68.cloudfront.net/1f3dbd0539883b3bd57333af237effb62813283b/5012f/static/85fa3827b21282d87e27c13c801c8f67/12fd3/normal.png" />
+            <p class="text-lg text-white mt-4 font-semibold">Artificial Intelligence</p>
+          </div>
 
-            <div class="shadow-2xl rounded-lg text-center p-8 mt-8 bg-gray-800">
-              <img alt="Modeling"
-                   class="shadow-2xl rounded-full max-w-full w-38 mx-auto p-2 bg-white"
-                   src="https://assets.website-files.com/60df2522e0f2ed1b5c5adcea/618256348b041f5106fe9b1b_13.%20Data%20modelling%20techniques%20explained.-2.jpg" />
-              <p class="text-lg text-white mt-4 font-semibold">Modeling</p>
-            </div>
+          <div class="shadow-2xl rounded-lg text-center p-8 mt-8 bg-gray-800">
+            <img alt="Modeling"
+                 class="shadow-2xl rounded-full max-w-full w-38 mx-auto p-2 bg-white"
+                 src="https://assets.website-files.com/60df2522e0f2ed1b5c5adcea/618256348b041f5106fe9b1b_13.%20Data%20modelling%20techniques%20explained.-2.jpg" />
+            <p class="text-lg text-white mt-4 font-semibold">Modeling</p>
+          </div>
         </div>
       </div>
     </div>
@@ -489,6 +489,57 @@
     </div>
   </div>
 
+  <!--Charts-->
+  <section class="bg-blueGray-200 -mt-24" id="chartspart">
+
+    <div class="container relative mx-auto mt-24">
+      <div class="items-center flex flex-wrap">
+        <div class="w-full ml-auto mr-auto text-center h-full">
+          <div class="container mx-auto px-4">
+            <h3 class="text-3xl mb-2 font-semibold leading-normal mt-20">
+              GRAPHS
+            </h3>
+            <!--Graph-->
+            <div class="relative rounded-lg shadow dark:bg-gray-700 mt-8">
+              <!--header -->
+              <div class="flex justify-between items-start p-4 rounded-t border-b dark:border-gray-600  bg-white">
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                  Sentiment Analysis
+                </h3>
+
+              </div>
+              <!--body -->
+              <div class="p-6 space-y-6">
+                ttq4wyh45h
+              </div>
+            </div>
+
+            <!--Graph-->
+            <div class="relative rounded-lg shadow dark:bg-gray-700 mt-8 mb-12">
+              <!--header -->
+              <div class="flex justify-between items-start p-4 rounded-t border-b dark:border-gray-600  bg-white">
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                  Topic Analysis
+                </h3>
+
+              </div>
+              <!--body -->
+              <div class="p-6 space-y-6">
+                ttq4wyh45
+              </div>
+            </div>
+
+           
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+  </section>
+
+
+
   <!--Contact-->
   <section class="pb-20 relative block bg-blueGray-800" id="contactpart">
     <div class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20 h-20"
@@ -519,10 +570,10 @@
           <div class="text-blueGray-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
             <i class="fas fa-phone text-xl"></i>
           </div>
-          <h6 class="text-xl mt-5 font-semibold text-white">
+          <h5 class="text-xl mt-3 font-semibold text-white">
             PHONE
-          </h6>
-          <p class="mt-2 mb-4 text-blueGray-400">
+          </h5>
+          <p class="mb-10 text-blueGray-400">
             +212 (0)530-103000
 
           </p>
@@ -531,11 +582,11 @@
           <div class="text-blueGray-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
             <i class="fas fa-location text-xl"></i>
           </div>
-          <h5 class="text-xl mt-5 font-semibold text-white">
+          <h5 class="text-xl mt-3 font-semibold text-white">
             ADDRESS
           </h5>
           <a href="https://goo.gl/maps/WPQAxovq43HCsovr5" target="_blank">
-            <p class="mt-2 mb-4 text-blueGray-400">
+            <p class="mb-10 text-blueGray-400">
               Université Internationale de Rabat Technopolis Rabat-Shore Rocade Rabat-Salé      11000 Sala Al Jadida
             </p>
           </a>
@@ -544,14 +595,17 @@
           <div class="text-blueGray-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
             <i class="fas fa-envelope text-xl"></i>
           </div>
-          <h5 class="text-xl mt-5 font-semibold text-white">EMAIL</h5>
-          <p class="mt-2 mb-4 text-blueGray-400">
+          <h5 class="text-xl mt-3 font-semibold text-white">
+          EMAIL
+          </h5>
+          <p class="mb-10 text-blueGray-400">
             contact@uir.ac.ma
           </p>
         </div>
       </div>
     </div>
   </section>
+  <!--Send message-->
   <section class="relative block py-24 lg:pt-0 bg-blueGray-800">
     <div class="container mx-auto px-4">
       <div class="flex flex-wrap justify-center lg:-mt-64 -mt-48">

@@ -7,8 +7,10 @@
     "\\src\\app\\components\\footers",
     "\\src\\app\\components\\footers\\footer",
     "\\src\\app\\views",
-    "\\src\\app\\views\\landing"
+    "\\src\\app\\views\\index",
+    "\\src\\app\\views\\landing",
+    "\\src\\app\\views\\profile"
   ],
-  "SelectedNode": "\\src\\app\\views\\landing\\landing.component.html",
+  "SelectedNode": "\\src\\app\\app.module.ts",
   "PreviewInSolutionExplorer": false
 }
