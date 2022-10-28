@@ -4,13 +4,9 @@
     "\\src",
     "\\src\\app",
     "\\src\\app\\components",
-    "\\src\\app\\components\\footers",
-    "\\src\\app\\components\\footers\\footer",
     "\\src\\app\\views",
-    "\\src\\app\\views\\index",
-    "\\src\\app\\views\\landing",
-    "\\src\\app\\views\\profile"
+    "\\src\\app\\views\\landing"
   ],
-  "SelectedNode": "\\src\\app\\app.module.ts",
+  "SelectedNode": "\\src\\app\\views\\landing\\landing.component.html",
   "PreviewInSolutionExplorer": false
 }
