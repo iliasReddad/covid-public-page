@@ -1,3 +1,7 @@
+import { TablesComponent } from './views/admin/tables/tables.component';
+import { SettingsComponent } from './views/admin/settings/settings.component';
+import { MapsComponent } from './views/admin/maps/maps.component';
+import { AdminComponent } from './layouts/auth/admin/admin.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -34,9 +38,14 @@ import { ChartComponent } from './chart/chart.component'
 import { NgChartsModule } from 'ng2-charts';
 import { SachartComponent } from './sachart/sachart.component';
 import { TachartComponent } from './tachart/tachart.component';
+import { DashboardComponent } from './views/admin/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [AppComponent,
+    DashboardComponent,
+    ChartComponent,
+    SachartComponent,
+    TachartComponent,
     IndexDropdownComponent,
     PagesDropdownComponent,
     TableDropdownComponent,
@@ -56,17 +65,19 @@ import { TachartComponent } from './tachart/tachart.component';
     MapExampleComponent,
     AuthNavbarComponent,
     AdminNavbarComponent,
-    AuthComponent,
     IndexNavbarComponent,
+    AdminComponent,
+    AuthComponent,
+    MapsComponent,
+    SettingsComponent,
+    TablesComponent,
     LoginComponent,
     RegisterComponent,
     IndexComponent,
     LandingComponent,
     ProfileComponent,
     StatsComponent,
-    ChartComponent,
-    SachartComponent,
-    TachartComponent,
+    
   ],
   imports: [
     BrowserModule,
