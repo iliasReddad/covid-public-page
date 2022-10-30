@@ -1,3 +1,4 @@
+import { authInterceptorProviders } from './_helpers/auth.interceptor';
 import { TablesComponent } from './views/admin/tables/tables.component';
 import { SettingsComponent } from './views/admin/settings/settings.component';
 import { MapsComponent } from './views/admin/maps/maps.component';
@@ -39,6 +40,8 @@ import { NgChartsModule } from 'ng2-charts';
 import { SachartComponent } from './sachart/sachart.component';
 import { TachartComponent } from './tachart/tachart.component';
 import { DashboardComponent } from './views/admin/dashboard/dashboard.component';
+import { FormsModule }   from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent,
@@ -81,10 +84,12 @@ import { DashboardComponent } from './views/admin/dashboard/dashboard.component'
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    HttpClientModule,
     AppRoutingModule,
     NgChartsModule
   ],
-  providers: [],
+  providers: [authInterceptorProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
