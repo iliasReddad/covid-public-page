@@ -1,13 +1,15 @@
+  <section *ngIf="!contenu[0]"  class="header relative min-h-screen grid h-screen place-items-center" id="loader">
+  <app-loader></app-loader>
+  </section>
 <app-index-navbar ></app-index-navbar>
-
-<main>
+<main #myScrollableContaine *ngIf="contenu[0] ">
   <!--Welcome-->
-  <section class="header relative min-h-screen items-center flex" id="welcomepart">
+  <section  class="header relative min-h-screen items-center flex" id="welcomepart">
     <div class="container mx-auto items-center flex flex-wrap pt-8">
       <div class="w-full md:w-8/12 lg:w-6/12 xl:w-6/12 px-4">
         <div class="pt-32 sm:pt-0">
           <h2 class="font-bold text-5xl text-lightBlue-600 mt-16">
-            Welcome to e-covid19
+            {{contenu[0].titre }} 
           </h2>
           <p class="font-semibold text-xl mt-8 text-blueGray-600 ml-2">
             A moroccan platform for covid19 management

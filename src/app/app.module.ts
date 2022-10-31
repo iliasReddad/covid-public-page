@@ -42,6 +42,9 @@ import { TachartComponent } from './tachart/tachart.component';
 import { DashboardComponent } from './views/admin/dashboard/dashboard.component';
 import { FormsModule }   from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService } from 'src/in-memory-data.service';
+import { LoaderComponent } from './views/loader/loader.component';
 
 @NgModule({
   declarations: [AppComponent,
@@ -80,13 +83,15 @@ import { HttpClientModule } from '@angular/common/http';
     LandingComponent,
     ProfileComponent,
     StatsComponent,
+    LoaderComponent
     
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule,
     AppRoutingModule,
+    HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, { dataEncapsulation : false } ),
     NgChartsModule
   ],
   providers: [authInterceptorProviders],
