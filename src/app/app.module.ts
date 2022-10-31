@@ -45,6 +45,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from 'src/in-memory-data.service';
 import { LoaderComponent } from './views/loader/loader.component';
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [AppComponent,
@@ -91,7 +92,7 @@ import { LoaderComponent } from './views/loader/loader.component';
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
-    HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, { dataEncapsulation : false } ),
+    environment.production ?[] : HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, { dataEncapsulation : false } ),
     NgChartsModule
   ],
   providers: [authInterceptorProviders],

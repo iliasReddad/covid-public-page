@@ -11,7 +11,7 @@ export class ContenuServiceTsService {
   constructor(private http: HttpClient) { }
 
   getContenu():Observable<contenu>{
-    return this.http.get('api/contenus/')
+    return this.http.get('app/contenus/')
     .pipe(
       tap((response: any)=>console.log(response)),
       catchError((error)=> this.handleError(error,[])) //lever error sans cracher app tab vide)
@@ -19,7 +19,7 @@ export class ContenuServiceTsService {
   }
 
   getContenuById(contenuId:number){
-    return this.http.get(`api/contenus/${contenuId}`)
+    return this.http.get(`app/contenus/${contenuId}`)
     .pipe(
       tap((response: any)=>this.log(response)),
       catchError((error)=> this.handleError(error,[])) //lever error sans cracher app tab vide)
