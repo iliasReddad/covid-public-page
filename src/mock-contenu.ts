@@ -3,7 +3,7 @@ import { contenu } from './app/contenu';
 export const CONTENUS: contenu[] = [
     {
         id: 1,
-        titre: 'Welcome to e-covid_2019',
+        titre: 'Welcome to e-covid_2022',
         sous_titre: 'A moroccan platform for covid_19 management ',
         paragraphe: 'The e-covid19 platform is a moroccan platform for covid-19 management. It presents a decision-making assistance tool based on AI aimed to provide real-time social media analysis, automated sentiment analysis and topic modeling.',
         description3: 'description 1',

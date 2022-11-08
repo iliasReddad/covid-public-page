@@ -46,6 +46,8 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from 'src/in-memory-data.service';
 import { LoaderComponent } from './views/loader/loader.component';
 import { environment } from 'src/environments/environment';
+import { CreateAccountComponent } from './components/create-account/create-account.component';
+import { ModalComponent } from './modal/modal.component';
 
 @NgModule({
   declarations: [AppComponent,
@@ -84,7 +86,9 @@ import { environment } from 'src/environments/environment';
     LandingComponent,
     ProfileComponent,
     StatsComponent,
-    LoaderComponent
+    LoaderComponent,
+    CreateAccountComponent,
+    ModalComponent
     
   ],
   imports: [
@@ -92,7 +96,7 @@ import { environment } from 'src/environments/environment';
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
-    environment.production ?[] : HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, { dataEncapsulation : false } ),
+    //environment.production ?[] : HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, { dataEncapsulation : false } ),
     NgChartsModule
   ],
   providers: [authInterceptorProviders],

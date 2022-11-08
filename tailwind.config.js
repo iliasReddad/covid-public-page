@@ -5,13 +5,13 @@ module.exports = {
   purge: {
     enabled: true,
     content: [
+      "./node_modules/flowbite/**/*.js",
       "./**/*.html",
       "./*.html",
       "./**/*.js",
       "./*.js",
       "./**/*.ts",
       "./*.ts",
-        "./node_modules/flowbite/**/*.js"
     ],
     options: {
       safelist: [],
@@ -95,9 +95,7 @@ module.exports = {
     "disabled",
   ],
   plugins: [
-    require('flowbite/plugin')
-],
-  plugins: [
+    require('flowbite/plugin'),
     require("@tailwindcss/forms"),
     plugin(function ({ addComponents, theme }) {
       const screens = theme("screens", {});

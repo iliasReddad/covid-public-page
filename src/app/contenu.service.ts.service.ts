@@ -10,22 +10,12 @@ export class ContenuServiceTsService {
 
   constructor(private http: HttpClient) { }
 
-  getContenu():Observable<contenu>{
-    return this.http.get('app/contenus/')
-    .pipe(
-      tap((response: any)=>console.log(response)),
-      catchError((error)=> this.handleError(error,[])) //lever error sans cracher app tab vide)
-    )
+  getContenu():Observable<any>{
+    return this.http.get('http://localhost:8080/content/all')
+    
   }
 
-  getContenuById(contenuId:number){
-    return this.http.get(`app/contenus/${contenuId}`)
-    .pipe(
-      tap((response: any)=>this.log(response)),
-      catchError((error)=> this.handleError(error,[])) //lever error sans cracher app tab vide)
-    )
-  }
-
+ 
 
 
   private log(response:any){
