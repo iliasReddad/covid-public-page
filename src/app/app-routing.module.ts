@@ -24,7 +24,7 @@ const routes: Routes = [
     path: "admin",
     component: AdminComponent,
     children: [
-      { path: "dashboard", component: DashboardComponent , canActivate:[AuthGuard]},
+      { path: "dashboard", component: DashboardComponent },
       { path: "USER_MANAGEMENT", component: SettingsComponent , canActivate:[AuthGuard]},
       { path: "tables", component: TablesComponent ,canActivate:[AuthGuard] },
       { path: "maps", component: MapsComponent },

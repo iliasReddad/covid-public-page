@@ -3,10 +3,9 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\components",
-    "\\src\\app\\views",
-    "\\src\\app\\views\\landing"
+    "\\src\\assets",
+    "\\src\\assets\\img"
   ],
-  "SelectedNode": "\\src\\app\\views\\landing\\landing.component.html",
+  "SelectedNode": "\\src\\assets\\img\\pattern_angular.png",
   "PreviewInSolutionExplorer": false
 }
