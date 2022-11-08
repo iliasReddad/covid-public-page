@@ -1,50 +1,25 @@
+<  <section *ngIf="!contenu[0]"  class="header relative min-h-screen grid h-screen place-items-center" id="loader">
+  <app-loader></app-loader>
+  </section>
 <app-index-navbar ></app-index-navbar>
-
-<main>
+<main  *ngIf="contenu[0] ">
   <!--Welcome-->
-  <section class="header relative min-h-screen items-center flex" id="welcomepart">
+  <section  class="header relative min-h-screen items-center flex" id="welcomepart">
     <div class="container mx-auto items-center flex flex-wrap pt-8">
       <div class="w-full md:w-8/12 lg:w-6/12 xl:w-6/12 px-4">
         <div class="pt-32 sm:pt-0">
           <h2 class="font-bold text-5xl text-lightBlue-600 mt-16">
-            Welcome to e-covid19
+            {{contenu[0].titre }} 
           </h2>
           <p class="font-semibold text-xl mt-8 text-blueGray-600 ml-2">
-            A moroccan platform for covid19 management
+            {{contenu[0].sous_titre }}
           </p>
           <p class="mt-4 ml-2  text-lg leading-relaxed text-blueGray-500">
-            The e-covid19 platform is a moroccan platform for covid-19 management. It presents a decision-making assistance
-            tool based on AI aimed to provide real-time social media analysis, automated sentiment analysis and topic
-            modeling.
-          </p>
-          <button class="github-star ml-1 text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mt-6 mb-12 mr-1 mb-1 bg-lightBlue-600 active:bg-blueGray-600 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150" type="button" data-modal-toggle="videoModal">
-            View Video
-          </button>
-          <!-- Main modal -->
-          <div id="videoModal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full">
-            <div class="relative p-4 w-full max-w-2xl">
+            {{contenu[0].paragraphe }}
 
-              <!-- Modal content -->
-              <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
-                <!-- Modal header -->
-                <div class="flex justify-between items-start p-4 rounded-t border-b dark:border-gray-600">
-                  <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-                    e-covid19 Presentation
-                  </h3>
-                  <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-toggle="videoModal">
-                    <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                    <span class="sr-only">Close modal</span>
-                  </button>
-                </div>
-                <!-- Modal body -->
-                <div class="p-6 space-y-6">
-                  <video controls>
-                    <source src="./assets/videos/Clip.mp4" />
-                  </video>
-                </div>
-              </div>
-            </div>
-          </div>
+          </p>
+          <app-modal [content]="contenu[0].button "></app-modal>
+       
         </div>
       </div>
       <div class="w-full md:w-8/12 lg:w-6/12 xl:w-6/12 px-4">
@@ -181,12 +156,12 @@
             <div class="pt-6 text-center">
               <h5 class="text-xl font-bold">Visitor</h5>
               <div class="mt-6">
-                <button class="bg-lightBlue-600 text-white active:bg-blue-400 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 ease-linear transition-all duration-150" data-modal-toggle="visitorModal"
+                <button class="bg-lightBlue-600 text-white active:bg-blue-400 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 ease-linear transition-all duration-150" type="button" (click)="toggleModalVisitor()"
                         type="button">
                   Learn more
                 </button>
                 <!-- Main modal -->
-                <div id="visitorModal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full">
+                <div *ngIf="showModalVisitor" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full">
                   <div class="relative p-4 w-full max-w-2xl">
                     <!-- Modal content -->
                     <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
@@ -195,7 +170,7 @@
                         <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
                           Visitors can access and view
                         </h3>
-                        <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-toggle="visitorModal">
+                        <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white" (click)="toggleModalVisitor()">
                           <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
                           <span class="sr-only">Close modal</span>
                         </button>
@@ -212,6 +187,34 @@
                     </div>
                   </div>
                 </div>
+
+                <div *ngIf="showModalVisitor" class="overflow-x-hidden overflow-y-auto   fixed inset-0 z-50 outline-none focus:outline-none justify-center items-center flex">
+                  <div class="relative p-4 w-full max-w-2xl">
+                    <!-- Modal content -->
+                    <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                      <!-- Modal header -->
+                      <div class="flex justify-between items-start p-4 rounded-t border-b dark:border-gray-600">
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                          Visitors can access and view
+                        </h3>
+                        <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white" (click)="toggleModalVisitor()">
+                          <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                          <span class="sr-only">Close modal</span>
+                        </button>
+                      </div>
+                      <!-- Modal body -->
+                      <div class="p-6 space-y-6">
+                        <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400 text-left">
+                          - Public graphs and statistics such as percentages of comments by topic and emotion, as well as the most dominant topics and the collective emotional response.
+                        </p>
+                        <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400 text-left">
+                          - Contact administrators.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              
               </div>
             </div>
           </div>
@@ -225,12 +228,13 @@
             <div class="pt-6 text-center">
               <h5 class="text-xl font-bold">Data Reviewers</h5>
               <div class="mt-6">
-                <button class="bg-lightBlue-600 text-white active:bg-blue-400 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 ease-linear transition-all duration-150" data-modal-toggle="datarevModal"
-                        type="button">
+                <button class="bg-lightBlue-600 text-white active:bg-blue-400 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 ease-linear transition-all duration-150" 
+                        type="button"
+                        (click)="toggleModalData()">
                   Learn more
                 </button>
                 <!-- Main modal -->
-                <div id="datarevModal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full">
+                <div *ngIf="showModalData " class="overflow-x-hidden overflow-y-auto   fixed inset-0 z-50 outline-none focus:outline-none justify-center items-center flex">
                   <div class="relative p-4 w-full max-w-2xl">
                     <!-- Modal content -->
                     <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
@@ -239,7 +243,7 @@
                         <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
                           Data Reviewers can access and view
                         </h3>
-                        <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-toggle="datarevModal">
+                        <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"  (click)="toggleModalData()">
                           <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
                           <span class="sr-only">Close modal</span>
                         </button>
@@ -281,12 +285,13 @@
             <div class="pt-6 text-center">
               <h5 class="text-xl font-bold">Administrators</h5>
               <div class="mt-6">
-                <button class="bg-lightBlue-600 text-white active:bg-blue-400 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 ease-linear transition-all duration-150" data-modal-toggle="adminModal"
-                        type="button">
+                <button class="bg-lightBlue-600 text-white active:bg-blue-400 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 ease-linear transition-all duration-150" 
+                        type="button"
+                        (click)="toggleModalAdmin()">
                   Learn more
                 </button>
                 <!-- Main modal -->
-                <div id="adminModal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full">
+                <div *ngIf="showModalAdmin" class="overflow-x-hidden overflow-y-auto   fixed inset-0 z-50 outline-none focus:outline-none justify-center items-center flex">
                   <div class="relative p-4 w-full max-w-2xl">
                     <!-- Modal content -->
                     <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
@@ -295,7 +300,7 @@
                         <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
                           Administrators can access and view
                         </h3>
-                        <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-toggle="adminModal">
+                        <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"   (click)="toggleModalAdmin()" >
                           <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
                           <span class="sr-only">Close modal</span>
                         </button>
@@ -640,3 +645,4 @@
   </section>
 </main>
 <app-footer></app-footer>
+>

@@ -1,16 +1,17 @@
-import { Component, OnInit } from "@angular/core";
-import { AuthService } from "src/app/_services/auth.service";
+import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/_services/auth.service';
 
 @Component({
-  selector: "app-register",
-  templateUrl: "./register.component.html",
+  selector: 'app-create-account',
+  templateUrl: './create-account.component.html',
+  styleUrls: ['./create-account.component.css']
 })
-export class RegisterComponent implements OnInit {
+export class CreateAccountComponent implements OnInit {
   form: any = {
     username: null,
     email: null,
     password: null,
-    roles: null,
+    role: null,
   };
   isSuccessful = false;
   isSignUpFailed = false;
@@ -22,13 +23,14 @@ export class RegisterComponent implements OnInit {
   }
 
   onSubmit(): void {
-    const { username, email, password ,roles } = this.form;
+    const { username, email, password , role } = this.form;
 
-    this.authService.register(username, email, password,roles).subscribe({
+    this.authService.register(username, email, password,role).subscribe({
       next: data => {
         console.log(data);
         this.isSuccessful = true;
         this.isSignUpFailed = false;
+            setTimeout(function(){  window.location.reload() ; }, 3000);
       },
       error: err => {
         this.errorMessage = err.error.message;
