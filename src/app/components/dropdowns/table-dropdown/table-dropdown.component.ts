@@ -31,14 +31,14 @@ export class TableDropdownComponent implements AfterViewInit {
         this.isSuccessful = true;
         this.isDeleteFailed = false;
          setTimeout(function(){  window.location.reload() ; }, 1000);
-        this.callbackmethode(this.isDeleteFailed ? 'fail.' : 'success.' + this.errorMessage);
+        this.callbackmethode(this.isDeleteFailed ? 'fail.' + this.errorMessage : 'success.' + this.errorMessage);
 
       },
       error: err => {
         this.errorMessage = err.error.message;
         this.isDeleteFailed = true;
         //alert(this.errorMessage);
-        this.callbackmethode(this.isDeleteFailed ? 'fail.' : 'success.' + this.errorMessage);
+        this.callbackmethode(this.isDeleteFailed ? 'fail.' + this.errorMessage : 'success.' + this.errorMessage);
 
       }
     });

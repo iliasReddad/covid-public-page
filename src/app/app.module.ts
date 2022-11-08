@@ -46,8 +46,8 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from 'src/in-memory-data.service';
 import { LoaderComponent } from './views/loader/loader.component';
 import { environment } from 'src/environments/environment';
-import { CreateAccountComponent } from './components/create-account/create-account.component';
 import { ModalComponent } from './modal/modal.component';
+import { CreateAccModalComponent } from './create-acc-modal/create-acc-modal.component';
 
 @NgModule({
   declarations: [AppComponent,
@@ -87,8 +87,8 @@ import { ModalComponent } from './modal/modal.component';
     ProfileComponent,
     StatsComponent,
     LoaderComponent,
-    CreateAccountComponent,
-    ModalComponent
+    ModalComponent,
+    CreateAccModalComponent
     
   ],
   imports: [
