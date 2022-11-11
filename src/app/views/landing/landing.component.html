@@ -353,7 +353,7 @@
                 Analysed comments
               </h6>
               <h4  class="mt-4 text-xl font-semibold">
-                1{{AnalysedComments?.length}}
+                {{AnalysedComments?.length}}
               </h4>
               <p class="text-blueGray-500">
                 comment
@@ -372,7 +372,7 @@
                 Positive comments rate
               </h6>
               <h4 class="mt-4 text-xl font-semibold">
-                {{(AnalysedComments?.length/PostiveComment).toFixed(3)}}%
+                {{( (  PostiveComment* 100  )/AnalysedComments?.length).toFixed(3)}}%
               </h4>
               <p class="text-blueGray-500">
                 in {{AnalysedComments?.length}} comments

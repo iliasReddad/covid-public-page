@@ -1,6 +1,7 @@
 import { AuthService } from './../../_services/auth.service';
 import { Component, ElementRef, OnInit ,HostListener } from "@angular/core";
 import { ContenuServiceTsService } from "src/app/contenu.service.ts.service";
+import { single } from 'rxjs';
 
 @Component({
   selector: "app-landing",
@@ -16,6 +17,20 @@ export class LandingComponent implements OnInit {
   topic: string[] = [];
   StatsdominantTopic:number=0;
   dominantTopic!:string;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -57,7 +72,14 @@ export class LandingComponent implements OnInit {
       
       console.log("largest "+this.StatsdominantTopic + " "+this.dominantTopic);
 
-      
+     
+
+    
+
+    
+
+
+
 
     });
 
