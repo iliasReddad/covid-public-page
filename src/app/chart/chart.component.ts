@@ -63,6 +63,10 @@
 
         });
 
+        this.creeatechsart(0, this.labelss[0]);
+
+
+        
 
 
 

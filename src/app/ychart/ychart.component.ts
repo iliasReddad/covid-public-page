@@ -65,6 +65,9 @@ export class YchartComponent implements OnInit {
 
       });
 
+      this.creeatechsart(0, this.labelss[0]);
+
+
 
 
 
