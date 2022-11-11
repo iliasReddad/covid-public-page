@@ -14,7 +14,7 @@ export class ZchartComponent implements OnInit {
   constructor(private Service:AuthService ) { }
   public tachart: any;
   ngOnInit(): void {
-    this.Service.getCommentsBytopic().subscribe((response: any) => {
+    this.Service.getCommentsByEmotion().subscribe((response: any) => {
       response.forEach((element: string) => {
         this.comments.push(element.split(",")[0]);
         this.date.push(element.split(",")[1]);

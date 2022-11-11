@@ -40,6 +40,12 @@ export class AuthService {
   getEvolutionOfCommentsBytopic():Observable<any>{
     return this.http.get('http://localhost:8080/api/Data/EvolutionofcommentairesbyTopic')
   }
+  getCommentsByEmotion():Observable<any>{
+    return this.http.get('http://localhost:8080/api/Data/numberofcommentairesbyEmotion')
+  }
+  getEvolutionOfCommentsByEmotion():Observable<any>{
+    return this.http.get('http://localhost:8080/api/Data/EvolutionofcommentairesbyEmotion')
+  }
 
   login(username: string, password: string ): Observable<any> {
     return this.http.post(AUTH_API + 'signin', {

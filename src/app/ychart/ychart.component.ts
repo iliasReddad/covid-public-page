@@ -19,7 +19,7 @@ export class YchartComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.Service.getEvolutionOfCommentsBytopic().subscribe((response: any) => {
+    this.Service.getEvolutionOfCommentsByEmotion().subscribe((response: any) => {
       response.forEach((element: string) => {
         this.topic.push(element.split(",")[1]);
         this.date.push(element.split(",")[2].split(" ")[0]);
