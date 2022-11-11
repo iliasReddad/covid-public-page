@@ -1,12 +1,14 @@
-import { AuthService } from 'src/app/_services/auth.service';
 import { Component, OnInit } from '@angular/core';
 import { Chart } from 'chart.js';
+import { AuthService } from '../_services/auth.service';
+
 @Component({
-  selector: 'app-tachart',
-  templateUrl: './tachart.component.html',
-  styleUrls: ['./tachart.component.css']
+  selector: 'app-zchart',
+  templateUrl: './zchart.component.html',
+  styleUrls: ['./zchart.component.css']
 })
-export class TachartComponent implements OnInit {
+export class ZchartComponent implements OnInit {
+
   date: string[] = [];
   comments: string[] = [];
   constructor(private Service:AuthService ) { }
@@ -23,7 +25,7 @@ export class TachartComponent implements OnInit {
   }
   createTachart(date:string[],comments:string[]) {
 
-    this.tachart = new Chart("MyTachart", {
+    this.tachart = new Chart("MyZchart", {
       type: 'bar', //this denotes tha type of chart
 
       data: {// values on X-Axis
@@ -43,4 +45,5 @@ export class TachartComponent implements OnInit {
 
     });
   }
+
 }

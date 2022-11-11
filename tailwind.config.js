@@ -2,6 +2,7 @@ const plugin = require("tailwindcss/plugin");
 const colors = require("tailwindcss/colors");
 
 module.exports = {
+  
   purge: {
     enabled: true,
     content: [
@@ -17,6 +18,7 @@ module.exports = {
       safelist: [],
     },
   },
+  
   theme: {
     colors: {
       ...colors,
@@ -142,3 +144,4 @@ module.exports = {
     }),
   ],
 };
+

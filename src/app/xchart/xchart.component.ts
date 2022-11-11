@@ -1,15 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { Chart } from 'chart.js';
 import { AuthService } from '../_services/auth.service';
+
 @Component({
-  selector: 'app-sachart',
-  templateUrl: './sachart.component.html',
-  styleUrls: ['./sachart.component.css']
+  selector: 'app-xchart',
+  templateUrl: './xchart.component.html',
+  styleUrls: ['./xchart.component.css']
 })
-export class SachartComponent implements OnInit {
+export class XchartComponent implements OnInit {
 
   constructor(private Service: AuthService) { }
-  public sachart: any=null;
+  public xchart: any=null;
   date: string[] = [];
   comments: string[] = [];
 
@@ -31,10 +32,8 @@ export class SachartComponent implements OnInit {
   }
   
   createSachart(date:string[],comments:string[]) {
-    if(this.sachart!=null){
-      this.sachart.destroy(); 
-    }
-    this.sachart = new Chart("MySachart", {
+   
+    this.xchart = new Chart("MyXachart", {
       type: 'line', //this denotes tha type of chart
 
       data: {// values on X-Axis
@@ -55,4 +54,5 @@ export class SachartComponent implements OnInit {
     });
 
   }
+
 }
