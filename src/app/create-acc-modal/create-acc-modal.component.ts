@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from 'src/app/_services/auth.service';
+import { AuthService } from '../_services/auth.service';
 
 @Component({
-  selector: 'app-create-account',
-  templateUrl: './create-account.component.html',
-  styleUrls: ['./create-account.component.css']
+  selector: 'app-create-acc-modal',
+  templateUrl: './create-acc-modal.component.html',
+  styleUrls: ['./create-acc-modal.component.css']
 })
-export class CreateAccountComponent implements OnInit {
+export class CreateAccModalComponent implements OnInit {
+
   form: any = {
     username: null,
     email: null,
@@ -17,9 +18,14 @@ export class CreateAccountComponent implements OnInit {
   isSignUpFailed = false;
   errorMessage = '';
 
+  showModal = false;
+  
   constructor(private authService: AuthService) { }
 
   ngOnInit(): void {
+  }
+  toggleModal(){
+    this.showModal = !this.showModal;
   }
 
   onSubmit(): void {
@@ -39,3 +45,4 @@ export class CreateAccountComponent implements OnInit {
     });
   }
 }
+

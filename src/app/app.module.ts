@@ -40,14 +40,19 @@ import { NgChartsModule } from 'ng2-charts';
 import { SachartComponent } from './sachart/sachart.component';
 import { TachartComponent } from './tachart/tachart.component';
 import { DashboardComponent } from './views/admin/dashboard/dashboard.component';
-import { FormsModule }   from '@angular/forms';
+import {  FormsModule }   from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from 'src/in-memory-data.service';
 import { LoaderComponent } from './views/loader/loader.component';
 import { environment } from 'src/environments/environment';
-import { CreateAccountComponent } from './components/create-account/create-account.component';
 import { ModalComponent } from './modal/modal.component';
+import { CreateAccModalComponent } from './create-acc-modal/create-acc-modal.component';
+import { TestComponent } from './test/test.component';
+import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
+import { XchartComponent } from './xchart/xchart.component';
+import { YchartComponent } from './ychart/ychart.component';
+import { ZchartComponent } from './zchart/zchart.component';
 
 @NgModule({
   declarations: [AppComponent,
@@ -87,13 +92,18 @@ import { ModalComponent } from './modal/modal.component';
     ProfileComponent,
     StatsComponent,
     LoaderComponent,
-    CreateAccountComponent,
-    ModalComponent
+    ModalComponent,
+    CreateAccModalComponent,
+    TestComponent,
+    XchartComponent,
+    YchartComponent,
+    ZchartComponent
     
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    NgbModule,
     AppRoutingModule,
     HttpClientModule,
     //environment.production ?[] : HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, { dataEncapsulation : false } ),
