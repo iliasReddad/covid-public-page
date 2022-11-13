@@ -48,6 +48,7 @@ import { LoaderComponent } from './views/loader/loader.component';
 import { environment } from 'src/environments/environment';
 import { ModalComponent } from './modal/modal.component';
 import { CreateAccModalComponent } from './create-acc-modal/create-acc-modal.component';
+import { AdminHeaderComponent } from './components/headers/admin-header/admin-header.component';
 
 @NgModule({
   declarations: [AppComponent,
@@ -88,7 +89,8 @@ import { CreateAccModalComponent } from './create-acc-modal/create-acc-modal.com
     StatsComponent,
     LoaderComponent,
     ModalComponent,
-    CreateAccModalComponent
+    CreateAccModalComponent,
+    AdminHeaderComponent
     
   ],
   imports: [
