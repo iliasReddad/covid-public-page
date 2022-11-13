@@ -54,6 +54,7 @@ import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
 import { XchartComponent } from './xchart/xchart.component';
 import { YchartComponent } from './ychart/ychart.component';
 import { ZchartComponent } from './zchart/zchart.component';
+import { DataAnnotationComponent } from './data-annotation/data-annotation.component';
 
 @NgModule({
   declarations: [AppComponent,
@@ -99,7 +100,8 @@ import { ZchartComponent } from './zchart/zchart.component';
     TestComponent,
     XchartComponent,
     YchartComponent,
-    ZchartComponent
+    ZchartComponent,
+    DataAnnotationComponent
     
   ],
   imports: [
