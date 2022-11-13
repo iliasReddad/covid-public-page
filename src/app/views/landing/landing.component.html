@@ -352,8 +352,8 @@
               <h6 class="text-xl font-bold">
                 Analysed comments
               </h6>
-              <h4 class="mt-4 text-xl font-semibold">
-                13650
+              <h4  class="mt-4 text-xl font-semibold">
+                {{AnalysedComments?.length}}
               </h4>
               <p class="text-blueGray-500">
                 comment
@@ -372,10 +372,10 @@
                 Positive comments rate
               </h6>
               <h4 class="mt-4 text-xl font-semibold">
-                7%
+                {{( (  PostiveComment* 100  )/AnalysedComments?.length).toFixed(3)}}%
               </h4>
               <p class="text-blueGray-500">
-                in 13650 comments
+                in {{AnalysedComments?.length}} comments
               </p>
             </div>
           </div>
@@ -391,10 +391,10 @@
                 Most dominant topic
               </h6>
               <h4 class="mt-4 text-xl font-semibold">
-                Statistics
+                {{dominantTopic}}
               </h4>
               <p class="text-blueGray-500">
-                36%
+                {{StatsdominantTopic}}
               </p>
             </div>
           </div>
@@ -462,22 +462,22 @@
       <p class="text-lg font-light leading-relaxed mt-4 mb-4 text-blueGray-600">
       </p>
       <div class="block pb-6">
-        <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2">
+        <span class="text-xs font-semibold inline-block py-1 px-2  rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2">
           Data Annotation
         </span>
-        <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2">
+        <span class="text-xs font-semibold inline-block py-1 px-2  rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2">
           Data Automation
         </span>
-        <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2">
+        <span class="text-xs font-semibold inline-block py-1 px-2  rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2">
           Data Classification
         </span>
-        <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2">
+        <span class="text-xs font-semibold inline-block py-1 px-2  rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2">
           Artifical Intelligence
         </span>
-        <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2">
+        <span class="text-xs font-semibold inline-block py-1 px-2  rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2">
           Real Time Social Media Analysis
         </span>
-        <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2">
+        <span class="text-xs font-semibold inline-block py-1 px-2  rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2">
           Modeling
         </span>
       </div>
@@ -486,47 +486,34 @@
 
   <!--Charts-->
   <section class="bg-white -mt-24" id="chartspart">
-    <div class="container relative mx-auto mt-24">
-      <div class="items-center flex flex-wrap">
+    <div class="container  relative mx-auto mt-24">
+      <div class="items-center flex flex-wrap p-16">
         <div class="w-full ml-auto mr-auto text-center h-full">
-          <div class="container mx-auto px-4">
+          <div class="container w-max-75% mx-auto px-4">
             <h3 class="text-3xl mb-2 font-semibold leading-normal mt-20">
-              <div class="bg-lightBlue-600 text-white p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full">
+              <div class="bg-lightBlue-600 text-white p-3  text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full">
                 <i class="fa-solid fa-chart-line"></i>
               </div>
-              GRAPHS
+              Topics analysis
             </h3>
             <!--Graph-->
-            <div class="relative rounded-lg shadow shadow-2xl dark:bg-gray-700 mt-8">
+            <div class="relative rounded-lg  shadow-2xl dark:bg-gray-700  my-8 mt-8">
+              <app-test [data]="Topic"></app-test>
               <!--header -->
-              <div class="flex justify-between items-start p-4 rounded-t border-b dark:border-gray-600  bg-white">
-                <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-                  Sentiment Analysis
-                </h3>
-
-              </div>
-              <!--body -->
-              <div class="p-6 space-y-6">
-                <app-sachart></app-sachart>
-              </div>
             </div>
-
+          </div>
+          <div class="container w-max-75% mx-auto px-4">
+            <h3 class="text-3xl mb-2 font-semibold leading-normal mt-20">
+              <div class="bg-lightBlue-600 text-white p-3  text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full">
+                <i class="fa-solid fa-chart-line"></i>
+              </div>
+              Sentimental analysis
+            </h3>
             <!--Graph-->
-            <div class="relative rounded-lg shadow shadow-2xl dark:bg-gray-700 mt-8 mb-12">
+            <div class="relative rounded-lg  shadow-2xl dark:bg-gray-700  my-8 mt-8">
+              <app-test [data]="Sentimental"></app-test>
               <!--header -->
-              <div class="flex justify-between items-start p-4 rounded-t border-b dark:border-gray-600  bg-white">
-                <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-                  Topic Analysis
-                </h3>
-
-              </div>
-              <!--body -->
-              <div class="p-6 space-y-6">
-                <app-tachart></app-tachart>
-              </div>
             </div>
-
-           
           </div>
         </div>
       </div>

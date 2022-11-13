@@ -24,9 +24,15 @@ const routes: Routes = [
     path: "admin",
     component: AdminComponent,
     children: [
+<<<<<<< HEAD
       { path: "dashboard", component: DashboardComponent },
       { path: "USER_MANAGEMENT", component: SettingsComponent},
       { path: "tables", component: TablesComponent},
+=======
+      { path: "dashboard", component: DashboardComponent , canActivate:[AuthGuard]},
+      { path: "USER_MANAGEMENT", component: SettingsComponent , canActivate:[AuthGuard]},
+      { path: "tables", component: TablesComponent ,canActivate:[AuthGuard] },
+>>>>>>> 91c8442ee0fdbcaf7952568ca88a9210a4a65882
       { path: "maps", component: MapsComponent },
       { path: "", redirectTo: "dashboard", pathMatch: "full" },
     ],

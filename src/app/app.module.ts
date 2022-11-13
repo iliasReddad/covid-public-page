@@ -40,7 +40,7 @@ import { NgChartsModule } from 'ng2-charts';
 import { SachartComponent } from './sachart/sachart.component';
 import { TachartComponent } from './tachart/tachart.component';
 import { DashboardComponent } from './views/admin/dashboard/dashboard.component';
-import { FormsModule }   from '@angular/forms';
+import {  FormsModule }   from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from 'src/in-memory-data.service';
@@ -48,7 +48,15 @@ import { LoaderComponent } from './views/loader/loader.component';
 import { environment } from 'src/environments/environment';
 import { ModalComponent } from './modal/modal.component';
 import { CreateAccModalComponent } from './create-acc-modal/create-acc-modal.component';
+<<<<<<< HEAD
 import { AdminHeaderComponent } from './components/headers/admin-header/admin-header.component';
+=======
+import { TestComponent } from './test/test.component';
+import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
+import { XchartComponent } from './xchart/xchart.component';
+import { YchartComponent } from './ychart/ychart.component';
+import { ZchartComponent } from './zchart/zchart.component';
+>>>>>>> 91c8442ee0fdbcaf7952568ca88a9210a4a65882
 
 @NgModule({
   declarations: [AppComponent,
@@ -90,12 +98,20 @@ import { AdminHeaderComponent } from './components/headers/admin-header/admin-he
     LoaderComponent,
     ModalComponent,
     CreateAccModalComponent,
+<<<<<<< HEAD
     AdminHeaderComponent
+=======
+    TestComponent,
+    XchartComponent,
+    YchartComponent,
+    ZchartComponent
+>>>>>>> 91c8442ee0fdbcaf7952568ca88a9210a4a65882
     
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    NgbModule,
     AppRoutingModule,
     HttpClientModule,
     //environment.production ?[] : HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, { dataEncapsulation : false } ),
