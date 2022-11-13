@@ -8,6 +8,7 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 })
 export class DataAnnotationComponent implements OnInit {
   
+  illegibletoSubmit: boolean = false;
   ul:any[] = [];
   ul2:any[] = [];
 
@@ -15,6 +16,7 @@ export class DataAnnotationComponent implements OnInit {
   selectType($event : Event  /* cocher ou decocher */){
     const isChecked = ($event.target as HTMLInputElement).checked;
     isChecked ? this.ul.push(1) :  this.ul.pop();  
+    
     
   }
 
@@ -43,6 +45,12 @@ export class DataAnnotationComponent implements OnInit {
   }
   return false;
 }
+
+form: any = {
+  username: null,
+  password: null
+};
+
 
 
  @ViewChild('myDiv')
@@ -77,6 +85,8 @@ export class DataAnnotationComponent implements OnInit {
   constructor( private service: AuthService ) { }
 
   ngOnInit(): void {
+
+    
     this.service.getComments().subscribe((response:any)=>{
       this.list = response;
       this.comment=this.list[0];
@@ -91,6 +101,7 @@ export class DataAnnotationComponent implements OnInit {
   comment:string = " ";
    
   show(){
+    const { items, items2 } = this.form;
     this.reset();
     if(this.i < this.list.length){
     this.comment=this.list[this.i];
