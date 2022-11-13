@@ -48,11 +48,13 @@ import { LoaderComponent } from './views/loader/loader.component';
 import { environment } from 'src/environments/environment';
 import { ModalComponent } from './modal/modal.component';
 import { CreateAccModalComponent } from './create-acc-modal/create-acc-modal.component';
+import { AdminHeaderComponent } from './components/headers/admin-header/admin-header.component';
 import { TestComponent } from './test/test.component';
 import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
 import { XchartComponent } from './xchart/xchart.component';
 import { YchartComponent } from './ychart/ychart.component';
 import { ZchartComponent } from './zchart/zchart.component';
+import { DataAnnotationComponent } from './data-annotation/data-annotation.component';
 
 @NgModule({
   declarations: [AppComponent,
@@ -94,10 +96,12 @@ import { ZchartComponent } from './zchart/zchart.component';
     LoaderComponent,
     ModalComponent,
     CreateAccModalComponent,
+    AdminHeaderComponent,
     TestComponent,
     XchartComponent,
     YchartComponent,
-    ZchartComponent
+    ZchartComponent,
+    DataAnnotationComponent
     
   ],
   imports: [

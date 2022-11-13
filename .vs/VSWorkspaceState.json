@@ -3,9 +3,14 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\assets",
-    "\\src\\assets\\img"
+    "\\src\\app\\components",
+    "\\src\\app\\components\\headers",
+    "\\src\\app\\components\\headers\\admin-header",
+    "\\src\\app\\components\\headers\\header-stats",
+    "\\src\\app\\views",
+    "\\src\\app\\views\\admin",
+    "\\src\\app\\views\\admin\\dashboard"
   ],
-  "SelectedNode": "\\src\\assets\\img\\pattern_angular.png",
+  "SelectedNode": "\\src\\app\\views\\admin\\dashboard\\dashboard.component.html",
   "PreviewInSolutionExplorer": false
 }

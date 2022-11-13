@@ -33,7 +33,7 @@ export class YchartComponent implements OnInit {
 
       });
 
-      this.responseFiltré.forEach((element: any) => {
+     this.responseFiltré.forEach((element: any) => {
         element.forEach((element: string) => {
           this.responseFiltré2.push(element.split(",")[0]);
 
