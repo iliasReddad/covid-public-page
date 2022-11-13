@@ -1,7 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\src",
+    "\\src\\app",
+    "\\src\\assets",
+    "\\src\\assets\\img"
   ],
-  "SelectedNode": "\\C:\\Users\\mizel\\Source\\Repos\\covid-public-page",
+  "SelectedNode": "\\src\\assets\\img\\pattern_angular.png",
   "PreviewInSolutionExplorer": false
 }
