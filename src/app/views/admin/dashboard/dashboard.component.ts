@@ -1,3 +1,4 @@
+import { AuthService } from './../../../_services/auth.service';
 import { Component, OnInit } from "@angular/core";
 
 @Component({
@@ -5,7 +6,19 @@ import { Component, OnInit } from "@angular/core";
   templateUrl: "./dashboard.component.html",
 })
 export class DashboardComponent implements OnInit {
-  constructor() {}
+  constructor(private service : AuthService) {}
+  data: any[] = [];
+  allComments!: number;
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.service.getCommentsByEmotion().subscribe((response:any)=>{
+      this.data = response;
+      console.log(response);
+    });
+    this.service.getComments().subscribe((response:any)=>{
+      this.allComments = response.length;
+      console.log(response);
+    }
+    );
+  }
 }

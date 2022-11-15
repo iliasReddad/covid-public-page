@@ -1,3 +1,4 @@
+import { DataAnnotationComponent } from './data-annotation/data-annotation.component';
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 import { AuthGuard } from "./auth.guard";
@@ -43,8 +44,10 @@ const routes: Routes = [
   },
   // no layout views
   { path: "profile", component: ProfileComponent },
+  { path: "dataAnnotation", component: DataAnnotationComponent },
   { path: "", component: LandingComponent },
   { path: "**", redirectTo: "", pathMatch: "full" },
+
 ];
 
 @NgModule({
