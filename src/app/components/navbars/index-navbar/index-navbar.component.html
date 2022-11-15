@@ -1,5 +1,5 @@
 <nav
-  class="top-0 fixed z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg bg-white shadow"
+  class="top-0 fixed z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg bg-gray-100 shadow"
 >
   <div
     class="container px-4 mx-auto flex flex-wrap items-center justify-between"
@@ -23,46 +23,41 @@
     >
       <ul class="flex flex-col lg:flex-row list-none lg:ml-auto">
         <li class="flex items-center">
-          <app-index-dropdown class="block"></app-index-dropdown>
-        </li>
-        <li class="flex items-center">
-          <a
-            class="hover:text-blueGray-500 text-blueGray-700 px-3 py-2 flex items-center text-xs uppercase font-bold"
-            href="#welcomepart"
-          >
+          <a class="hover:text-blueGray-500 text-blueGray-700 px-3 py-2 flex items-center text-xs uppercase font-bold"
+             href="#welcomepart">
             Welcome
           </a>
         </li>
         <li class="flex items-center">
-          <a
-            class="hover:text-blueGray-500 text-blueGray-700 px-3 py-2 flex items-center text-xs uppercase font-bold"
-            href="#aboutpart"
-          >
+          <a class="hover:text-blueGray-500 text-blueGray-700 px-3 py-2 flex items-center text-xs uppercase font-bold"
+             href="#aboutpart">
             About
           </a>
         </li>
         <li class="flex items-center">
-          <a
-            class="hover:text-blueGray-500 text-blueGray-700 px-3 py-2 flex items-center text-xs uppercase font-bold"
-            href="#servicespart"
-          >
+          <a class="hover:text-blueGray-500 text-blueGray-700 px-3 py-2 flex items-center text-xs uppercase font-bold"
+             href="#servicespart">
             Services
           </a>
         </li>
         <li class="flex items-center">
-          <a
-            class="hover:text-blueGray-500 text-blueGray-700 px-3 py-2 flex items-center text-xs uppercase font-bold"
-            href="#chartspart"
-          >
+          <a class="hover:text-blueGray-500 text-blueGray-700 px-3 py-2 flex items-center text-xs uppercase font-bold"
+             href="#chartspart">
             Graphs
           </a>
         </li>
         <li class="flex items-center">
-          <a
-            class="hover:text-blueGray-500 text-blueGray-700 px-3 py-2 flex items-center text-xs uppercase font-bold"
-            href="#contactpart"
-          >
+          <a class="hover:text-blueGray-500 text-blueGray-700 px-3 py-2 flex items-center text-xs uppercase font-bold"
+             href="#contactpart">
             Contact us
+          </a>
+        </li>
+        <li class="flex items-center">
+          <a [routerLink]="['/admin/dashboard']"
+             class="hover:text-blueGray-500 text-blueGray-700 px-3 flex items-center text-xs uppercase font-bold">
+            <div class="bg-white text-center inline-flex items-center justify-center w-12 h-12 shadow-lg rounded-full">
+              <i class="fa-solid fa-lock text-xl"></i>
+            </div>
           </a>
         </li>
       </ul>
