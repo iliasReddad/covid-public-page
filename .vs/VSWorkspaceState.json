@@ -3,14 +3,9 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\components",
-    "\\src\\app\\components\\headers",
-    "\\src\\app\\components\\headers\\admin-header",
-    "\\src\\app\\components\\headers\\header-stats",
     "\\src\\app\\views",
-    "\\src\\app\\views\\admin",
-    "\\src\\app\\views\\admin\\dashboard"
+    "\\src\\app\\views\\landing"
   ],
-  "SelectedNode": "\\src\\app\\views\\admin\\dashboard\\dashboard.component.html",
+  "SelectedNode": "\\src\\app\\views\\landing\\landing.component.html",
   "PreviewInSolutionExplorer": false
 }
