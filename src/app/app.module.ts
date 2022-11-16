@@ -9,8 +9,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CardPageVisitsComponent } from './components/cards/card-page-visits/card-page-visits.component';
-import { CardProfileComponent } from './components/cards/card-profile/card-profile.component';
-import { CardSettingsComponent } from './components/cards/card-settings/card-settings.component';
+import { CardSettingsComponent } from './components/cards/card-settings(create account )/card-settings.component';
 import { CardSocialTrafficComponent } from './components/cards/card-social-traffic/card-social-traffic.component';
 import { CardStatsComponent } from './components/cards/card-stats/card-stats.component';
 import { CardTableComponent } from './components/cards/card-table/card-table.component';
@@ -47,7 +46,6 @@ import { InMemoryDataService } from 'src/in-memory-data.service';
 import { LoaderComponent } from './views/loader/loader.component';
 import { environment } from 'src/environments/environment';
 import { ModalComponent } from './modal/modal.component';
-import { CreateAccModalComponent } from './create-acc-modal/create-acc-modal.component';
 import { AdminHeaderComponent } from './components/headers/admin-header/admin-header.component';
 import { TestComponent } from './test/test.component';
 import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
@@ -72,7 +70,6 @@ import { DataAnnotationComponent } from './data-annotation/data-annotation.compo
     FooterSmallComponent,
     FooterAdminComponent,
     CardPageVisitsComponent,
-    CardProfileComponent,
     CardSettingsComponent,
     CardSocialTrafficComponent,
     CardStatsComponent,
@@ -95,7 +92,6 @@ import { DataAnnotationComponent } from './data-annotation/data-annotation.compo
     StatsComponent,
     LoaderComponent,
     ModalComponent,
-    CreateAccModalComponent,
     AdminHeaderComponent,
     TestComponent,
     XchartComponent,

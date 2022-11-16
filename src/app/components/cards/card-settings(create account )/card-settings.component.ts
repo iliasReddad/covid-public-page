@@ -1,13 +1,13 @@
-import { Component, OnInit } from '@angular/core';
-import { AuthService } from '../_services/auth.service';
+import { Component, OnInit } from "@angular/core";
+import { AuthService } from "src/app/_services/auth.service";
+import { TokenStorageService } from "src/app/_services/token-storage.service";
 
 @Component({
-  selector: 'app-create-acc-modal',
-  templateUrl: './create-acc-modal.component.html',
-  styleUrls: ['./create-acc-modal.component.css']
+  selector: "app-card-settings",
+  templateUrl: "./card-settings.component.html",
 })
-export class CreateAccModalComponent implements OnInit {
-
+export class CardSettingsComponent implements OnInit  {
+ 
   form: any = {
     username: null,
     email: null,
@@ -44,5 +44,5 @@ export class CreateAccModalComponent implements OnInit {
       }
     });
   }
+  
 }
-

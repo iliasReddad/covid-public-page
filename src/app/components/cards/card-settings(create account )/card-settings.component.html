@@ -1,0 +1,106 @@
+
+
+
+<div  class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-blueGray-100 border-0">
+  
+  <div class="rounded-t bg-white mb-0 px-6 py-6">
+    <div class="text-center flex justify-between">
+      <h6 class="text-blueGray-700 text-xl font-bold">CREATE ACCOUNT</h6>
+   
+
+
+     
+    </div>
+  </div>
+
+  <div class="p-6 space-y-6">
+
+  <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+    <div class="form-group">
+      <label class="block uppercase mt-4 text-blueGray-600 text-xs font-bold mb-2" for="username">Username</label>
+      <input type="text"
+        class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+        name="username" [(ngModel)]="form.username" required minlength="3" maxlength="20" #username="ngModel" />
+      <div class="alert-danger alert-danger block uppercase mt-2 text-blueGray-600 text-xs font-bold mb-2 "
+        *ngIf="username.errors && f.submitted">
+        <div *ngIf="username.errors['required']">Username is required</div>
+        <div class="text-red-600 " *ngIf="username.errors['minlength']">
+          Username must be at least 3 characters
+        </div>
+        <div class="text-red-600 " *ngIf="username.errors['maxlength']">
+          Username must be at most 20 characters
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="block uppercase mt-4 text-blueGray-600 text-xs font-bold mb-2" for="email">Email</label>
+      <input type="email"
+        class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+        name="email" [(ngModel)]="form.email" required email #email="ngModel" />
+      <div class="alert-danger alert-danger block uppercase mt-2 text-blueGray-600 text-xs font-bold mb-2 "
+        *ngIf="email.errors && f.submitted">
+        <div class="text-red-600 " *ngIf="email.errors['required']">Email is required</div>
+        <div class="text-red-600 " *ngIf="email.errors['email']">
+          Email must be a valid email address
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="block uppercase mt-4 text-blueGray-600 text-xs font-bold mb-2" for="password">Password</label>
+      <input type="password"
+        class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+        name="password" [(ngModel)]="form.password" required minlength="6" #password="ngModel" />
+      <div class="alert-danger block uppercase mt-2 text-blueGray-600 text-xs font-bold mb-2"
+        *ngIf="password.errors && f.submitted">
+        <div class="text-red-600 " *ngIf="password.errors['required']">Password is required</div>
+        <div class="text-red-600 " *ngIf="password.errors['minlength']">
+          Password must be at least 6 characters
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="role" class="block uppercase mt-4 text-blueGray-600 text-xs font-bold mb-2">Select a Role </label>
+          <select id="role" [(ngModel)]="form.role" required role #role="ngModel" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+            <option selected value="user">USER</option>
+            <option value="mod">MODERATOR</option>
+            <option value="admin">ADMIN</option>
+            
+</select>
+
+    </div>
+
+    <div class="form-group">
+
+      <label class="block uppercase mt-4 text-blueGray-600 text-xs font-bold mb-2" for="file_input">Upload
+        Image</label>
+      <input
+        class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+        aria-describedby="file_input_help" id="file_input" type="file">
+      <p class="mt-1 text-sm text-gray-500 dark:text-gray-300" id="file_input_help">SVG, PNG, JPG or GIF (MAX.
+        800x400px).</p>
+
+    </div>
+
+    <div *ngIf="!isSuccessful" class="form-group">
+      <button
+        class="bg-transparent w-full mt-4 items-center hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+        SignUp </button>
+    </div>
+    <div class="alert alert-warning" *ngIf="f.submitted && isSignUpFailed">
+      <div class="p-4 mb-4 text-sm text-red-700 bg-red-100 rounded-lg dark:bg-red-200 dark:text-red-800"
+        role="alert">
+        <span class="font-medium"> Signup failed!!</span> {{ errorMessage }}
+      </div>
+
+    </div>
+    <div class="alert  mt-4 alert-success" *ngIf="isSuccessful">
+      <div class="p-4 mt-4 mb-4 text-sm text-green-700 bg-green-100 rounded-lg dark:bg-green-200 dark:text-green-800"
+        role="alert">
+        <span class="font-medium">Success alert!</span> Youre registration is sucsseful
+      </div>
+    </div>
+  </form>
+  </div>
+  
+
+</div>
