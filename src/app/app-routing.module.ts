@@ -18,6 +18,7 @@ import { RegisterComponent } from "./views/auth/register/register.component";
 import { IndexComponent } from "./views/index/index.component";
 import { LandingComponent } from "./views/landing/landing.component";
 import { ProfileComponent } from "./views/profile/profile.component";
+import { SentTablesComponentComponent } from './views/sent-tables-component/sent-tables-component.component';
 
 const routes: Routes = [
  
@@ -28,6 +29,9 @@ const routes: Routes = [
       { path: "dashboard", component: DashboardComponent , canActivate:[AuthGuard]},
       { path: "USER_MANAGEMENT", component: SettingsComponent, canActivate:[AuthGuard]},
       { path: "tables", component: TablesComponent, canActivate:[AuthGuard]},
+      { path: "Sentimentstables", component: SentTablesComponentComponent, canActivate:[AuthGuard]},
+
+      
       { path: "maps", component: MapsComponent , canActivate:[AuthGuard]},
       { path: "", redirectTo: "dashboard", pathMatch: "full" },
     ],

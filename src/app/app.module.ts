@@ -54,6 +54,8 @@ import { YchartComponent } from './ychart/ychart.component';
 import { ZchartComponent } from './zchart/zchart.component';
 import { DataAnnotationComponent } from './data-annotation/data-annotation.component';
 import { DataTablesModule } from "angular-datatables";
+import { SentTablesComponentComponent } from './views/sent-tables-component/sent-tables-component.component';
+import { CartTableSentimentsComponent } from './components/cards/cart-table-sentiments/cart-table-sentiments.component';
 
 @NgModule({
   declarations: [AppComponent,
@@ -98,7 +100,9 @@ import { DataTablesModule } from "angular-datatables";
     XchartComponent,
     YchartComponent,
     ZchartComponent,
-    DataAnnotationComponent
+    DataAnnotationComponent,
+    SentTablesComponentComponent,
+    CartTableSentimentsComponent
     
   ],
   imports: [

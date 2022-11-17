@@ -1,0 +1,102 @@
+<div style="height: 73vh ;" class="relative overflow-x-auto flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded"
+  [ngClass]="color === 'light' ? 'bg-white' : 'bg-red-900 text-white'">
+  <div  class="rounded-t   w-fit  mb-0 px-4 py-3 border-0">
+    <div class="flex flex-wrap items-center justify-center">
+      <div class="relative px-4 max-w-full flex flex-grow flex-row justify-between  items-center">
+        <h3 class="font-semibold text-lg p-4 mb-4" [ngClass]="color === 'light' ? 'text-blueGray-700' : 'text-white'">
+          Comments  By Emotions 
+        </h3>
+        
+        
+      
+      
+    </div>
+  </div>
+  
+    <!-- Projects table -->
+    <table   datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="items-center table-fixed   bg-transparent border-collapse">
+      <thead>
+        <tr>
+          <th
+            class="px-6 align-middle  border border-solid py-3 text-xs uppercase border-l-0 border-r-0  font-semibold text-left"
+            [ngClass]="
+              color === 'light'
+                ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
+                : 'bg-red-800 text-red-300 border-red-700'
+            ">
+            Date
+          </th>
+          <th
+            class="px-6 align-middle  border border-solid py-3 text-xs uppercase border-l-0 border-r-0  font-semibold text-left"
+            [ngClass]="
+              color === 'light'
+                ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
+                : 'bg-red-800 text-red-300 border-red-700'
+            ">
+            Commentaire
+          </th>
+          <th
+            class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0  font-semibold text-left"
+            [ngClass]="
+              color === 'light'
+                ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
+                : 'bg-red-800 text-red-300 border-red-700'
+            ">
+            Source
+          </th>
+
+          <th
+            class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0  font-semibold text-left"
+            [ngClass]="
+              color === 'light'
+                ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
+                : 'bg-red-800 text-red-300 border-red-700'
+            ">
+            Emotion
+          </th>
+          
+         
+        </tr>
+      </thead>
+      <tbody id="excel-table" >
+        <tr *ngFor="let user of Comments" class="border-b">
+          <th
+            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs p-4 text-left flex items-center">
+            
+            <span class="ml-3 font-bold" [ngClass]="color === 'light' ? 'text-blueGray-600' : 'text-white'">
+              {{ user.date.split('T')[0] }}
+            </span>
+          </th>
+         
+
+          <td  class="border-t-0 break-word  px-6 align-middle  border-l-0 border-r-0 text-xs  p-4">
+        {{ user.commentaire  }}
+                      
+          </td>
+          <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs  p-4">
+                       {{ user.source | uppercase }}
+
+          </td>
+
+          <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs  p-4">
+            <div class="flex items-center">
+              <span class="mr-2">{{user.emotion | uppercase}}</span>
+
+            </div>
+          </td>
+         
+          
+        </tr>
+        
+
+      </tbody>
+    </table>
+   
+
+
+    
+  
+
+  </div>
+
+</div>
