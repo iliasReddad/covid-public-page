@@ -53,6 +53,7 @@ import { XchartComponent } from './xchart/xchart.component';
 import { YchartComponent } from './ychart/ychart.component';
 import { ZchartComponent } from './zchart/zchart.component';
 import { DataAnnotationComponent } from './data-annotation/data-annotation.component';
+import { DataTablesModule } from "angular-datatables";
 
 @NgModule({
   declarations: [AppComponent,
@@ -106,6 +107,7 @@ import { DataAnnotationComponent } from './data-annotation/data-annotation.compo
     NgbModule,
     AppRoutingModule,
     HttpClientModule,
+    DataTablesModule,
     //environment.production ?[] : HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, { dataEncapsulation : false } ),
     NgChartsModule
   ],
