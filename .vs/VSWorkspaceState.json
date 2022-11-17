@@ -4,8 +4,9 @@
     "\\src",
     "\\src\\app",
     "\\src\\app\\views",
-    "\\src\\app\\views\\landing"
+    "\\src\\app\\views\\admin",
+    "\\src\\app\\views\\admin\\data"
   ],
-  "SelectedNode": "\\src\\app\\views\\landing\\landing.component.html",
+  "SelectedNode": "\\src\\app\\views\\admin",
   "PreviewInSolutionExplorer": false
 }
