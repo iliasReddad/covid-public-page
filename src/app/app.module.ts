@@ -12,7 +12,7 @@ import { CardPageVisitsComponent } from './components/cards/card-page-visits/car
 import { CardSettingsComponent } from './components/cards/card-settings(create account )/card-settings.component';
 import { CardSocialTrafficComponent } from './components/cards/card-social-traffic/card-social-traffic.component';
 import { CardStatsComponent } from './components/cards/card-stats/card-stats.component';
-import { CardTableComponent } from './components/cards/card-table/card-table.component';
+import { CardTableComponent } from './components/cards/card-table(USER TABLE)/card-table.component';
 import { IndexDropdownComponent } from './components/dropdowns/index-dropdown/index-dropdown.component';
 import { NotificationDropdownComponent } from './components/dropdowns/notification-dropdown/notification-dropdown.component';
 import { PagesDropdownComponent } from './components/dropdowns/pages-dropdown/pages-dropdown.component';
@@ -53,6 +53,9 @@ import { XchartComponent } from './xchart/xchart.component';
 import { YchartComponent } from './ychart/ychart.component';
 import { ZchartComponent } from './zchart/zchart.component';
 import { DataAnnotationComponent } from './data-annotation/data-annotation.component';
+import { DataTablesModule } from "angular-datatables";
+import { SentTablesComponentComponent } from './views/sent-tables-component/sent-tables-component.component';
+import { CartTableSentimentsComponent } from './components/cards/cart-table-sentiments/cart-table-sentiments.component';
 
 @NgModule({
   declarations: [AppComponent,
@@ -97,7 +100,9 @@ import { DataAnnotationComponent } from './data-annotation/data-annotation.compo
     XchartComponent,
     YchartComponent,
     ZchartComponent,
-    DataAnnotationComponent
+    DataAnnotationComponent,
+    SentTablesComponentComponent,
+    CartTableSentimentsComponent
     
   ],
   imports: [
@@ -106,6 +111,7 @@ import { DataAnnotationComponent } from './data-annotation/data-annotation.compo
     NgbModule,
     AppRoutingModule,
     HttpClientModule,
+    DataTablesModule,
     //environment.production ?[] : HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, { dataEncapsulation : false } ),
     NgChartsModule
   ],
