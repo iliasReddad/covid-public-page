@@ -54,7 +54,7 @@ export class CardTableComponent implements OnInit {
     
     this.dtOptions = {
       pagingType: 'full_numbers',
-      pageLength: 2,
+      pageLength: 5,
       dom: 'Bfrtip',
 
     };
@@ -76,6 +76,10 @@ export class CardTableComponent implements OnInit {
   isSuccessful = false;
   isDeleteFailed = false;
   errorMessage = ''
+  isChangeFailed = false;
+  isChangeSuccessful = false;
+  errorMessage2 = ''
+
   
   
   delete(user:User):void{
@@ -103,6 +107,41 @@ export class CardTableComponent implements OnInit {
         setTimeout(() => {
           this.isDeleteFailed=false;
           this.errorMessage = "";
+        }, 2500);        //alert(this.errorMessage);
+
+      }
+    });
+  }
+
+  changeStatue(user:User):void{
+    this.service.changeStatues(user?.username).subscribe({
+      next: data => {
+        console.log(data.message);
+        this.isChangeSuccessful = true;
+        this.isChangeFailed = false;
+
+       //timeOut to Hide the alert
+        setTimeout(() => {
+          this.isChangeSuccessful=false;
+        }, 1000);
+
+        setTimeout(() => {
+          this.service.getAllUser().subscribe((response:any)=>{
+            this.users = response;
+          });
+        }, 1000);
+
+        
+      },
+      
+      error: err => {
+        this.errorMessage2 = err.error.message;
+        this.isChangeFailed = true;
+
+        //timeOut to Hide the alert
+        setTimeout(() => {
+          this.isChangeFailed=false;
+          this.errorMessage2 = "";
         }, 2500);        //alert(this.errorMessage);
 
       }

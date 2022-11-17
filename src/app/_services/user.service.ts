@@ -22,5 +22,9 @@ export class UserService {
     return this.http.delete(API_URL + `delete/${Username}`);
     }
 
+    changeStatues(Username: string): Observable<any> {
+      return this.http.get(API_URL + `change/${Username}`);
+      }
+
   
 }
