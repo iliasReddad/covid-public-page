@@ -1,42 +1,29 @@
-import { AuthService } from 'src/app/_services/auth.service';
 import { Component, OnInit } from "@angular/core";
-import { ContenuServiceTsService } from "src/app/contenu.service.ts.service";
+import { Router } from '@angular/router';
 
 @Component({
   selector: "app-header-stats",
   templateUrl: "./header-stats.component.html",
 })
 export class HeaderStatsComponent implements OnInit {
-  
-  data!:any[] ; //All Data from BackEnd
-  comment!:any[];; //All Comments from BackEnd
-  length! : number;
-  commentPositive!:any[];
-  dataModified!:any[]; //All Comments from BackEnd
+    href: string = "";
 
-
-  constructor(private service:AuthService) { 
+  constructor(private router: Router) { 
  
   }
 
   ngOnInit(): void {
 
-    this.service.getBackEndData().subscribe((response:any)=>{
-      this.data = response;
+    this.href = this.geturl();
 
-    });
-
-    this.service.getComments().subscribe((response:any)=>{
-      this.comment = response;
-    });
-
-    this.service.getCommentsPositives().subscribe((response:any)=>{
-      this.commentPositive = response;
-    });
 
 
   }
- 
+
   
+ 
+  geturl(){
+    return this.router.url;
+  }
 
 }

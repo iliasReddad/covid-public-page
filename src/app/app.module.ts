@@ -56,6 +56,7 @@ import { DataAnnotationComponent } from './data-annotation/data-annotation.compo
 import { DataTablesModule } from "angular-datatables";
 import { SentTablesComponentComponent } from './views/sent-tables-component/sent-tables-component.component';
 import { CartTableSentimentsComponent } from './components/cards/cart-table-sentiments/cart-table-sentiments.component';
+import { CardTypeColorPipe } from './components/cards/cart-table-sentiments/card-type-color.pipe';
 
 @NgModule({
   declarations: [AppComponent,
@@ -102,7 +103,8 @@ import { CartTableSentimentsComponent } from './components/cards/cart-table-sent
     ZchartComponent,
     DataAnnotationComponent,
     SentTablesComponentComponent,
-    CartTableSentimentsComponent
+    CartTableSentimentsComponent,
+    CardTypeColorPipe
     
   ],
   imports: [
@@ -113,7 +115,8 @@ import { CartTableSentimentsComponent } from './components/cards/cart-table-sent
     HttpClientModule,
     DataTablesModule,
     //environment.production ?[] : HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, { dataEncapsulation : false } ),
-    NgChartsModule
+    NgChartsModule,
+    
   ],
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent]
