@@ -1,3 +1,4 @@
+import { AuthService } from './../../_services/auth.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SentimentalStatsComponent implements OnInit {
 
-  constructor() { }
+  data: any[] = [];
+  Comments: any;
+  constructor(private service:AuthService) { }
 
   ngOnInit(): void {
+    this.service.getBackEndData().subscribe((response:any)=>{
+      this.Comments = response;
+    });
+
+
+    this.service.getCommentsByEmotion().subscribe((response:any)=>{
+      this.data = response;
+    
+    });
   }
+
 
 }

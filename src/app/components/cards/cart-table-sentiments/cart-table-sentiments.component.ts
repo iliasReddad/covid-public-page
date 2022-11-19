@@ -53,14 +53,27 @@ export class CartTableSentimentsComponent implements OnInit {
   allComments!: number;
 
 
-  constructor(private service: AuthService) {}
+  constructor(private service: AuthService) {
+        
+
+  }
+
+
+
+  
+
 
   ngOnInit(): void {
     
     this.service.getCommentsByEmotion().subscribe((response:any)=>{
       this.data = response;
-      console.log(response);
+      let myMap = new Map(Object.entries(this.data));
+
+
+      
+      console.log(myMap);
     });
+
 
     this.cardsPerPage = this.getCardsPerPage();
     this.initializeSlider();
@@ -89,6 +102,9 @@ export class CartTableSentimentsComponent implements OnInit {
     // Do not forget to unsubscribe the event
     this.dtTrigger.unsubscribe();
   }
+
+
+  
 
   
  initializeSlider() {

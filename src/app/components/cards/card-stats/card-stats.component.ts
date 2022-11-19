@@ -15,10 +15,10 @@ export class CardStatsComponent implements OnInit {
   private _statSubtitle = "Traffic";
 
   @Input()
-  get statTitle(): string {
+  get statTitle(): any {
     return this._statTitle;
   }
-  set statTitle(statTitle: string) {
+  set statTitle(statTitle: any) {
     this._statTitle = statTitle === undefined ? "350,897" : statTitle;
   }
   private _statTitle = "350,897";
