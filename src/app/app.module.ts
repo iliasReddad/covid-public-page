@@ -57,6 +57,7 @@ import { DataTablesModule } from "angular-datatables";
 import { SentTablesComponentComponent } from './views/sent-tables-component/sent-tables-component.component';
 import { CartTableSentimentsComponent } from './components/cards/cart-table-sentiments/cart-table-sentiments.component';
 import { CardTypeColorPipe } from './components/cards/cart-table-sentiments/card-type-color.pipe';
+import { SentimentalStatsComponent } from './views/sentimental-stats/sentimental-stats.component';
 
 @NgModule({
   declarations: [AppComponent,
@@ -104,7 +105,8 @@ import { CardTypeColorPipe } from './components/cards/cart-table-sentiments/card
     DataAnnotationComponent,
     SentTablesComponentComponent,
     CartTableSentimentsComponent,
-    CardTypeColorPipe
+    CardTypeColorPipe,
+    SentimentalStatsComponent
     
   ],
   imports: [
