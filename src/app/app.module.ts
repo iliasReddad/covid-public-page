@@ -5,7 +5,6 @@ import { MapsComponent } from './views/admin/maps/maps.component';
 import { AdminComponent } from './layouts/auth/admin/admin.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CardPageVisitsComponent } from './components/cards/card-page-visits/card-page-visits.component';
@@ -56,6 +55,7 @@ import { DataAnnotationComponent } from './data-annotation/data-annotation.compo
 import { DataTablesModule } from "angular-datatables";
 import { SentTablesComponentComponent } from './views/sent-tables-component/sent-tables-component.component';
 import { CartTableSentimentsComponent } from './components/cards/cart-table-sentiments/cart-table-sentiments.component';
+import { CardSentimentComponent } from './components/cards/card-sentiment/card-sentiment.component';
 
 @NgModule({
   declarations: [AppComponent,
@@ -102,7 +102,8 @@ import { CartTableSentimentsComponent } from './components/cards/cart-table-sent
     ZchartComponent,
     DataAnnotationComponent,
     SentTablesComponentComponent,
-    CartTableSentimentsComponent
+    CartTableSentimentsComponent,
+    CardSentimentComponent
     
   ],
   imports: [
