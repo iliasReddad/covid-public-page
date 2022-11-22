@@ -1,3 +1,4 @@
+import { SentimentalStatsComponent } from './views/sentimental-stats/sentimental-stats.component';
 import { DataAnnotationComponent } from './data-annotation/data-annotation.component';
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
@@ -26,10 +27,11 @@ const routes: Routes = [
     path: "admin",
     component: AdminComponent,
     children: [
-      { path: "dashboard", component: DashboardComponent },
-      { path: "USER_MANAGEMENT", component: SettingsComponent},
-      { path: "tables", component: TablesComponent},
-      { path: "Sentimentstables", component: SentTablesComponentComponent},
+      { path: "dashboard", component: DashboardComponent , canActivate:[AuthGuard]},
+      { path: "USER_MANAGEMENT", component: SettingsComponent, canActivate:[AuthGuard]},
+      { path: "tables", component: TablesComponent, canActivate:[AuthGuard]},
+      { path: "Sentimentstables", component: SentTablesComponentComponent, canActivate:[AuthGuard]},
+      { path: "SentimentstStates", component: SentimentalStatsComponent, canActivate:[AuthGuard]},
 
       
       { path: "maps", component: MapsComponent , canActivate:[AuthGuard]},

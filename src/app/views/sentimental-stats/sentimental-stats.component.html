@@ -1,0 +1,22 @@
+<div style="height:83vh ;" class="relative  md:pt-16 pb-16">
+  
+    <div>
+      <!-- Card stats -->
+      <div class="flex flex-wrap" >
+        <div *ngFor="let element of data"   class="w-full lg:w-6/12 xl:w-3/12 px-4">
+  
+          <app-card-stats
+            statSubtitle="{{  (element.split(',')[1] ) }}"
+                          statTitle="{{  (((element.split(',')[0] ) * 100 ) / Comments.length ).toFixed(0)}}%"
+                          statArrow="up"
+                          statPercent=""
+                          statPercentColor="text-emerald-500"
+                          statDescripiron="Since last month"
+                          statIconName="far fa-comment"
+                          statIconColor="bg-blue-900"></app-card-stats>
+        </div>
+       
+      </div>
+    </div>
+    
+  </div>

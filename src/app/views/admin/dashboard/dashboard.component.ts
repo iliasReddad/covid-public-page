@@ -1,12 +1,13 @@
 import { AuthService } from './../../../_services/auth.service';
 import { Component, OnInit } from "@angular/core";
+import { Router } from '@angular/router';
 
 @Component({
   selector: "app-dashboard",
   templateUrl: "./dashboard.component.html",
 })
 export class DashboardComponent implements OnInit {
-  constructor(private service : AuthService) {}
+  constructor(private service : AuthService , router:Router) {}
   data: any[] = [];
   allComments!: number;
 
@@ -21,4 +22,6 @@ export class DashboardComponent implements OnInit {
     }
     );
   }
+
+  
 }

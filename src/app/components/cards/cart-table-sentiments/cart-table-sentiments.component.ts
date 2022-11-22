@@ -1,5 +1,5 @@
 import { AuthService } from 'src/app/_services/auth.service';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, ElementRef, HostListener, Input, OnInit, ViewChild } from '@angular/core';
 import { Subject } from 'rxjs';
 
 @Component({
@@ -8,6 +8,28 @@ import { Subject } from 'rxjs';
   styleUrls: ['./cart-table-sentiments.component.css']
 })
 export class CartTableSentimentsComponent implements OnInit {
+  totalCards: number  = 6;
+  currentPage: number = 1;
+  pagePosition: string = "0%";
+  cardsPerPage!: number ;
+  totalPages!: number;
+  overflowWidth!: string;
+  cardWidth!: string;
+  containerWidth!: number;
+  @ViewChild("container", { static: true, read: ElementRef })
+  container!: ElementRef;
+  @HostListener("window:resize") windowResize() {
+    let newCardsPerPage = this.getCardsPerPage();
+    if (newCardsPerPage != this.cardsPerPage) {
+      this.cardsPerPage = newCardsPerPage;
+      this.initializeSlider();
+      if (this.currentPage > this.totalPages) {
+        this.currentPage = this.totalPages;
+        this.populatePagePosition();
+      }
+    }
+  }
+  
 
   @Input()
   get color(): string {
@@ -27,11 +49,35 @@ export class CartTableSentimentsComponent implements OnInit {
   dtTrigger: Subject<any> = new Subject<any>();
   
   Comments: any;
+  data: any[] = [];
+  allComments!: number;
 
-  constructor(private service: AuthService) {}
+
+  constructor(private service: AuthService) {
+        
+
+  }
+
+
+
+  
+
 
   ngOnInit(): void {
     
+    this.service.getCommentsByEmotion().subscribe((response:any)=>{
+      this.data = response;
+      let myMap = new Map(Object.entries(this.data));
+
+
+      
+      console.log(myMap);
+    });
+
+
+    this.cardsPerPage = this.getCardsPerPage();
+    this.initializeSlider();
+
     this.dtOptions = {
       pagingType: 'full_numbers',
       pageLength: 5,
@@ -42,11 +88,13 @@ export class CartTableSentimentsComponent implements OnInit {
     this.service.getBackEndData().subscribe((response:any)=>{
       this.Comments = response;
       this.dtTrigger.next(void 0);
+      this.allComments=this.Comments.length;
     });
 
-    
 
-  
+ 
+
+
 
 
   }
@@ -55,5 +103,30 @@ export class CartTableSentimentsComponent implements OnInit {
     this.dtTrigger.unsubscribe();
   }
 
+
+  
+
+  
+ initializeSlider() {
+    this.totalPages = Math.ceil(this.totalCards / this.cardsPerPage);
+    this.overflowWidth = `calc(${this.totalPages * 100}% + ${this.totalPages *
+      10}px)`;
+    this.cardWidth = `calc((${100 / this.totalPages}% - ${this.cardsPerPage *
+      10}px) / ${this.cardsPerPage})`;
+  }
+
+  getCardsPerPage() {
+    return Math.floor(this.container.nativeElement.offsetWidth / 300);
+  }
+
+  changePage(incrementor: number) {
+    this.currentPage += incrementor;
+    this.populatePagePosition();
+  }
+
+  populatePagePosition() {
+    this.pagePosition = `calc(${-100 * (this.currentPage - 1)}% - ${10 *
+      (this.currentPage - 1)}px)`;
+  }
 
 }
