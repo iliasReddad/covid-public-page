@@ -3,14 +3,9 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\components",
-    "\\src\\app\\components\\cards",
-    "\\src\\app\\components\\cards\\card-sentiment",
-    "\\src\\app\\components\\cards\\card-stats",
-    "\\src\\app\\views",
-    "\\src\\app\\views\\admin",
-    "\\src\\app\\views\\admin\\dashboard"
+    "\\src\\assets",
+    "\\src\\assets\\img"
   ],
-  "SelectedNode": "\\src\\app\\components\\cards\\card-sentiment\\card-sentiment.component.ts",
+  "SelectedNode": "\\src\\assets\\img\\form.jpg",
   "PreviewInSolutionExplorer": false
 }
