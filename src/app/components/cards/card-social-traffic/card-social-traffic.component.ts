@@ -13,11 +13,9 @@ export class CardSocialTrafficComponent implements OnInit {
   ngOnInit() {
     this.service.getCommentsBytopic().subscribe((response:any)=>{
       this.data = response;
-      console.log(response);
     });
     this.service.getComments().subscribe((response:any)=>{
       this.allComments = response.length;
-      console.log(response);
     }
     );
   }

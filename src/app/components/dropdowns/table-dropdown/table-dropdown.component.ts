@@ -27,7 +27,6 @@ export class TableDropdownComponent implements AfterViewInit {
   delete():void{
     this.service.deleteuser(this.user?.username).subscribe({
       next: data => {
-        console.log(data.message);
         this.isSuccessful = true;
         this.isDeleteFailed = false;
          setTimeout(function(){  window.location.reload() ; }, 1000);

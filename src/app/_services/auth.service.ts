@@ -55,7 +55,6 @@ export class AuthService {
   }
 
   register(username: string, email: string, password: string, role:string): Observable<any> {
-    console.log('role',role,"password",password,"email",email,"username",username);
 
     return this.http.post(AUTH_API + 'signup', {
       username,

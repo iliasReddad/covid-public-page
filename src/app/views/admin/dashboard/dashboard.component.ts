@@ -14,11 +14,9 @@ export class DashboardComponent implements OnInit {
   ngOnInit() {
     this.service.getCommentsByEmotion().subscribe((response:any)=>{
       this.data = response;
-      console.log(response);
     });
     this.service.getComments().subscribe((response:any)=>{
       this.allComments = response.length;
-      console.log(response);
     }
     );
   }

@@ -71,7 +71,6 @@ export class CartTableSentimentsComponent implements OnInit {
 
 
       
-      console.log(myMap);
     });
 
 

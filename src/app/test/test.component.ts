@@ -15,7 +15,6 @@ export class TestComponent implements OnInit {
 	active = 1;
 
   ngOnInit(): void {
-    console.log(this.data==="Sentimental ");
     
   }
   

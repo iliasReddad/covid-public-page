@@ -31,7 +31,6 @@ export class DataAnnotationComponent implements OnInit {
   
     if (length >= 1) {   // en moins un type
       return true;
-      console.log("false");
     }
     return false;
  }
@@ -41,7 +40,6 @@ export class DataAnnotationComponent implements OnInit {
 
   if (length >= 1) {   // en moins un type
     return true;
-    console.log("false");
   }
   return false;
 }
@@ -106,7 +104,6 @@ form: any = {
     if(this.i < this.list.length){
     this.comment=this.list[this.i];
     this.i++;
-    console.log(this.comment);
     }
     else{
       this.comment = " not comment Left ";

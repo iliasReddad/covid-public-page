@@ -33,7 +33,6 @@ export class CardSettingsComponent implements OnInit  {
 
     this.authService.register(username, email, password,role).subscribe({
       next: data => {
-        console.log(data);
         this.isSuccessful = true;
         this.isSignUpFailed = false;
             setTimeout(function(){  window.location.reload() ; }, 3000);

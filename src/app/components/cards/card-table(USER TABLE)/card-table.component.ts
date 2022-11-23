@@ -64,7 +64,6 @@ export class CardTableComponent implements OnInit {
       this.users = response;
       this.dtTrigger.next(void 0);
     });
-    this.service.getAllUser().subscribe((response:any)=>{console.log(response)});
   }
   ngOnDestroy(): void {
     // Do not forget to unsubscribe the event
@@ -85,7 +84,6 @@ export class CardTableComponent implements OnInit {
   delete(user:User):void{
     this.service.deleteuser(user?.username).subscribe({
       next: data => {
-        console.log(data.message);
         this.isSuccessful = true;
         this.isDeleteFailed = false;
 
@@ -116,7 +114,6 @@ export class CardTableComponent implements OnInit {
   changeStatue(user:User):void{
     this.service.changeStatues(user?.username).subscribe({
       next: data => {
-        console.log(data.message);
         this.isChangeSuccessful = true;
         this.isChangeFailed = false;
 
