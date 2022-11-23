@@ -1,21 +1,42 @@
 <div style="height:83vh ;" class="relative  md:pt-16 pb-16">
-  
-    <div>
-      <!-- Card stats -->
-      <div class="flex flex-wrap" >
-        <div *ngFor="let element of data"   class="w-full lg:w-6/12 xl:w-3/12 px-4">
-  
-          <app-card-stats
-            statSubtitle="{{  (element.split(',')[1] ) }}"
-                          statTitle="{{  (((element.split(',')[0] ) * 100 ) / Comments.length ).toFixed(0)}}%"
-                          statArrow="up"
-                          statPercent=""
-                          statPercentColor="text-emerald-500"
-                          statDescripiron="Since last month"
-                          statIconName="far fa-comment"
-                          statIconColor="bg-blue-900"></app-card-stats>
-        </div>
-       
+
+  <app-header-stats></app-header-stats>  
+    <div class="flex flex-wrap pb-16">
+      <div class="w-full lg:w-6/12 xl:w-4/12 px-4">
+        <app-card-sentiment statSubtitle="Optimism Comments Rate"
+                            statTitle="1.22%"
+                            statColor="bg-blue-200"
+                            statIconName="fa-solid fa-face-smile"></app-card-sentiment>
+      </div>
+      <div class="w-full lg:w-6/12 xl:w-4/12 px-4">
+        <app-card-sentiment statSubtitle="Approval Comments Rate"
+                            statTitle="5.52%"
+                            statColor="bg-green-200"
+                            statIconName="fa-solid fa-thumbs-up"></app-card-sentiment>
+      </div>
+      <div class="w-full lg:w-6/12 xl:w-4/12 px-4">
+        <app-card-sentiment statSubtitle="Mistrust Comments Rate"
+                            statTitle="0.56%"
+                            statColor="bg-blueGrey-200"
+                            statIconName="fa-solid fa-question"></app-card-sentiment>
+      </div>
+      <div class="w-full lg:w-6/12 xl:w-4/12 px-4 pt-8">
+        <app-card-sentiment statSubtitle="Anger Comments Rate"
+                            statTitle="50.52%"
+                            statColor="bg-red-200"
+                            statIconName="fa-solid fa-face-angry"></app-card-sentiment>
+      </div>
+      <div class="w-full lg:w-6/12 xl:w-4/12 px-4 pt-8">
+        <app-card-sentiment statSubtitle="Sadness Comments Rate"
+                            statTitle="31.50%"
+                            statColor="bg-grey-200"
+                            statIconName="fa-solid fa-face-frown"></app-card-sentiment>
+      </div>
+      <div class="w-full lg:w-6/12 xl:w-4/12 px-4 pt-8">
+        <app-card-sentiment statSubtitle="Fear Comments Rate"
+                            statTitle="10.96%"
+                            statColor="bg-orange-200"
+                            statIconName="fa-solid fa-face-sad-cry"></app-card-sentiment>
       </div>
     </div>
     
