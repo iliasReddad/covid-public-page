@@ -21,7 +21,7 @@ export class TopicStatsComponent implements OnInit {
     });
 
 
-    this.service.getCommentsByEmotion().subscribe((response:any)=>{
+    this.service.getCommentsBytopic().subscribe((response:any)=>{
       this.data = response;
     
     });
@@ -32,22 +32,18 @@ export class TopicStatsComponent implements OnInit {
   getColor(emotion: string){
     let color: string = '';
     switch (emotion) {
-      case 'Anger':
-        color = 'bg-red-200';
-        break;
-      case 'Approval':
+      
+      case 'Economy':
         color = 'bg-green-200';
         break;
-      case 'Optimism':
+      case 'Education':
         color = 'bg-blue-200';
         break;
-      case 'Fear':
+      case 'Govt':
         color = 'bg-orange-200';
         break;
-      case 'Mistrust':
-        color = 'bg-blueGrey-200';
-        break;
-      case 'Sadness':
+    
+      case 'Health':
         color = 'bg-grey-200';
         break;
       default:
@@ -63,26 +59,21 @@ export class TopicStatsComponent implements OnInit {
     console.log(emotion);
     let color: string = '';
     switch (emotion) {
-      case 'Anger':
-        color = 'fa-solid fa-face-angry';
+      case 'Economy':
+        color = 'fa-solid fa-money-bill';
         break;
-      case 'Approval':
-        color = 'fa-solid fa-thumbs-up';
+      case 'Education':
+        color = 'fa-solid fa-school';
         break;
-      case 'Optimism':
-        color = 'fa-solid fa-face-smile';
+      case 'Govt':
+        color = 'fa-solid fa-building-columns';
         break;
-      case 'Fear':
-        color = 'fa-solid fa-face-sad-cry';
+      case 'Health':
+        color = 'fa-solid fa-notes-medical';
         break;
-      case 'Mistrust':
-        color = 'fa-solid fa-question';
-        break;
-      case 'Sadness':
-        color = 'fa-solid fa-face-frown';
-        break;
+     
       default:
-        color = 'fa-solid fa-face-smile';
+        color = '';
         break;
     }
 
