@@ -58,9 +58,68 @@ export class CartTableSentimentsComponent implements OnInit {
 
   }
 
+  getColor(emotion: string){
+    let color: string = '';
+    switch (emotion.split(",")[1]) {
+      case 'Anger':
+        color = '#fecaca';
+        break;
+      case 'Approval':
+        color = '#bcf0da';
+        break;
+      case 'Optimism':
+        color = '#c3ddfd';
+        break;
+      case 'Fear':
+        color = '#fed7aa';
+        break;
+      case 'Mistrust':
+        color = '#303249';
+        break;
+      case 'Sadness':
+        color = '#d662a8';
+        break;
+      default:
+        color = 'white';
+        break;
+    }
 
-
+    return color;
   
+  }
+
+
+
+  getIcon(emotion: string){
+    console.log(emotion);
+    let color: string = '';
+    switch (emotion.split(",")[1]) {
+      case 'Anger':
+        color = 'fa-solid fa-face-angry';
+        break;
+      case 'Approval':
+        color = 'fa-solid fa-thumbs-up';
+        break;
+      case 'Optimism':
+        color = 'fa-solid fa-face-smile';
+        break;
+      case 'Fear':
+        color = 'fa-solid fa-face-sad-cry';
+        break;
+      case 'Mistrust':
+        color = 'fa-solid fa-question';
+        break;
+      case 'Sadness':
+        color = 'fa-solid fa-face-frown';
+        break;
+      default:
+        color = 'fa-solid fa-face-smile';
+        break;
+    }
+
+    return color;
+  
+  }
 
 
   ngOnInit(): void {
