@@ -6,11 +6,11 @@
     </div>
   </div>
 
-  <div class="pt-5 h-fit space-y-6 flex flex-col-reverse lg:flex lg:flex-row">
+  <div class=" h-fit space-y-6 flex flex-col-reverse lg:flex lg:flex-row">
     <div class="grow">
       <form style="padding:30px;" name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
         <div class="form-group">
-          <label class="block uppercase mt-2 text-blueGray-600 text-xs font-bold mb-2" for="username">Username</label>
+          <label class="block uppercase  text-blueGray-600 text-xs font-bold mb-2" for="username">Username</label>
           <input type="text"
                  class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow-lg focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
                  name="username" [(ngModel)]="form.username" required minlength="3" maxlength="20" #username="ngModel" />
