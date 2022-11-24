@@ -4,7 +4,7 @@
     <div class="flex flex-wrap  p-16">
       <div *ngFor="let ele of data " class="w-full  mb-3  lg:w-full xl:w-4/12 px-4">
         <app-card-sentiment statSubtitle="{{ele.split(',')[1]}} Comments "
-                            statTitle="1.22%"
+                            statTitle="{{  (((ele.split(',')[0] ) * 100 ) / length ).toFixed(0)}} %"
                             statColor="{{getColor(ele.split(',')[1])}}"
                             statIconName="{{getIcon(ele.split(',')[1])}}"></app-card-sentiment>
       </div>
