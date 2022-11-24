@@ -1,7 +1,7 @@
 import { TopicStatsComponent } from './views/admin/topic-stats/topic-stats.component';
 import { TopicListComponent } from './views/admin/topic-list/topic-list.component';
 import { SentimentalStatsComponent } from './views/admin/sentimental-stats/sentimental-stats.component';
-import { DataAnnotationComponent } from './data-annotation/data-annotation.component';
+import { DataAnnotationComponent } from './components/data-annotation/data-annotation.component';
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 import { AuthGuard } from "./auth.guard";
@@ -22,6 +22,7 @@ import { IndexComponent } from "./views/index/index.component";
 import { LandingComponent } from "./views/landing/landing.component";
 import { ProfileComponent } from "./views/profile/profile.component";
 import { SentTablesComponentComponent } from './views/admin/sent-tables-component/sent-tables-component.component';
+import { DataAnnotComponent } from './views/admin/data-annot/data-annot.component';
 
 const routes: Routes = [
  
@@ -36,8 +37,7 @@ const routes: Routes = [
       { path: "SentimentstStates", component: SentimentalStatsComponent},
       { path: "Topictables", component: TopicListComponent},
       { path: "TopicStates", component: TopicStatsComponent},
-
-      
+      { path: "dataAnnotation", component: DataAnnotComponent },
       { path: "maps", component: MapsComponent , canActivate:[AuthGuard]},
       { path: "", redirectTo: "dashboard", pathMatch: "full" },
     ],
@@ -54,9 +54,9 @@ const routes: Routes = [
   },
   // no layout views
   { path: "profile", component: ProfileComponent },
-  { path: "dataAnnotation", component: DataAnnotationComponent },
   { path: "", component: LandingComponent },
   { path: "**", redirectTo: "", pathMatch: "full" },
+
 
 ];
 

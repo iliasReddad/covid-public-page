@@ -51,7 +51,7 @@ import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
 import { XchartComponent } from './xchart/xchart.component';
 import { YchartComponent } from './ychart/ychart.component';
 import { ZchartComponent } from './zchart/zchart.component';
-import { DataAnnotationComponent } from './data-annotation/data-annotation.component';
+import { DataAnnotationComponent } from './components/data-annotation/data-annotation.component';
 import { DataTablesModule } from "angular-datatables";
 import { SentTablesComponentComponent } from './views/admin/sent-tables-component/sent-tables-component.component';
 import { CartTableSentimentsComponent } from './components/cards/cart-table-sentiments/cart-table-sentiments.component';
@@ -63,6 +63,7 @@ import { TopicListComponent } from './views/admin/topic-list/topic-list.componen
 import { TopicChartComponent } from './views/admin/topic-chart/topic-chart.component';
 import { SentChartComponent } from './views/admin/sent-chart/sent-chart.component';
 import { CartTableTopicComponent } from './components/cart-table-topic/cart-table-topic.component';
+import { DataAnnotComponent } from './views/admin/data-annot/data-annot.component';
 
 @NgModule({
   declarations: [AppComponent,
@@ -117,7 +118,8 @@ import { CartTableTopicComponent } from './components/cart-table-topic/cart-tabl
     TopicListComponent,
     TopicChartComponent,
     SentChartComponent,
-    CartTableTopicComponent
+    CartTableTopicComponent,
+    DataAnnotComponent
     
   ],
   imports: [
