@@ -53,11 +53,15 @@ import { YchartComponent } from './ychart/ychart.component';
 import { ZchartComponent } from './zchart/zchart.component';
 import { DataAnnotationComponent } from './data-annotation/data-annotation.component';
 import { DataTablesModule } from "angular-datatables";
-import { SentTablesComponentComponent } from './views/sent-tables-component/sent-tables-component.component';
+import { SentTablesComponentComponent } from './views/admin/sent-tables-component/sent-tables-component.component';
 import { CartTableSentimentsComponent } from './components/cards/cart-table-sentiments/cart-table-sentiments.component';
 import { CardTypeColorPipe } from './components/cards/cart-table-sentiments/card-type-color.pipe';
-import { SentimentalStatsComponent } from './views/sentimental-stats/sentimental-stats.component';
+import { SentimentalStatsComponent } from './views/admin/sentimental-stats/sentimental-stats.component';
 import { CardSentimentComponent } from './components/cards/card-sentiment/card-sentiment.component';
+import { TopicStatsComponent } from './views/admin/topic-stats/topic-stats.component';
+import { TopicListComponent } from './views/admin/topic-list/topic-list.component';
+import { TopicChartComponent } from './views/admin/topic-chart/topic-chart.component';
+import { SentChartComponent } from './views/admin/sent-chart/sent-chart.component';
 
 @NgModule({
   declarations: [AppComponent,
@@ -107,7 +111,11 @@ import { CardSentimentComponent } from './components/cards/card-sentiment/card-s
     CartTableSentimentsComponent,
     CardTypeColorPipe,
     SentimentalStatsComponent,
-    CardSentimentComponent
+    CardSentimentComponent,
+    TopicStatsComponent,
+    TopicListComponent,
+    TopicChartComponent,
+    SentChartComponent
     
   ],
   imports: [
