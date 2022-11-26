@@ -12,4 +12,5 @@ export class TopicChartComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  
 }

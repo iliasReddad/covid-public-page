@@ -64,6 +64,8 @@ import { TopicChartComponent } from './views/admin/topic-chart/topic-chart.compo
 import { SentChartComponent } from './views/admin/sent-chart/sent-chart.component';
 import { CartTableTopicComponent } from './components/cart-table-topic/cart-table-topic.component';
 import { DataAnnotComponent } from './views/admin/data-annot/data-annot.component';
+import { TextAreaComponent } from './components/text-area/text-area.component';
+import { AngularEditorModule } from '@kolkov/angular-editor';
 
 @NgModule({
   declarations: [AppComponent,
@@ -119,7 +121,8 @@ import { DataAnnotComponent } from './views/admin/data-annot/data-annot.componen
     TopicChartComponent,
     SentChartComponent,
     CartTableTopicComponent,
-    DataAnnotComponent
+    DataAnnotComponent,
+    TextAreaComponent
     
   ],
   imports: [
@@ -129,6 +132,7 @@ import { DataAnnotComponent } from './views/admin/data-annot/data-annot.componen
     AppRoutingModule,
     HttpClientModule,
     DataTablesModule,
+    AngularEditorModule,
     //environment.production ?[] : HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, { dataEncapsulation : false } ),
     NgChartsModule,
     

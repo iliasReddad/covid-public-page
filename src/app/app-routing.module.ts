@@ -23,6 +23,8 @@ import { LandingComponent } from "./views/landing/landing.component";
 import { ProfileComponent } from "./views/profile/profile.component";
 import { SentTablesComponentComponent } from './views/admin/sent-tables-component/sent-tables-component.component';
 import { DataAnnotComponent } from './views/admin/data-annot/data-annot.component';
+import { TopicChartComponent } from './views/admin/topic-chart/topic-chart.component';
+import { SentChartComponent } from './views/admin/sent-chart/sent-chart.component';
 
 const routes: Routes = [
  
@@ -31,13 +33,26 @@ const routes: Routes = [
     component: AdminComponent,
     children: [
       { path: "dashboard", component: DashboardComponent},
-      { path: "USER_MANAGEMENT", component: SettingsComponent},
-      { path: "tables", component: TablesComponent},
+
+      //USERS
+      { path: "USER_MANAGEMENT", component: SettingsComponent },
+      { path: "tables", component: TablesComponent },
+
+      //SENTIMENT ANALYSIS
       { path: "Sentimentstables", component: SentTablesComponentComponent},
-      { path: "SentimentstStates", component: SentimentalStatsComponent},
+      { path: "SentimentstStates", component: SentimentalStatsComponent },
+      { path: "SentimentstChart", component: SentChartComponent },
+
+      //TOPIC ANALYSIS
       { path: "Topictables", component: TopicListComponent},
-      { path: "TopicStates", component: TopicStatsComponent},
+      { path: "TopicStates", component: TopicStatsComponent },
+      { path: "TopicChart", component: TopicChartComponent },
+
+      //VISITOR PAGE MANAGEMENT
+
+
       { path: "dataAnnotation", component: DataAnnotComponent },
+
       { path: "maps", component: MapsComponent , canActivate:[AuthGuard]},
       { path: "", redirectTo: "dashboard", pathMatch: "full" },
     ],

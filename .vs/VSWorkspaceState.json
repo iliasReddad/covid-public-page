@@ -2,16 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\src",
-    "\\src\\app",
-    "\\src\\app\\components",
-    "\\src\\app\\components\\headers",
-    "\\src\\app\\components\\headers\\header-stats",
-    "\\src\\app\\views",
-    "\\src\\app\\views\\admin",
-    "\\src\\app\\views\\admin\\settings",
-    "\\src\\assets",
-    "\\src\\assets\\img"
+    "\\src\\app"
   ],
-  "SelectedNode": "\\src\\app\\components\\headers\\header-stats\\header-stats.component.html",
+  "SelectedNode": "\\src\\app\\views",
   "PreviewInSolutionExplorer": false
 }
