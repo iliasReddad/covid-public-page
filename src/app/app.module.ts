@@ -66,6 +66,12 @@ import { CartTableTopicComponent } from './components/cart-table-topic/cart-tabl
 import { DataAnnotComponent } from './views/admin/data-annot/data-annot.component';
 import { TextAreaComponent } from './components/text-area/text-area.component';
 import { AngularEditorModule } from '@kolkov/angular-editor';
+import { HomeSMComponent } from './views/admin/home-sm/home-sm.component';
+import { AboutSMComponent } from './views/admin/about-sm/about-sm.component';
+import { ServiceSMComponent } from './views/admin/service-sm/service-sm.component';
+import { SentimentSMComponent } from './views/admin/sentiment-sm/sentiment-sm.component';
+import { TopicSMComponent } from './views/admin/topic-sm/topic-sm.component';
+import { ContactSMComponent } from './views/admin/contact-sm/contact-sm.component';
 
 @NgModule({
   declarations: [AppComponent,
@@ -122,7 +128,13 @@ import { AngularEditorModule } from '@kolkov/angular-editor';
     SentChartComponent,
     CartTableTopicComponent,
     DataAnnotComponent,
-    TextAreaComponent
+    TextAreaComponent,
+    HomeSMComponent,
+    AboutSMComponent,
+    ServiceSMComponent,
+    SentimentSMComponent,
+    TopicSMComponent,
+    ContactSMComponent
     
   ],
   imports: [
