@@ -1,14 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Chart } from 'chart.js';
 @Component({
   selector: 'app-sachart',
   templateUrl: './sachart.component.html',
   styleUrls: ['./sachart.component.css']
 })
-export class SachartComponent implements OnInit {
+export class SachartComponent implements OnInit , OnDestroy {
 
   constructor() { }
   public sachart: any;
+
+  ngOnDestroy(): void {
+    this.sachart.destroy();
+      }
+
+      
   ngOnInit(): void {
     this.createSachart();
   }

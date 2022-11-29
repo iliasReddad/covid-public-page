@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularEditorConfig } from '@kolkov/angular-editor';
 
 @Component({
   selector: 'app-home-sm',
@@ -11,5 +12,8 @@ export class HomeSMComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  
+
 
 }

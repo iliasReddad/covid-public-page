@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Chart } from 'chart.js';
 import { AuthService } from '../_services/auth.service';
 
@@ -7,7 +7,7 @@ import { AuthService } from '../_services/auth.service';
   templateUrl: './ychart.component.html',
   styleUrls: ['./ychart.component.css']
 })
-export class YchartComponent implements OnInit {
+export class YchartComponent implements OnInit , OnDestroy {
 
   constructor(private Service: AuthService) { }
   public chart: any;
@@ -16,6 +16,10 @@ export class YchartComponent implements OnInit {
   responseFiltré: any[] = [];
   labelss: string[] = [];
   responseFiltré2: string[] = [];
+
+  ngOnDestroy(): void {
+    this.chart.destroy();
+  }
 
 
   ngOnInit(): void {

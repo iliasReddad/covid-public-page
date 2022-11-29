@@ -1,14 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Chart } from 'chart.js';
 @Component({
   selector: 'app-tachart',
   templateUrl: './tachart.component.html',
   styleUrls: ['./tachart.component.css']
 })
-export class TachartComponent implements OnInit {
+export class TachartComponent implements OnInit , OnDestroy {
 
   constructor() { }
   public tachart: any;
+
+  ngOnDestroy(): void {
+    this.tachart.destroy();
+      }
+  
   ngOnInit(): void {
     this.createTachart();
   }

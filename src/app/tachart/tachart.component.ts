@@ -1,16 +1,21 @@
 import { AuthService } from 'src/app/_services/auth.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Chart } from 'chart.js';
 @Component({
   selector: 'app-tachart',
   templateUrl: './tachart.component.html',
   styleUrls: ['./tachart.component.css']
 })
-export class TachartComponent implements OnInit {
+export class TachartComponent implements OnInit , OnDestroy {
   date: string[] = [];
   comments: string[] = [];
   constructor(private Service:AuthService ) { }
+ 
   public tachart: any;
+
+  ngOnDestroy(): void {
+    this.tachart.destroy();
+  }
   ngOnInit(): void {
     this.Service.getCommentsBytopic().subscribe((response: any) => {
       response.forEach((element: string) => {

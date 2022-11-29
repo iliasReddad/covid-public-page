@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Chart } from 'chart.js';
 import { AuthService } from '../_services/auth.service';
 
@@ -7,13 +7,19 @@ import { AuthService } from '../_services/auth.service';
   templateUrl: './xchart.component.html',
   styleUrls: ['./xchart.component.css']
 })
-export class XchartComponent implements OnInit {
+export class XchartComponent implements OnInit , OnDestroy{
 
   constructor(private Service: AuthService) { }
+ 
   public xchart: any=null;
   date: string[] = [];
   comments: string[] = [];
 
+
+  ngOnDestroy(): void {
+    this.xchart.destroy();
+  }
+  
   ngOnInit(): void {
     this.Service.getCommentsByDate().subscribe((response: any) => {
       response.forEach((element: string) => {

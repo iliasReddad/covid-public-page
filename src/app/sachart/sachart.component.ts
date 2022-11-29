@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Chart } from 'chart.js';
 import { AuthService } from '../_services/auth.service';
 @Component({
@@ -6,12 +6,17 @@ import { AuthService } from '../_services/auth.service';
   templateUrl: './sachart.component.html',
   styleUrls: ['./sachart.component.css']
 })
-export class SachartComponent implements OnInit {
+export class SachartComponent implements OnInit ,OnDestroy {
 
   constructor(private Service: AuthService) { }
+  
   public sachart: any=null;
   date: string[] = [];
   comments: string[] = [];
+
+  ngOnDestroy(): void {
+    this.sachart.destroy();
+  }
 
   ngOnInit(): void {
     this.Service.getCommentsByDate().subscribe((response: any) => {

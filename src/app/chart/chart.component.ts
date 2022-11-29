@@ -1,4 +1,4 @@
-  import { Component, OnInit } from '@angular/core';
+  import { Component, OnInit , OnDestroy } from '@angular/core';
   import { Chart } from 'chart.js';
   import { AuthService } from '../_services/auth.service';
   @Component({
@@ -6,18 +6,27 @@
     templateUrl: './chart.component.html',
     styleUrls: ['./chart.component.css']
   })
-  export class ChartComponent implements OnInit {
+  export class ChartComponent implements OnInit , OnDestroy {
     constructor(private Service: AuthService) { }
     public chart: any;
     date: string[] = [];
     topic: string[] = [];
-    responseFiltré: any[] = [];
+    responseFiltre: any[] = [];
     labelss: string[] = [];
-    responseFiltré2: string[] = [];
+    responseFiltre2: string[] = [];
 
+    connect: any;
+
+
+    ngOnDestroy(): void {
+      this.chart.destroy();
+    }
 
     ngOnInit(): void {
-      this.Service.getEvolutionOfCommentsBytopic().subscribe((response: any) => {
+      this.connect = this.Service.getEvolutionOfCommentsBytopic().subscribe((response: any) => {
+
+        console.log('1');
+
         response.forEach((element: string) => {
           this.topic.push(element.split(",")[1]);
           this.date.push(element.split(",")[2].split(" ")[0]);
@@ -26,14 +35,14 @@
         this.labelss = this.topic.filter((x, i, a) => a.indexOf(x) === i);
 
         this.labelss.forEach((element: string) => {
-          this.responseFiltré.push(response.filter((x: string) => x.split(",")[1] === element));
-
-
+          this.responseFiltre.push(response.filter((x: string) => x.split(",")[1] === element));
         });
 
-        this.responseFiltré.forEach((element: any) => {
+        
+
+        this.responseFiltre.forEach((element: any) => {
           element.forEach((element: string) => {
-            this.responseFiltré2.push(element.split(",")[0]);
+            this.responseFiltre2.push(element.split(",")[0]);
 
           });
 
@@ -74,18 +83,19 @@
 
     }
 
+    
+
     creeatechsart(index: number, element: any) {
-      
       this.chart = new Chart("MyChart", {
 
         type: 'bar',
         data: {
-          labels: this.responseFiltré[index].map((x: string) => x.split(",")[2].split(" ")[0]),
+          labels: this.responseFiltre[index].map((x: string) => x.split(",")[2].split(" ")[0]),
           datasets: [
 
             {
               label: element,
-              data: this.responseFiltré[index].map((x: string) => x.split(",")[0]),
+              data: this.responseFiltre[index].map((x: string) => x.split(",")[0]),
               backgroundColor: 'blue'
             },
 

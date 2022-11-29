@@ -66,7 +66,7 @@ const routes: Routes = [
 
       { path: "dataAnnotation", component: DataAnnotComponent },
 
-      { path: "maps", component: MapsComponent, canActivate: [AuthGuard] },
+      { path: "maps", component: MapsComponent,  },
       { path: "", redirectTo: "dashboard", pathMatch: "full" },
     ],
   },

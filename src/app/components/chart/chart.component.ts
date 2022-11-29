@@ -1,14 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Chart } from 'chart.js';
 @Component({
   selector: 'app-chart',
   templateUrl: './chart.component.html',
   styleUrls: ['./chart.component.css']
 })
-export class ChartComponent implements OnInit {
+export class ChartComponent implements OnInit , OnDestroy {
 
   constructor() { }
   public chart: any;
+
+    ngOnDestroy(): void {
+  this.chart.destroy();
+    }
+
   ngOnInit(): void {
     this.createChart();
   }

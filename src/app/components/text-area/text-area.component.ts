@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { AngularEditorConfig } from '@kolkov/angular-editor';
 
 @Component({
@@ -8,10 +8,16 @@ import { AngularEditorConfig } from '@kolkov/angular-editor';
 })
 export class TextAreaComponent implements OnInit {
 
+  @Input() titre:string ="";
+  
+
   constructor() { }
 
   ngOnInit(): void {
   }
+  
+
+
   htmlContent = '';
 
   config: AngularEditorConfig = {
