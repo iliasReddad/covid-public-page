@@ -5,19 +5,21 @@
 <h1 class=" container mx-auto  text-xl text-black  hover:underline hover:font-bold hover:text-gray-600">{{titre}}</h1>
 
 <angular-editor [(ngModel)]="htmlContent" [config]="config"></angular-editor>
-<h5 class="html-header">HTML Output</h5>
+<h5 class="html-header">PREVIOUS  DATA</h5>
 
 
 <blockquote class="p-4 my-4 bg-gray-50 border-l-4 border-gray-300 dark:border-gray-500 dark:bg-gray-800">
-  <p class="text-xl italic font-medium leading-relaxed text-gray-900 dark:text-white">  {{ htmlContent }}
+  <p class="text-xl italic font-medium leading-relaxed text-gray-900 dark:text-white">  {{ content }}
   </p>
 </blockquote>
 
-<button type="button" class="text-blue-700 border border-blue-700 hover:bg-blue-700 hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:focus:ring-blue-800">
-  <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-  <span class="sr-only">Icon description</span>
-  <span class="ml-2">Save Modification</span>
-</button>
+<button
+(click)="updateContent()"
+type="button" class="text-blue-700 border border-blue-700 hover:bg-blue-700 hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:focus:ring-blue-800">
+    <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+    <span class="sr-only">Icon description</span>
+    <span class="ml-2">Save Modification</span>
+  </button >
 
 </div>
 
