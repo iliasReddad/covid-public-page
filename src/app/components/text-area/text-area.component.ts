@@ -13,6 +13,11 @@ export class TextAreaComponent implements OnInit {
 
   
   @Input() titre:string ="";
+
+   updateStatue : boolean = false;
+   done! : boolean ;
+   notDone! : boolean  ;
+
   
 
   @Input()
@@ -79,13 +84,31 @@ export class TextAreaComponent implements OnInit {
       this.paragraphe = this.htmlContent;
     }
     this.service.update(this.idBloock,this.titr,this.sous_titre,this.paragraphe).subscribe((response:any)=>{
-      console.log(response);
-    });
+      this.updateStatue = response;
+      if (this.updateStatue == true){
+        this.done = true;
+        this.notDone = false;
+        setTimeout(() => {
+          this.done = false;
+        }, 2000);
+        
+      }else{
+        this.notDone = true;
+        this.done = false;
+        setTimeout(() => {
+          this.notDone = false;
+        }, 2000);
+      }
+
+      
+    })
 
 
 
+    
+  
    
+
+
   }
-
-
 }

@@ -21,5 +21,20 @@ type="button" class="text-blue-700 border border-blue-700 hover:bg-blue-700 hove
     <span class="ml-2">Save Modification</span>
   </button >
 
+
+
+  <div
+  *ngIf="done"
+   class="p-4 mt-5 mb-4 text-sm text-green-700 bg-green-100 rounded-lg dark:bg-green-200 dark:text-green-800" role="alert">
+    <span class="font-medium">Success alert!</span> Statue Change With Success.
+  </div>
+
+  <div 
+  *ngIf="notDone"
+  
+  class="p-4 mt-5 mb-4 text-sm text-red-700 bg-red-100 rounded-lg dark:bg-red-200 dark:text-red-800" role="alert">
+    <span class="font-medium">Danger alert!</span>  Fill the Text-Area First !..
+  </div>
+
 </div>
 
