@@ -9,6 +9,9 @@ export class SentChartComponent implements OnInit {
 
   constructor() { }
 
+  active = 1;
+
+  
   ngOnInit(): void {
   }
 

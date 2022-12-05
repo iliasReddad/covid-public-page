@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Chart } from 'chart.js';
-import { AuthService } from '../_services/auth.service';
+import { AuthService } from '../../_services/auth.service';
 
 @Component({
   selector: 'app-ychart',
@@ -24,12 +24,15 @@ export class YchartComponent implements OnInit , OnDestroy {
 
   ngOnInit(): void {
     this.Service.getEvolutionOfCommentsByEmotion().subscribe((response: any) => {
+      console.log(response);
       response.forEach((element: string) => {
         this.topic.push(element.split(",")[1]);
         this.date.push(element.split(",")[2].split(" ")[0]);
       });
 
       this.labelss = this.topic.filter((x, i, a) => a.indexOf(x) === i);
+      console.log(this.labelss);
+
 
       this.labelss.forEach((element: string) => {
         this.responseFiltré.push(response.filter((x: string) => x.split(",")[1] === element));

@@ -1,1 +1,56 @@
-<p>topic-chart works!</p>
+<app-header-stats></app-header-stats>
+
+<div class="container w-max-75% mx-auto px-4">
+    <!--Graph-->
+    <div class="relative rounded-lg  shadow-2xl dark:bg-gray-700  my-8 mt-8">
+
+        <div class="mb-4 border-b border-gray-200 dark:border-gray-700">
+
+            <ul ngbNav #nav="ngbNav" [(activeId)]="active"
+                class="flex flex-wrap -mb-px text-sm font-semibold dark:border-gray-700">
+                <li [ngbNavItem]="1" class=" mr-2" id="li">
+                    <a class=" focus:text-blue-700 text-black inline-block p-4 rounded-t-lg border-b-2 " ngbNavLink>
+                        Comments By Date </a>
+
+
+                    <ng-template ngbNavContent>
+                        <p>
+
+                            <app-sachart></app-sachart>
+                        </p>
+                    </ng-template>
+
+
+                </li>
+                <li [ngbNavItem]="2" class=" mr-2">
+                    <a class="inline-block p-4 focus:text-blue-700 text-black rounded-t-lg border-b-2" ngbNavLink>
+                        Distribution Of Topic Last 7 Days</a>
+                    <ng-template ngbNavContent>
+                        <p>
+
+                            <app-tachart></app-tachart>
+                        </p>
+                    </ng-template>
+
+                </li>
+                <li [ngbNavItem]="3" class="   mr-2">
+                    <a class="inline-block p-4  focus:text-blue-700 text-black rounded-t-lg border-b-2"
+                        ngbNavLink>Evolution of Topic in last 7 days</a>
+                    <ng-template ngbNavContent>
+                        <p>
+
+                            <app-chart></app-chart>
+                        </p>
+                    </ng-template>
+
+                </li>
+            </ul>
+        </div>
+
+
+        <div [ngbNavOutlet]="nav" class="mt-2 p-16 rounded-lg"></div>
+
+
+        <!--header -->
+    </div>
+</div>

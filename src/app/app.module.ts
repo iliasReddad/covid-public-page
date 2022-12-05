@@ -33,10 +33,9 @@ import { IndexComponent } from './views/index/index.component';
 import { LandingComponent } from './views/landing/landing.component';
 import { ProfileComponent } from './views/profile/profile.component';
 import { StatsComponent } from './stats/stats.component';
-import { ChartComponent } from './chart/chart.component'
+import { ChartComponent } from './Charts/EvolutionchartTopic/chart.component'
 import { NgChartsModule } from 'ng2-charts';
-import { SachartComponent } from './sachart/sachart.component';
-import { TachartComponent } from './tachart/tachart.component';
+import { SachartComponent } from './Charts/commentsForTopic/sachart.component';
 import { DashboardComponent } from './views/admin/dashboard/dashboard.component';
 import {  FormsModule }   from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -48,9 +47,9 @@ import { ModalComponent } from './modal/modal.component';
 import { AdminHeaderComponent } from './components/headers/admin-header/admin-header.component';
 import { TestComponent } from './test/test.component';
 import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
-import { XchartComponent } from './xchart/xchart.component';
-import { YchartComponent } from './ychart/ychart.component';
-import { ZchartComponent } from './zchart/zchart.component';
+import { XchartComponent } from './Charts/CommentForSentimentchart/xchart.component';
+import { YchartComponent } from './Charts/EvolutionchartSenti/ychart.component';
+import { ZchartComponent } from './Charts/DistributionchartSentiment/zchart.component';
 import { DataAnnotationComponent } from './components/data-annotation/data-annotation.component';
 import { DataTablesModule } from "angular-datatables";
 import { SentTablesComponentComponent } from './views/admin/sent-tables-component/sent-tables-component.component';
@@ -72,6 +71,7 @@ import { ServiceSMComponent } from './views/admin/service-sm/service-sm.componen
 import { SentimentSMComponent } from './views/admin/sentiment-sm/sentiment-sm.component';
 import { TopicSMComponent } from './views/admin/topic-sm/topic-sm.component';
 import { ContactSMComponent } from './views/admin/contact-sm/contact-sm.component';
+import { TachartComponent } from './Charts/DistriburtionChartTopic/tachart.component';
 
 
 @NgModule({
