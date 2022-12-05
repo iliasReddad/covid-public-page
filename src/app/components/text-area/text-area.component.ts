@@ -83,7 +83,10 @@ export class TextAreaComponent implements OnInit {
     if (this.titre == "PARAGRAPHE TITRE"){
       this.paragraphe = this.htmlContent;
     }
-    this.service.update(this.idBloock,this.titr,this.sous_titre,this.paragraphe).subscribe((response:any)=>{
+
+
+
+     this.service.update(this.idBloock,this.titr,this.sous_titre,this.paragraphe).subscribe((response:any)=>{
       this.updateStatue = response;
       if (this.updateStatue == true){
         this.done = true;
@@ -91,7 +94,6 @@ export class TextAreaComponent implements OnInit {
         setTimeout(() => {
           this.done = false;
         }, 2000);
-        
       }else{
         this.notDone = true;
         this.done = false;
@@ -99,8 +101,6 @@ export class TextAreaComponent implements OnInit {
           this.notDone = false;
         }, 2000);
       }
-
-      
     })
 
 

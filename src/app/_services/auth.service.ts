@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 
 
 const AUTH_API = 'http://localhost:8080/api/auth/';
+const Data_API = 'http://localhost:8080/api/';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' } )
@@ -27,6 +28,12 @@ export class AuthService {
 
   }
 
+  getCommentsNoAnnoted():Observable<any>{
+    return this.http.get('http://localhost:8080/api/Data/NoAnnotComment')
+
+  }
+  
+
   getCommentsPositives():Observable<any>{
     return this.http.get('http://localhost:8080/api/Data/numberofcommentairesbyEmotionPositive')
   }
@@ -46,6 +53,13 @@ export class AuthService {
   }
   getEvolutionOfCommentsByEmotion():Observable<any>{
     return this.http.get('http://localhost:8080/api/Data/EvolutionofcommentairesbyEmotion')
+  }
+
+  UpdateComments(id :number , emotion:string ,topic:string ):Observable<any>{
+    return this.http.put(Data_API + `Data/UpdateComments/${id}&${topic}&${emotion}`,{
+      topic,
+      emotion
+    })
   }
 
   login(username: string, password: string ): Observable<any> {
