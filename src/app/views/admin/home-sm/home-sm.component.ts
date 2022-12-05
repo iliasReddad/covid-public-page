@@ -13,33 +13,23 @@ import { ContenuServiceTsService } from 'src/app/contenu.service.ts.service';
 
 export class HomeSMComponent implements OnInit {
 
-  contenus!: contenu ;
-  idBlock:string = "HOME";
-  
- AUTH_API = 'http://localhost:8080/api/auth/';
+  contenus!: contenu;
+  idBlock: string = "HOME";
 
- httpOptions = {
-  headers: new HttpHeaders({ 'Content-Type': 'application/json' } )
+  AUTH_API = 'http://localhost:8080/api/auth/';
 
-};
+  httpOptions = {
+    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
 
-  constructor(private service : ContenuServiceTsService ) { }
+  };
+
+  constructor(private service: ContenuServiceTsService) { }
 
   ngOnInit(): void {
-    this.service.getContenuById("HOME").subscribe((response:any)=>{
+    this.service.getContenuById("HOME").subscribe((response: any) => {
       this.contenus = response
       console.log(this.contenus);
     });
-    
-
-
-    
   }
-
-    
-  
-
-  
-
 
 }
