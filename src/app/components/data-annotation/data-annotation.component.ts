@@ -42,10 +42,12 @@ export class DataAnnotationComponent implements OnInit {
     if (!form.valid) {
       return false;
     } else {
+      
       //to update the comment with the emotion and the topic
       this.service.UpdateComments(id, form.value.Emotion, form.value.topic).subscribe((response: any) => {
         //to display the next comment
         this.show();
+        form.resetForm();
       });
     }
   }

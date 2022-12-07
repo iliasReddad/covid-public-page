@@ -5,8 +5,8 @@
     <h2 class=" text-2xl font-bold">Sentimental Analytic </h2>
     
     <div class="container" #container>
-        <div class="left" *ngIf="totalPages > 1" (click)="currentPage != 1 && changePage(-1)" [ngClass]="{'disabled':currentPage === 1}">
-        <i class="fa-light fa-left"></i>  </div>
+        <div class="left left fa-solid fa-arrow-left" *ngIf="totalPages > 1" (click)="currentPage != 1 && changePage(-1)" [ngClass]="{'disabled':currentPage === 1}">
+          </div>
       <div class="cards" [ngClass]="{'w-100': totalPages === 1}">
             <div class="overflow"  [ngStyle]="{'width': overflowWidth, 'left': pagePosition}">
                 <div class=" card    "   *ngFor="let ele of data "   [ngStyle]="{'width': cardWidth , 'background-color':getColor(ele)}">
@@ -29,7 +29,7 @@
           </div>
             </div>
         </div>
-        <div class="right" *ngIf="totalPages > 1" (click)="currentPage != totalPages && changePage(+1)"
+        <div class="right  fa-solid fa-arrow-right" *ngIf="totalPages > 1" (click)="currentPage != totalPages && changePage(+1)"
             [ngClass]="{'disabled':currentPage === totalPages}"></div>
     </div>
     

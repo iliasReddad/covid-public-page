@@ -37,16 +37,15 @@
 
 .left,
 .right {
-  height: 30px;
-  width: 30px;
-  background-color: #0072bc;
+  
+text-color: #0072bc;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
 }
 
 .left.disabled, .right.disabled {
-  background-color:#CCC;
+  display:hidden;
 }
 
 .left {
