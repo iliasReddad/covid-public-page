@@ -37,15 +37,16 @@
 
 .left,
 .right {
-  
-text-color: #0072bc;
+  cursor: pointer;
+  color: #0072bc;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
 }
 
 .left.disabled, .right.disabled {
-  display:hidden;
+  color:#CCC;
+  cursor: default;
 }
 
 .left {

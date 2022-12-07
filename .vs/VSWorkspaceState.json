@@ -2,8 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\src",
-    "\\src\\app"
+    "\\src\\app",
+    "\\src\\app\\components",
+    "\\src\\app\\components\\cards",
+    "\\src\\app\\components\\cards\\cart-table-sentiments"
   ],
-  "SelectedNode": "\\src\\app\\views",
+  "SelectedNode": "\\src\\app\\components\\cards\\cart-table-sentiments\\cart-table-sentiments.component.css",
   "PreviewInSolutionExplorer": false
 }
