@@ -100,6 +100,10 @@ class="md:left-0 md:block md:fixed md:top-0 md:bottom-0 md:overflow-y-auto md:fl
         </li>
       </ul>
 
+
+      <div *ngIf="state" >
+
+       
       <!-- Divider -->
       <hr class="my-4 md:min-w-full" />
       <!-- Heading -->
@@ -108,9 +112,9 @@ class="md:left-0 md:block md:fixed md:top-0 md:bottom-0 md:overflow-y-auto md:fl
       </h6>
       <!-- Navigation -->
 
-      <ul class="md:flex-col md:min-w-full flex flex-col list-none md:mb-4">
+      <ul  class="md:flex-col md:min-w-full flex flex-col list-none md:mb-4">
 
-        <li class="items-center">
+        <li   class="items-center">
           <a [routerLink]="['/admin/USER_MANAGEMENT']"
              class="text-xs uppercase py-3 font-bold block"
              routerLinkActive
@@ -147,6 +151,7 @@ class="md:left-0 md:block md:fixed md:top-0 md:bottom-0 md:overflow-y-auto md:fl
           </a>
         </li>
       </ul>
+    </div> 
 
       <!-- Divider -->
       <hr class="my-4 md:min-w-full" />

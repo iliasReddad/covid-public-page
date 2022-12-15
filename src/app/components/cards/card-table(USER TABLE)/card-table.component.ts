@@ -1,3 +1,4 @@
+import { TokenStorageService } from './../../../_services/token-storage.service';
 import { UserService } from '../../../_services/user.service';
 import { Component, OnInit, Input } from "@angular/core";
 import { User } from 'src/app/User';
@@ -7,11 +8,13 @@ import { Subject } from 'rxjs';
 @Component({
   selector: "app-card-table",
   templateUrl: "./card-table.component.html",
+  styleUrls: ['./card-table.component.css']
+
 })
 export class CardTableComponent implements OnInit {
   
   users!: User[];
-  userole!:string;
+                        userole!:string;
   user : User|undefined;
 
   public boolean = false
@@ -48,9 +51,12 @@ export class CardTableComponent implements OnInit {
   dtTrigger: Subject<any> = new Subject<any>();
 
 
-  constructor(private service: UserService) {}
+  constructor(private service: UserService , private tokenService : TokenStorageService) {}
 
   ngOnInit(): void {
+
+    this.userole = this.tokenService.getUser().roles[0];
+    console.log(this.userole)
     
     this.dtOptions = {
       pagingType: 'full_numbers',

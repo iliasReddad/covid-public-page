@@ -23,6 +23,19 @@ export class AuthService {
     return this.http.get('http://localhost:8080/api/Data')
   }
   
+  getBackEndDataGrowRate():Observable<any>{
+    return this.http.get('http://localhost:8080/api/DataStats')
+  }
+  getBackEndDataGrowRatePositive():Observable<any>{
+    return this.http.get('http://localhost:8080/api/DataStatsPosit')
+  }
+
+  getBackEndUserNumber():Observable<any>{
+    return this.http.get('http://localhost:8080/api/UserNumber')
+  }
+  
+  
+  
   getComments():Observable<any>{
     return this.http.get('http://localhost:8080/api/Data/Commentaires')
 

@@ -8,7 +8,7 @@ import { Subject } from 'rxjs';
   styleUrls: ['./cart-table-topic.component.css']
 })
 export class CartTableTopicComponent implements OnInit {
-  totalCards: number  = 6;
+  totalCards: number  = 7;
   currentPage: number = 1;
   pagePosition: string = "0%";
   cardsPerPage!: number ;
@@ -163,7 +163,7 @@ export class CartTableTopicComponent implements OnInit {
   }
 
   getCardsPerPage() {
-    return Math.floor(this.container.nativeElement.offsetWidth / 300);
+    return Math.floor(this.container.nativeElement.offsetWidth / 200);
   }
 
   changePage(incrementor: number) {

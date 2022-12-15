@@ -1,12 +1,13 @@
-<div style="height: fit-content; min-height:73.5vh; align-items: center;" class="relative w-full  justify-center min-w-0 break-words  mb-6 shadow-lg rounded-lg bg-blueGray-100 border-0">
+<div  style="height: fit-content; min-height:73.5vh; align-items: center;" class="relative w-full  justify-center min-w-0 break-words  mb-6 shadow-lg rounded-lg bg-blueGray-100 border-0">
 
-  <div class="rounded-t bg-white mb-0 px-6 py-6">
+  <div *ngIf="userole==='ROLE_ADMIN'"  class="rounded-t bg-white mb-0 px-6 py-6">
     <div class="text-center flex justify-between">
       <h6 class="text-blueGray-700 text-xl font-bold">CREATE A NEW USER</h6>
     </div>
   </div>
 
-  <div class=" h-fit space-y-6 flex flex-col-reverse lg:flex lg:flex-row">
+  <div *ngIf="userole==='ROLE_ADMIN'"  class=" h-fit space-y-6 flex flex-col-reverse lg:flex lg:flex-row">
+
     <div class="grow">
       <form style="padding:30px;" name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
         <div class="form-group">
@@ -107,3 +108,7 @@
 
 
 </div>
+
+  <app-access-denied *ngIf="userole==='ROLE_MODERATOR'"></app-access-denied>
+
+     

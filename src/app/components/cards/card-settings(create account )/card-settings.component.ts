@@ -19,10 +19,13 @@ export class CardSettingsComponent implements OnInit  {
   errorMessage = '';
 
   showModal = false;
+  userole:string= "";
   
-  constructor(private authService: AuthService) { }
+  constructor(private authService: AuthService, private tokenService : TokenStorageService) { }
 
   ngOnInit(): void {
+    this.userole = this.tokenService.getUser().roles[0];
+
   }
   toggleModal(){
     this.showModal = !this.showModal;

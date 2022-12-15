@@ -36,13 +36,14 @@ const routes: Routes = [
 
   {
     path: "admin",
-    component: AdminComponent,
+    component: AdminComponent, 
+    canActivate:[AuthGuard],
     children: [
-      { path: "dashboard", component: DashboardComponent },
+      { path: "dashboard", component: DashboardComponent ,} ,
 
       //USERS
-      { path: "USER_MANAGEMENT", component: SettingsComponent },
-      { path: "tables", component: TablesComponent },
+      { path: "USER_MANAGEMENT", component: SettingsComponent , canActivateChild: [AuthGuard] },
+      { path: "tables", component: TablesComponent  },
 
       //SENTIMENT ANALYSIS
       { path: "Sentimentstables", component: SentTablesComponentComponent },
@@ -64,7 +65,7 @@ const routes: Routes = [
 
 
 
-      { path: "dataAnnotation", component: DataAnnotComponent },
+      { path: "dataAnnotation", component: DataAnnotComponent  },
 
       { path: "maps", component: MapsComponent,  },
       { path: "", redirectTo: "dashboard", pathMatch: "full" },

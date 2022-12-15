@@ -72,6 +72,7 @@ import { SentimentSMComponent } from './views/admin/sentiment-sm/sentiment-sm.co
 import { TopicSMComponent } from './views/admin/topic-sm/topic-sm.component';
 import { ContactSMComponent } from './views/admin/contact-sm/contact-sm.component';
 import { TachartComponent } from './Charts/DistriburtionChartTopic/tachart.component';
+import { AccessDeniedComponent } from './components/access-denied/access-denied.component';
 
 
 @NgModule({
@@ -135,7 +136,8 @@ import { TachartComponent } from './Charts/DistriburtionChartTopic/tachart.compo
     ServiceSMComponent,
     SentimentSMComponent,
     TopicSMComponent,
-    ContactSMComponent
+    ContactSMComponent,
+    AccessDeniedComponent
     
   ],
   imports: [

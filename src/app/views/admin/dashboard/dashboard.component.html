@@ -10,9 +10,9 @@
 
         <app-card-stats statSubtitle="COMMENTS"
                         statTitle="21341"
-                        statArrow="up"
-                        statPercent="3.48"
-                        statPercentColor="text-emerald-500"
+                        statArrow={{up_Down}}  
+                        statPercent={{integer}}
+                        statPercentColor="text-red-500"
                         statDescripiron="Since last month"
                         statIconName="far fa-comment"
                         statIconColor="bg-blue-900"></app-card-stats>
@@ -20,8 +20,8 @@
       <div class="w-full lg:w-6/12 xl:w-3/12 px-4">
         <app-card-stats statSubtitle="+ COMMENTS RATES"
                         statTitle="123"
-                        statArrow="down"
-                        statPercent="6.73"
+                        statArrow={{up_DownPosit}} 
+                        statPercent={{integerPosit}}
                         statPercentColor="text-red-500"
                         statDescripiron="Since last week"
                         statIconName="fas fa-plus"
@@ -29,11 +29,10 @@
       </div>
       <div class="w-full lg:w-6/12 xl:w-3/12 px-4">
         <app-card-stats statSubtitle="USER REGISTRATION"
-                        statTitle="5"
+                        statTitle={{Usernumbner}}
                         statArrow="down"
                         statPercent="1.10"
                         statPercentColor="text-orange-500"
-                        statDescripiron="Since yesterday"
                         statIconName="fas fa-users"
                         statIconColor="bg-blue-900"></app-card-stats>
       </div>
