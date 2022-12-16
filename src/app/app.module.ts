@@ -61,7 +61,7 @@ import { TopicStatsComponent } from './views/admin/topic-stats/topic-stats.compo
 import { TopicListComponent } from './views/admin/topic-list/topic-list.component';
 import { TopicChartComponent } from './views/admin/topic-chart/topic-chart.component';
 import { SentChartComponent } from './views/admin/sent-chart/sent-chart.component';
-import { CartTableTopicComponent } from './components/cart-table-topic/cart-table-topic.component';
+import { CartTableTopicComponent } from './components/cards/cart-table-topic/cart-table-topic.component';
 import { DataAnnotComponent } from './views/admin/data-annot/data-annot.component';
 import { TextAreaComponent } from './components/text-area/text-area.component';
 import { AngularEditorModule } from '@kolkov/angular-editor';
