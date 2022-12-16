@@ -137,7 +137,8 @@ import { AccessDeniedComponent } from './components/access-denied/access-denied.
     SentimentSMComponent,
     TopicSMComponent,
     ContactSMComponent,
-    AccessDeniedComponent
+    AccessDeniedComponent,
+    
     
   ],
   imports: [
