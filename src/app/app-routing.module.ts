@@ -1,3 +1,4 @@
+import { PermGuardGuard } from './perm-guard.guard';
 import { ContactSMComponent } from './views/admin/contact-sm/contact-sm.component';
 import { SentimentSMComponent } from './views/admin/sentiment-sm/sentiment-sm.component';
 import { TopicSMComponent } from './views/admin/topic-sm/topic-sm.component';
@@ -42,8 +43,8 @@ const routes: Routes = [
       { path: "dashboard", component: DashboardComponent ,} ,
 
       //USERS
-      { path: "USER_MANAGEMENT", component: SettingsComponent , canActivateChild: [AuthGuard] },
-      { path: "tables", component: TablesComponent  },
+      { path: "USER_MANAGEMENT", component: SettingsComponent , canActivate: [PermGuardGuard] },
+      { path: "tables", component: TablesComponent ,  canActivate: [PermGuardGuard]  },
 
       //SENTIMENT ANALYSIS
       { path: "Sentimentstables", component: SentTablesComponentComponent },
