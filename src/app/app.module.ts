@@ -73,7 +73,9 @@ import { TopicSMComponent } from './views/admin/topic-sm/topic-sm.component';
 import { ContactSMComponent } from './views/admin/contact-sm/contact-sm.component';
 import { TachartComponent } from './Charts/DistriburtionChartTopic/tachart.component';
 import { AccessDeniedComponent } from './components/access-denied/access-denied.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 
 @NgModule({
   declarations: [AppComponent,
@@ -151,6 +153,9 @@ import { AccessDeniedComponent } from './components/access-denied/access-denied.
     AngularEditorModule,
     //environment.production ?[] : HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, { dataEncapsulation : false } ),
     NgChartsModule,
+    BrowserAnimationsModule,
+    BsDatepickerModule.forRoot(),
+    
     
   ],
   providers: [authInterceptorProviders],

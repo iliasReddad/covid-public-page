@@ -3,11 +3,73 @@
     <app-header-stats></app-header-stats>  
       <div class="flex flex-wrap  p-16">
         <div *ngFor="let ele of data " class="w-full  mb-3  lg:w-full xl:w-4/12 px-4">
-          <app-card-sentiment statSubtitle="{{ele.split(',')[1]}} Comments "
+          <app-card-sentiment statSubtitle="{{ele.split(',')[1]}}  "
                               statTitle="{{  (((ele.split(',')[0] ) * 100 ) / length ).toFixed(0)}} %"
                               statColor="{{getColor(ele.split(',')[1])}}"
-                              statIconName="{{getIcon(ele.split(',')[1])}}"></app-card-sentiment>
+                              (click)="toggleModal()" statIconName="{{getIcon(ele.split(',')[1])}}"></app-card-sentiment>
         </div>
       
     </div>
   </div>
+  
+  
+  <div *ngIf="showModal" class="overflow-x-hidden overflow-y-auto   fixed inset-0 z-50 outline-none focus:outline-none justify-center items-center flex">
+    <div class="relative p-4 w-full max-w-2xl">
+        <!--content-->
+      <div class="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+        <!--header-->
+        <div class="flex items-start justify-between p-5 border-b border-solid border-slate-200 rounded-t">
+          <h3 class="text-3xl font-semibold">
+            Filter By Date
+          </h3>
+          <button class="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none" (click)="toggleModal()">
+            <span class="bg-transparent text-black opacity-5 h-6 w-6 text-2xl block outline-none focus:outline-none">
+              ×
+            </span>
+          </button>
+        </div>
+        <!--body-->
+        <div class="p-6 space-y-6">
+          
+  <div class="row">
+    <div class="col-xs-12 col-12 col-md-4 form-group mb-3" (click)="changestate()">
+      
+      <input type="text"
+      [hidden]="state"
+             placeholder="Datepicker"
+             class="form-control"
+             #dp="bsDatepicker"
+             [(ngModel)]="date"
+             bsDatepicker
+             [bsConfig]="{ containerClass: 'p-4 theme-dark-blue', showTodayButton: true, todayPosition: 'center' ,returnFocusToInput: true,isAnimated:true, dateInputFormat: 'DD/MM/YYYY' }">
+             <button
+             [hidden]="state"
+             class="github-star ml-1 text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mt-6 mb-12 mr-1 mb-1 bg-lightBlue-600 active:bg-blueGray-600 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150" type="button" (click)="sendRequest()">
+              FilterBtSingleDate
+            </button> 
+    </div>
+    <div class="col-xs-12 col-12 col-md-4 form-group mb-3"  (click)="changestate2()">
+      <input type="text"
+             [hidden]="state2"
+             placeholder="Daterangepicker"
+             class="form-control"
+             bsDaterangepicker
+             [(ngModel)]="date2"
+             [bsConfig]="{ returnFocusToInput: true, isAnimated:true, dateInputFormat: 'DD/MM/YYYY' }">
+
+             <button
+             [hidden]="state2"
+             class="github-star ml-1 text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mt-6 mb-12 mr-1 mb-1 bg-lightBlue-600 active:bg-blueGray-600 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150" type="button" (click)="sendRequestBetwen()">
+              FilterBt2Date
+            </button>
+    </div>
+  </div>
+  
+  
+          </div>
+        
+      </div>
+      
+    </div>
+  </div>
+
