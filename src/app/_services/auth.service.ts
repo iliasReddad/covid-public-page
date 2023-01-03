@@ -75,6 +75,13 @@ export class AuthService {
     return this.http.get(`http://localhost:8080/api/Data/numberofcommentairesbyTopicFilterBet/${dateFrom}&${dateTo}`) 
   }
 
+  getCommentsByStatFilter(date:string):Observable<any>{
+    return this.http.get(`http://localhost:8080/api/Data/numberofcommentairesbyStatFilter/${date}`)
+  }
+  getCommentsByStatFilter2(dateFrom:string,dateTo:string):Observable<any>{
+    return this.http.get(`http://localhost:8080/api/Data/numberofcommentairesbyStatFilterBet/${dateFrom}&${dateTo}`) 
+  }
+
   UpdateComments(id :number , emotion:string ,topic:string ):Observable<any>{
     return this.http.put(Data_API + `Data/UpdateComments/${id}&${topic}&${emotion}`,{
       topic,
