@@ -101,57 +101,57 @@ class="md:left-0 md:block md:fixed md:top-0 md:bottom-0 md:overflow-y-auto md:fl
       </ul>
 
 
-      <div *ngIf="state" >
+      <div *ngIf="state">
 
-       
-      <!-- Divider -->
-      <hr class="my-4 md:min-w-full" />
-      <!-- Heading -->
-      <h6 class="md:min-w-full text-black text-xs uppercase font-bold block pt-1 pb-4 no-underline">
-        Users
-      </h6>
-      <!-- Navigation -->
 
-      <ul  class="md:flex-col md:min-w-full flex flex-col list-none md:mb-4">
+        <!-- Divider -->
+        <hr class="my-4 md:min-w-full" />
+        <!-- Heading -->
+        <h6 class="md:min-w-full text-black text-xs uppercase font-bold block pt-1 pb-4 no-underline">
+          Users
+        </h6>
+        <!-- Navigation -->
 
-        <li   class="items-center">
-          <a [routerLink]="['/admin/USER_MANAGEMENT']"
-             class="text-xs uppercase py-3 font-bold block"
-             routerLinkActive
-             #adminSettings="routerLinkActive"
-             [ngClass]="
+        <ul class="md:flex-col md:min-w-full flex flex-col list-none md:mb-4">
+
+          <li class="items-center">
+            <a [routerLink]="['/admin/USER_MANAGEMENT']"
+               class="text-xs uppercase py-3 font-bold block"
+               routerLinkActive
+               #adminSettings="routerLinkActive"
+               [ngClass]="
               adminSettings.isActive
                 ? 'text-blue-600 hover:text-blue-700'
                 : 'text-blueGray-500 hover:text-blueGray-500'
             ">
-            <i class="fas fa-people-roof mr-2 text-sm"
-               [ngClass]="
+              <i class="fas fa-people-roof mr-2 text-sm"
+                 [ngClass]="
                 adminSettings.isActive ? 'opacity-75' : 'text-blueGray-500'
               "></i>
-            USER MANAGEMENT
-          </a>
-        </li>
+              USER MANAGEMENT
+            </a>
+          </li>
 
 
-        <li class="items-center">
-          <a [routerLink]="['/admin/tables']"
-             class="text-xs uppercase py-3 font-bold block"
-             routerLinkActive
-             #adminTables="routerLinkActive"
-             [ngClass]="
+          <li class="items-center">
+            <a [routerLink]="['/admin/tables']"
+               class="text-xs uppercase py-3 font-bold block"
+               routerLinkActive
+               #adminTables="routerLinkActive"
+               [ngClass]="
               adminTables.isActive
                 ? 'text-blue-600 hover:text-blue-700'
                 : 'text-blueGray-500 hover:text-blueGray-500'
             ">
-            <i class="fas fa-users mr-2 text-sm"
-               [ngClass]="
+              <i class="fas fa-users mr-2 text-sm"
+                 [ngClass]="
                 adminTables.isActive ? 'opacity-75' : 'text-blueGray-500'
               "></i>
-            Users list
-          </a>
-        </li>
-      </ul>
-    </div> 
+              Users list
+            </a>
+          </li>
+        </ul>
+      </div>
 
       <!-- Divider -->
       <hr class="my-4 md:min-w-full" />
@@ -162,7 +162,7 @@ class="md:left-0 md:block md:fixed md:top-0 md:bottom-0 md:overflow-y-auto md:fl
       <!-- Navigation -->
 
       <ul class="md:flex-col md:min-w-full flex flex-col list-none md:mb-4">
-      
+
 
         <li class="items-center">
           <a [routerLink]="['/admin/Sentimentstables']"
@@ -178,7 +178,7 @@ class="md:left-0 md:block md:fixed md:top-0 md:bottom-0 md:overflow-y-auto md:fl
                [ngClass]="
                SentiTables.isActive ? 'opacity-75' : 'text-blueGray-500'
               "></i>
-              Sentimental list
+            Sentimental list
           </a>
         </li>
 
@@ -199,7 +199,7 @@ class="md:left-0 md:block md:fixed md:top-0 md:bottom-0 md:overflow-y-auto md:fl
                [ngClass]="
                SentiStats.isActive ? 'opacity-75' : 'text-blueGray-500'
               "></i>
-              Sentimental Stats
+            Sentimental Stats
           </a>
         </li>
         <li class="items-center">
@@ -217,7 +217,7 @@ class="md:left-0 md:block md:fixed md:top-0 md:bottom-0 md:overflow-y-auto md:fl
                [ngClass]="
                SentiGraphs.isActive ? 'opacity-75' : 'text-blueGray-500'
               "></i>
-             Graphs
+            Graphs
           </a>
         </li>
 
@@ -247,7 +247,7 @@ class="md:left-0 md:block md:fixed md:top-0 md:bottom-0 md:overflow-y-auto md:fl
                [ngClass]="
                TopicTables.isActive ? 'opacity-75' : 'text-blueGray-500'
               "></i>
-              Topic list
+            Topic list
           </a>
         </li>
         <li class="items-center">
@@ -265,7 +265,7 @@ class="md:left-0 md:block md:fixed md:top-0 md:bottom-0 md:overflow-y-auto md:fl
                [ngClass]="
                TopicStats.isActive ? 'opacity-75' : 'text-blueGray-500'
               "></i>
-              Topic Stats
+            Topic Stats
           </a>
         </li>
         <li class="items-center">
@@ -298,150 +298,109 @@ class="md:left-0 md:block md:fixed md:top-0 md:bottom-0 md:overflow-y-auto md:fl
 
       <ul class="md:flex-col md:min-w-full flex flex-col list-none md:mb-4">
         <li class="items-center">
-          <a 
-          [routerLink]="['/admin/HomeSM']"
-              class="text-xs uppercase py-3 font-bold block"
-              routerLinkActive
-              #HomeSM="routerLinkActive"
-              [ngClass]="
+          <a [routerLink]="['/admin/HomeSM']"
+             class="text-xs uppercase py-3 font-bold block"
+             routerLinkActive
+             #HomeSM="routerLinkActive"
+             [ngClass]="
               HomeSM.isActive
                   ? 'text-blue-600 hover:text-blue-700'
                   : 'text-blueGray-500 hover:text-blueGray-500'
               ">
-              <i class="fas fa-house-user  mr-2 text-sm"
-                [ngClass]="
+            <i class="fas fa-house-user  mr-2 text-sm"
+               [ngClass]="
                 HomeSM.isActive ? 'opacity-75' : 'text-blueGray-500'
                 "></i>
-                Home
+            Home
           </a>
         </li>
         <li class="items-center">
-          <a 
-          [routerLink]="['/admin/AboutSM']"
-          class="text-xs uppercase py-3 font-bold block"
-          routerLinkActive
-          #AboutSM="routerLinkActive"
-          [ngClass]="
+          <a [routerLink]="['/admin/AboutSM']"
+             class="text-xs uppercase py-3 font-bold block"
+             routerLinkActive
+             #AboutSM="routerLinkActive"
+             [ngClass]="
           AboutSM.isActive
               ? 'text-blue-600 hover:text-blue-700'
               : 'text-blueGray-500 hover:text-blueGray-500'
           ">
-              <i class="fas fa-circle-info mr-2 text-sm"
-                [ngClass]="
+            <i class="fas fa-circle-info mr-2 text-sm"
+               [ngClass]="
                 AboutSM.isActive ? 'opacity-75' : 'text-blueGray-500'
                 "></i>
-                About
+            About
           </a>
         </li>
         <li class="items-center">
-          <a 
-          [routerLink]="['/admin/ServiceSM']"
-          class="text-xs uppercase py-3 font-bold block"
-          routerLinkActive
-          #ServiceSM="routerLinkActive"
-          [ngClass]="
+          <a [routerLink]="['/admin/ServiceSM']"
+             class="text-xs uppercase py-3 font-bold block"
+             routerLinkActive
+             #ServiceSM="routerLinkActive"
+             [ngClass]="
           ServiceSM.isActive
               ? 'text-blue-600 hover:text-blue-700'
               : 'text-blueGray-500 hover:text-blueGray-500'
           ">
-              <i class="fas fa-hand-holding-medical mr-2 text-sm"
-                [ngClass]="
+            <i class="fas fa-hand-holding-medical mr-2 text-sm"
+               [ngClass]="
                 ServiceSM.isActive ? 'opacity-75' : 'text-blueGray-500'
                 "></i>
-                Services
+            Services
           </a>
         </li>
         <li class="items-center">
-          <a
-          [routerLink]="['/admin/SentimentSM']"
-          class="text-xs uppercase py-3 font-bold block"
-          routerLinkActive
-          #SentimentSM="routerLinkActive"
-          [ngClass]="
+          <a [routerLink]="['/admin/SentimentSM']"
+             class="text-xs uppercase py-3 font-bold block"
+             routerLinkActive
+             #SentimentSM="routerLinkActive"
+             [ngClass]="
           SentimentSM.isActive
               ? 'text-blue-600 hover:text-blue-700'
               : 'text-blueGray-500 hover:text-blueGray-500'
           ">
-              <i class="fas fa-person-rays mr-2 text-sm"
-                [ngClass]="
+            <i class="fas fa-person-rays mr-2 text-sm"
+               [ngClass]="
                 SentimentSM.isActive ? 'opacity-75' : 'text-blueGray-500'
                 "></i>
-                Sentiment Analysis
+            Sentiment Analysis
           </a>
-          
+
         </li>
         <li class="items-center">
-          <a 
-          [routerLink]="['/admin/TopicSM']"
-          class="text-xs uppercase py-3 font-bold block"
-          routerLinkActive
-          #TopicSM="routerLinkActive"
-          [ngClass]="
+          <a [routerLink]="['/admin/TopicSM']"
+             class="text-xs uppercase py-3 font-bold block"
+             routerLinkActive
+             #TopicSM="routerLinkActive"
+             [ngClass]="
           TopicSM.isActive
               ? 'text-blue-600 hover:text-blue-700'
               : 'text-blueGray-500 hover:text-blueGray-500'
           ">
-              <i class="fas fa-person-chalkboard mr-2 text-sm"
-                [ngClass]="
+            <i class="fas fa-person-chalkboard mr-2 text-sm"
+               [ngClass]="
                 TopicSM.isActive ? 'opacity-75' : 'text-blueGray-500'
                 "></i>
-                Topic Analysis
+            Topic Analysis
           </a>
-    
+
         </li>
         <li class="items-center">
-          <a
-          [routerLink]="['/admin/ContactSM']"
-          class="text-xs uppercase py-3 font-bold block"
-          routerLinkActive
-          #ContactSM="routerLinkActive"
-          [ngClass]="
+          <a [routerLink]="['/admin/ContactSM']"
+             class="text-xs uppercase py-3 font-bold block"
+             routerLinkActive
+             #ContactSM="routerLinkActive"
+             [ngClass]="
           ContactSM.isActive
               ? 'text-blue-600 hover:text-blue-700'
               : 'text-blueGray-500 hover:text-blueGray-500'
           ">
-              <i class="fas fa-address-book  mr-2 text-sm"
-                [ngClass]="
+            <i class="fas fa-address-book  mr-2 text-sm"
+               [ngClass]="
                 ContactSM.isActive ? 'opacity-75' : 'text-blueGray-500'
                 "></i>
-                Contact
-          
-            
-          </a>
-        </li>
-      </ul>
+            Contact
 
 
-      <!-- Divider -->
-      <hr class="my-4 md:min-w-full" />
-      <!-- Heading -->
-      <h6 class="md:min-w-full text-black text-xs uppercase font-bold block pt-1 pb-4 no-underline">
-        Account
-      </h6>
-      <ul class="md:flex-col md:min-w-full flex flex-col list-none md:mb-4">
-
-        <li class="items-center">
-          <a *ngIf="!isAuthenticated"
-             [routerLink]="['/auth/login']"
-             class="text-blueGray-500 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block">
-            <i class="fas fa-fingerprint text-blueGray-500 mr-2 text-sm"></i>
-            Login
-          </a>
-        </li>
-        <li class="items-center">
-          <a *ngIf="isAuthenticated"
-             (click)="logout()"
-             class="text-blueGray-500 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block">
-            <i class="fas fa-fingerprint text-blueGray-500 mr-2 text-sm"></i>
-            LogOut
-          </a>
-        </li>
-
-        <li class="items-center">
-          <a [routerLink]="['/profile']"
-             class="text-blueGray-500 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block">
-            <i class="fas fa-user-circle text-blueGray-500 mr-2 text-sm"></i>
-            Profile Page
           </a>
         </li>
       </ul>
@@ -469,6 +428,43 @@ class="md:left-0 md:block md:fixed md:top-0 md:bottom-0 md:overflow-y-auto md:fl
           </a>
         </li>
       </ul>
+
+
+      <!-- Divider -->
+      <hr class="my-4 md:min-w-full" />
+      <!-- Heading -->
+      <h6 class="md:min-w-full text-black text-xs uppercase font-bold block pt-1 pb-4 no-underline">
+        Account
+      </h6>
+      <ul class="md:flex-col md:min-w-full flex flex-col list-none md:mb-4">
+
+        <li class="items-center">
+          <a *ngIf="!isAuthenticated"
+             [routerLink]="['/auth/login']"
+             class="text-blueGray-500 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block">
+            <i class="fas fa-fingerprint text-blueGray-500 mr-2 text-sm"></i>
+            Login
+          </a>
+        </li>
+        <li class="items-center">
+          <a *ngIf="isAuthenticated"
+             (click)="logout()"
+             class="text-blueGray-500 hover:text-blueGray-500 cursor-pointer text-xs uppercase py-3 font-bold block">
+            <i class="fas fa-lock text-blueGray-500 mr-2 text-sm"></i>
+            LogOut
+          </a>
+        </li>
+
+        <li class="items-center">
+          <a [routerLink]="['/profile']"
+             class="text-blueGray-500 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block">
+            <i class="fas fa-user-circle text-blueGray-500 mr-2 text-sm"></i>
+            Profile Page
+          </a>
+        </li>
+      </ul>
+
+
     </div>
   </div>
 </nav>

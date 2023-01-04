@@ -4,9 +4,13 @@
     "\\src",
     "\\src\\app",
     "\\src\\app\\components",
-    "\\src\\app\\components\\cards",
-    "\\src\\app\\components\\cards\\cart-table-sentiments"
+    "\\src\\app\\components\\sidebar",
+    "\\src\\app\\layouts",
+    "\\src\\app\\layouts\\auth",
+    "\\src\\app\\views",
+    "\\src\\app\\views\\index",
+    "\\src\\app\\views\\landing"
   ],
-  "SelectedNode": "\\src\\app\\components\\cards\\cart-table-sentiments\\cart-table-sentiments.component.css",
+  "SelectedNode": "\\src\\app\\layouts\\auth\\auth.component.html",
   "PreviewInSolutionExplorer": false
 }
