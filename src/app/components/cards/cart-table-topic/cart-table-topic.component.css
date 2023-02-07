@@ -1,0 +1,58 @@
+.w-100 {
+  width: 100%!important;
+}
+
+.container {
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+
+.cards {
+  width: calc(100% - 80px);
+  overflow: hidden;
+}
+
+.overflow {
+  position: relative;
+  transition: left 0.5s ease-in-out;
+}
+
+.card {
+  height: 80px;
+  
+    border-radius: 0.75rem/* 12px */;
+
+  display: inline-block;
+  grid-column: 1/2;
+  margin-right: 10px;
+  position: relative;
+}
+
+.no-right-margin {
+  margin-right: 0px;
+}
+
+
+
+.left,
+.right {
+  cursor:pointer;
+  color: #0072bc;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.left.disabled, .right.disabled {
+  cursor: default;
+  color:#CCC;
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  right: 0;
+}

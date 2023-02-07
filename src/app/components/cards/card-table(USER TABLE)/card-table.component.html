@@ -1,0 +1,145 @@
+<div *ngIf="userole==='ROLE_ADMIN'" style="height: 73vh ;" class="relative  overflow-x-auto flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded"
+  [ngClass]="color === 'light' ? 'bg-white' : 'bg-red-900 text-white'">
+  <div  class="rounded-t   w-fit  mb-0 px-4 py-3 border-0">
+    <div class="flex flex-wrap items-center justify-center">
+      <div class="relative px-4 max-w-full flex flex-grow flex-row justify-between  items-center">
+        <h3 class="text-blueGray-700 text-xl font-bold py-4" [ngClass]="color === 'light' ? 'text-blueGray-700' : 'text-white'">
+          USERS LIST
+        </h3>
+        
+        
+        <div  class="block overflow-x-auto">
+          <div *ngIf="isDeleteFailed" class="p-4 mb-4 text-sm text-red-700 bg-red-100 rounded-lg dark:bg-red-200 dark:text-red-800" role="alert">
+            <span class="font-medium text-sm text-red-700 dark:text-red-800">Danger alert! </span>{{errorMessage}}.
+            </div>
+          <div  *ngIf="isSuccessful"  class="p-4 mb-4 text-sm text-green-700 bg-green-100 rounded-lg dark:bg-green-200 dark:text-green-800" role="alert">
+            <span class="font-medium">Deleted Successfuly.!</span> 
+      </div>
+      </div>
+
+      <div  class="block overflow-x-auto">
+        <div *ngIf="isChangeFailed" class="p-4 mb-4 text-sm text-red-700 bg-red-100 rounded-lg dark:bg-red-200 dark:text-red-800" role="alert">
+          <span class="font-medium text-sm text-red-700 dark:text-red-800">Danger alert! </span>{{errorMessage2}}.
+          </div>
+        <div  *ngIf="isChangeSuccessful"  class="p-4 mb-4 text-sm text-green-700 bg-green-100 rounded-lg dark:bg-green-200 dark:text-green-800" role="alert">
+          <span class="font-medium">Statue Updated with Success.!</span> 
+    </div>
+    </div>
+      
+    </div>
+  </div>
+  
+    <!-- Projects table -->
+    <table style="width:100% ;" datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="items-center    bg-transparent border-collapse">
+      <thead>
+        <tr>
+          <th
+            class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
+            [ngClass]="
+              color === 'light'
+                ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
+                : 'bg-red-800 text-red-300 border-red-700'
+            ">
+            ROLE
+          </th>
+          <th
+            class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
+            [ngClass]="
+              color === 'light'
+                ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
+                : 'bg-red-800 text-red-300 border-red-700'
+            ">
+            USERNAME
+          </th>
+          <th
+            class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
+            [ngClass]="
+              color === 'light'
+                ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
+                : 'bg-red-800 text-red-300 border-red-700'
+            ">
+            Status
+          </th>
+
+          <th
+            class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
+            [ngClass]="
+              color === 'light'
+                ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
+                : 'bg-red-800 text-red-300 border-red-700'
+            ">
+            Email
+          </th>
+          <th
+            class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
+            [ngClass]="
+              color === 'light'
+                ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
+                : 'bg-red-800 text-red-300 border-red-700'
+            ">
+            Action
+          </th>
+         
+        </tr>
+      </thead>
+      <tbody id="excel-table" >
+        <tr *ngFor="let user of users">
+          <th
+            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left flex items-center">
+            <img *ngIf=" user.roles[0].name==='ROLE_ADMIN' "
+              src="https://i.pinimg.com/736x/d0/53/f2/d053f2394d420d8d3712046f4e8f80cc.jpg"
+              class="h-12 w-12 bg-white rounded-full border" alt="..." />
+            <img *ngIf=" user.roles[0].name==='ROLE_MODERATOR' "
+              src="https://previews.123rf.com/images/tashatuvango/tashatuvango1702/tashatuvango170200528/71397012-moderator-job-vacancy-3d-.jpg              "
+              class="h-12 w-12 bg-white rounded-full border" alt="..." />
+            <img *ngIf=" user.roles[0].name==='ROLE_USER' "
+              src="https://th.bing.com/th/id/R.332764865d005b74043c007d164478e8?rik=x4o1iu9i2qO99A&pid=ImgRaw&r=0"
+              class="h-12 w-12 bg-white rounded-full border" alt="..." />
+            <span class="ml-3 font-bold" [ngClass]="color === 'light' ? 'text-blueGray-600' : 'text-white'">
+              {{ user.roles[0].name.split('_')[1] }}
+            </span>
+          </th>
+          <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+            {{ user.username | uppercase }}
+          </td>
+          <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+            <i 
+            [ngClass]="user.status  === 'pending' ? 'fas fa-circle text-green-500 mr-2' : 'fas fa-circle text-red-500 mr-2 '"
+          ></i>   
+                      {{ user.status | uppercase }}
+
+          </td>
+
+          <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+            <div class="flex items-center">
+              <span class="mr-2">{{user.email | uppercase}}</span>
+
+            </div>
+          </td>
+          
+          <td class="  space-x-6">
+            <i (click)="delete(user)" class="fa-solid fa-trash"></i>
+            <i (click)="changeStatue(user)" class="fa-solid fa-pen-to-square"></i>
+            </td>
+          
+          
+        </tr>
+        
+
+      </tbody>
+    </table>
+   
+
+
+    
+  
+
+  </div>
+
+</div>
+
+  <div style="height: 73vh ;" *ngIf="userole==='ROLE_MODERATOR'" class="relative   w-full mb-6 shadow-lg rounded">
+   <app-access-denied></app-access-denied>
+
+      
+    </div>

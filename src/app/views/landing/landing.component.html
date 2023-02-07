@@ -1,4 +1,4 @@
-<  <section *ngIf="!contenu[0]"  class="header relative min-h-screen grid h-screen place-items-center" id="loader">
+ <section *ngIf="!contenu[0]"  class="header relative min-h-screen grid h-screen place-items-center" id="loader">
   <app-loader></app-loader>
   </section>
 <app-index-navbar ></app-index-navbar>
@@ -8,15 +8,18 @@
     <div class="container mx-auto items-center flex flex-wrap pt-8">
       <div class="w-full md:w-8/12 lg:w-6/12 xl:w-6/12 px-4">
         <div class="pt-32 sm:pt-0">
-          <h2 class="font-bold text-5xl text-lightBlue-600 mt-16">
-            {{contenu[0].titre }} 
-          </h2>
-          <p class="font-semibold text-xl mt-8 text-blueGray-600 ml-2">
-            {{contenu[0].sous_titre }}
-          </p>
-          <p class="mt-4 ml-2  text-lg leading-relaxed text-blueGray-500">
-            {{contenu[0].paragraphe }}
+          <h2 [innerHTML]="contenu[0].titre" 
+           class="font-bold text-5xl text-lightBlue-600 mt-16">
+           
 
+
+          </h2>
+          <p [innerHTML]="contenu[0].sous_titre" 
+          class="font-semibold text-xl mt-8 text-blueGray-600 ml-2">
+          </p>
+          <p 
+          [innerHTML]="contenu[0].paragraphe" 
+          class="mt-4 ml-2  text-lg leading-relaxed text-blueGray-500">
           </p>
           <app-modal [content]="contenu[0].button "></app-modal>
        
@@ -632,4 +635,3 @@
   </section>
 </main>
 <app-footer></app-footer>
->

@@ -100,53 +100,58 @@ class="md:left-0 md:block md:fixed md:top-0 md:bottom-0 md:overflow-y-auto md:fl
         </li>
       </ul>
 
-      <!-- Divider -->
-      <hr class="my-4 md:min-w-full" />
-      <!-- Heading -->
-      <h6 class="md:min-w-full text-black text-xs uppercase font-bold block pt-1 pb-4 no-underline">
-        Users
-      </h6>
-      <!-- Navigation -->
 
-      <ul class="md:flex-col md:min-w-full flex flex-col list-none md:mb-4">
+      <div *ngIf="state">
 
-        <li class="items-center">
-          <a [routerLink]="['/admin/USER_MANAGEMENT']"
-             class="text-xs uppercase py-3 font-bold block"
-             routerLinkActive
-             #adminSettings="routerLinkActive"
-             [ngClass]="
+
+        <!-- Divider -->
+        <hr class="my-4 md:min-w-full" />
+        <!-- Heading -->
+        <h6 class="md:min-w-full text-black text-xs uppercase font-bold block pt-1 pb-4 no-underline">
+          Users
+        </h6>
+        <!-- Navigation -->
+
+        <ul class="md:flex-col md:min-w-full flex flex-col list-none md:mb-4">
+
+          <li class="items-center">
+            <a [routerLink]="['/admin/USER_MANAGEMENT']"
+               class="text-xs uppercase py-3 font-bold block"
+               routerLinkActive
+               #adminSettings="routerLinkActive"
+               [ngClass]="
               adminSettings.isActive
                 ? 'text-blue-600 hover:text-blue-700'
                 : 'text-blueGray-500 hover:text-blueGray-500'
             ">
-            <i class="fas fa-people-roof mr-2 text-sm"
-               [ngClass]="
+              <i class="fas fa-people-roof mr-2 text-sm"
+                 [ngClass]="
                 adminSettings.isActive ? 'opacity-75' : 'text-blueGray-500'
               "></i>
-            USER MANAGEMENT
-          </a>
-        </li>
+              USER MANAGEMENT
+            </a>
+          </li>
 
 
-        <li class="items-center">
-          <a [routerLink]="['/admin/tables']"
-             class="text-xs uppercase py-3 font-bold block"
-             routerLinkActive
-             #adminTables="routerLinkActive"
-             [ngClass]="
+          <li class="items-center">
+            <a [routerLink]="['/admin/tables']"
+               class="text-xs uppercase py-3 font-bold block"
+               routerLinkActive
+               #adminTables="routerLinkActive"
+               [ngClass]="
               adminTables.isActive
                 ? 'text-blue-600 hover:text-blue-700'
                 : 'text-blueGray-500 hover:text-blueGray-500'
             ">
-            <i class="fas fa-users mr-2 text-sm"
-               [ngClass]="
+              <i class="fas fa-users mr-2 text-sm"
+                 [ngClass]="
                 adminTables.isActive ? 'opacity-75' : 'text-blueGray-500'
               "></i>
-            Users list
-          </a>
-        </li>
-      </ul>
+              Users list
+            </a>
+          </li>
+        </ul>
+      </div>
 
       <!-- Divider -->
       <hr class="my-4 md:min-w-full" />
@@ -157,21 +162,61 @@ class="md:left-0 md:block md:fixed md:top-0 md:bottom-0 md:overflow-y-auto md:fl
       <!-- Navigation -->
 
       <ul class="md:flex-col md:min-w-full flex flex-col list-none md:mb-4">
+
+
         <li class="items-center">
-          <a class="text-blueGray-500 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block">
-            <i class="fas fa-list text-blueGray-500 mr-2 text-sm"></i>
-            List
+          <a [routerLink]="['/admin/Sentimentstables']"
+             class="text-xs uppercase py-3 font-bold block"
+             routerLinkActive
+             #SentiTables="routerLinkActive"
+             [ngClass]="
+             SentiTables.isActive
+                ? 'text-blue-600 hover:text-blue-700'
+                : 'text-blueGray-500 hover:text-blueGray-500'
+            ">
+            <i class="fas fa-users mr-2 text-sm"
+               [ngClass]="
+               SentiTables.isActive ? 'opacity-75' : 'text-blueGray-500'
+              "></i>
+            Sentimental list
+          </a>
+        </li>
+
+
+
+        <li class="items-center">
+          <a [routerLink]="['/admin/SentimentstStates']"
+             class="text-xs uppercase py-3 font-bold block"
+             routerLinkActive
+             #SentiStats="routerLinkActive"
+             [ngClass]="
+             SentiStats.isActive
+                ? 'text-blue-600 hover:text-blue-700'
+                : 'text-blueGray-500 hover:text-blueGray-500'
+            ">
+
+            <i class="fas fa-chart-simple mr-2 text-sm"
+               [ngClass]="
+               SentiStats.isActive ? 'opacity-75' : 'text-blueGray-500'
+              "></i>
+            Sentimental Stats
           </a>
         </li>
         <li class="items-center">
-          <a class="text-blueGray-500 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block">
-            <i class="fas fa-chart-simple text-blueGray-500 mr-2 text-sm"></i>
-            Statistics
-          </a>
-        </li>
-        <li class="items-center">
-          <a class="text-blueGray-500 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block">
-            <i class="fas fa-chart-line text-blueGray-500 mr-2 text-sm"></i>
+          <a [routerLink]="['/admin/SentimentstChart']"
+             class="text-xs uppercase py-3 font-bold block"
+             routerLinkActive
+             #SentiGraphs="routerLinkActive"
+             [ngClass]="
+             SentiGraphs.isActive
+                ? 'text-blue-600 hover:text-blue-700'
+                : 'text-blueGray-500 hover:text-blueGray-500'
+            ">
+
+            <i class="fas fa-chart-simple mr-2 text-sm"
+               [ngClass]="
+               SentiGraphs.isActive ? 'opacity-75' : 'text-blueGray-500'
+              "></i>
             Graphs
           </a>
         </li>
@@ -189,20 +234,55 @@ class="md:left-0 md:block md:fixed md:top-0 md:bottom-0 md:overflow-y-auto md:fl
 
       <ul class="md:flex-col md:min-w-full flex flex-col list-none md:mb-4">
         <li class="items-center">
-          <a class="text-blueGray-500 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block">
-            <i class="fas fa-list text-blueGray-500 mr-2 text-sm"></i>
-            List
+          <a [routerLink]="['/admin/Topictables']"
+             class="text-xs uppercase py-3 font-bold block"
+             routerLinkActive
+             #TopicTables="routerLinkActive"
+             [ngClass]="
+             TopicTables.isActive
+                ? 'text-blue-600 hover:text-blue-700'
+                : 'text-blueGray-500 hover:text-blueGray-500'
+            ">
+            <i class="fas fa-users mr-2 text-sm"
+               [ngClass]="
+               TopicTables.isActive ? 'opacity-75' : 'text-blueGray-500'
+              "></i>
+            Topic list
           </a>
         </li>
         <li class="items-center">
-          <a class="text-blueGray-500 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block">
-            <i class="fas fa-chart-simple text-blueGray-500 mr-2 text-sm"></i>
-            Statistics
+          <a [routerLink]="['/admin/TopicStates']"
+             class="text-xs uppercase py-3 font-bold block"
+             routerLinkActive
+             #TopicStats="routerLinkActive"
+             [ngClass]="
+             TopicStats.isActive
+                ? 'text-blue-600 hover:text-blue-700'
+                : 'text-blueGray-500 hover:text-blueGray-500'
+            ">
+
+            <i class="fas fa-chart-simple mr-2 text-sm"
+               [ngClass]="
+               TopicStats.isActive ? 'opacity-75' : 'text-blueGray-500'
+              "></i>
+            Topic Stats
           </a>
         </li>
         <li class="items-center">
-          <a class="text-blueGray-500 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block">
-            <i class="fas fa-chart-line text-blueGray-500 mr-2 text-sm"></i>
+          <a [routerLink]="['/admin/TopicChart']"
+             class="text-xs uppercase py-3 font-bold block"
+             routerLinkActive
+             #Topicgraphs="routerLinkActive"
+             [ngClass]="
+             Topicgraphs.isActive
+                ? 'text-blue-600 hover:text-blue-700'
+                : 'text-blueGray-500 hover:text-blueGray-500'
+            ">
+
+            <i class="fas fa-chart-simple mr-2 text-sm"
+               [ngClass]="
+               Topicgraphs.isActive ? 'opacity-75' : 'text-blueGray-500'
+              "></i>
             Graphs
           </a>
         </li>
@@ -218,39 +298,133 @@ class="md:left-0 md:block md:fixed md:top-0 md:bottom-0 md:overflow-y-auto md:fl
 
       <ul class="md:flex-col md:min-w-full flex flex-col list-none md:mb-4">
         <li class="items-center">
-          <a class="text-blueGray-500 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block">
-            <i class="fas fa-house-user text-blueGray-500 mr-2 text-sm"></i>
+          <a [routerLink]="['/admin/HomeSM']"
+             class="text-xs uppercase py-3 font-bold block"
+             routerLinkActive
+             #HomeSM="routerLinkActive"
+             [ngClass]="
+              HomeSM.isActive
+                  ? 'text-blue-600 hover:text-blue-700'
+                  : 'text-blueGray-500 hover:text-blueGray-500'
+              ">
+            <i class="fas fa-house-user  mr-2 text-sm"
+               [ngClass]="
+                HomeSM.isActive ? 'opacity-75' : 'text-blueGray-500'
+                "></i>
             Home
           </a>
         </li>
         <li class="items-center">
-          <a class="text-blueGray-500 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block">
-            <i class="fas fa-circle-info text-blueGray-500 mr-2 text-sm"></i>
+          <a [routerLink]="['/admin/AboutSM']"
+             class="text-xs uppercase py-3 font-bold block"
+             routerLinkActive
+             #AboutSM="routerLinkActive"
+             [ngClass]="
+          AboutSM.isActive
+              ? 'text-blue-600 hover:text-blue-700'
+              : 'text-blueGray-500 hover:text-blueGray-500'
+          ">
+            <i class="fas fa-circle-info mr-2 text-sm"
+               [ngClass]="
+                AboutSM.isActive ? 'opacity-75' : 'text-blueGray-500'
+                "></i>
             About
           </a>
         </li>
         <li class="items-center">
-          <a class="text-blueGray-500 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block">
-            <i class="fas fa-hand-holding-medical text-blueGray-500 mr-2 text-sm"></i>
+          <a [routerLink]="['/admin/ServiceSM']"
+             class="text-xs uppercase py-3 font-bold block"
+             routerLinkActive
+             #ServiceSM="routerLinkActive"
+             [ngClass]="
+          ServiceSM.isActive
+              ? 'text-blue-600 hover:text-blue-700'
+              : 'text-blueGray-500 hover:text-blueGray-500'
+          ">
+            <i class="fas fa-hand-holding-medical mr-2 text-sm"
+               [ngClass]="
+                ServiceSM.isActive ? 'opacity-75' : 'text-blueGray-500'
+                "></i>
             Services
           </a>
         </li>
         <li class="items-center">
-          <a class="text-blueGray-500 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block">
-            <i class="fas fa-person-rays text-blueGray-500 mr-2 text-sm"></i>
+          <a [routerLink]="['/admin/SentimentSM']"
+             class="text-xs uppercase py-3 font-bold block"
+             routerLinkActive
+             #SentimentSM="routerLinkActive"
+             [ngClass]="
+          SentimentSM.isActive
+              ? 'text-blue-600 hover:text-blue-700'
+              : 'text-blueGray-500 hover:text-blueGray-500'
+          ">
+            <i class="fas fa-person-rays mr-2 text-sm"
+               [ngClass]="
+                SentimentSM.isActive ? 'opacity-75' : 'text-blueGray-500'
+                "></i>
             Sentiment Analysis
           </a>
+
         </li>
         <li class="items-center">
-          <a class="text-blueGray-500 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block">
-            <i class="fas fa-person-chalkboard text-blueGray-500 mr-2 text-sm"></i>
+          <a [routerLink]="['/admin/TopicSM']"
+             class="text-xs uppercase py-3 font-bold block"
+             routerLinkActive
+             #TopicSM="routerLinkActive"
+             [ngClass]="
+          TopicSM.isActive
+              ? 'text-blue-600 hover:text-blue-700'
+              : 'text-blueGray-500 hover:text-blueGray-500'
+          ">
+            <i class="fas fa-person-chalkboard mr-2 text-sm"
+               [ngClass]="
+                TopicSM.isActive ? 'opacity-75' : 'text-blueGray-500'
+                "></i>
             Topic Analysis
           </a>
+
         </li>
         <li class="items-center">
-          <a class="text-blueGray-500 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block">
-            <i class="fas fa-address-book text-blueGray-500 mr-2 text-sm"></i>
+          <a [routerLink]="['/admin/ContactSM']"
+             class="text-xs uppercase py-3 font-bold block"
+             routerLinkActive
+             #ContactSM="routerLinkActive"
+             [ngClass]="
+          ContactSM.isActive
+              ? 'text-blue-600 hover:text-blue-700'
+              : 'text-blueGray-500 hover:text-blueGray-500'
+          ">
+            <i class="fas fa-address-book  mr-2 text-sm"
+               [ngClass]="
+                ContactSM.isActive ? 'opacity-75' : 'text-blueGray-500'
+                "></i>
             Contact
+
+
+          </a>
+        </li>
+      </ul>
+
+      <!-- Divider -->
+      <hr class="my-4 md:min-w-full" />
+      <!-- Navigation -->
+
+      <ul class="md:flex-col md:min-w-full flex flex-col list-none">
+        <li class="items-center">
+          <a [routerLink]="['/admin/dataAnnotation']"
+             class="text-xs uppercase py-3 font-bold block"
+             routerLinkActive
+             #dataAnnotation="routerLinkActive"
+             [ngClass]="
+              dataAnnotation.isActive
+                ? 'text-blue-600 hover:text-blue-700'
+                : 'text-blueGray-500 hover:text-blueGray-500'
+            ">
+            <i class="fas fa-database mr-2 text-sm"
+               [ngClass]="
+                dataAnnotation.isActive ? 'opacity-75' : 'text-blueGray-500'
+              "></i>
+            Data Annotation
           </a>
         </li>
       </ul>
@@ -275,17 +449,9 @@ class="md:left-0 md:block md:fixed md:top-0 md:bottom-0 md:overflow-y-auto md:fl
         <li class="items-center">
           <a *ngIf="isAuthenticated"
              (click)="logout()"
-             class="text-blueGray-500 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block">
-            <i class="fas fa-fingerprint text-blueGray-500 mr-2 text-sm"></i>
+             class="text-blueGray-500 hover:text-blueGray-500 cursor-pointer text-xs uppercase py-3 font-bold block">
+            <i class="fas fa-lock text-blueGray-500 mr-2 text-sm"></i>
             LogOut
-          </a>
-        </li>
-
-        <li class="items-center">
-          <a [routerLink]="['/auth/register']"
-             class="text-blueGray-500 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block">
-            <i class="fas fa-clipboard-list text-blueGray-500 mr-2 text-sm"></i>
-            Register
           </a>
         </li>
 
@@ -298,29 +464,6 @@ class="md:left-0 md:block md:fixed md:top-0 md:bottom-0 md:overflow-y-auto md:fl
         </li>
       </ul>
 
-      <!-- Divider -->
-      <hr class="my-4 md:min-w-full" />
-      <!-- Navigation -->
-
-      <ul class="md:flex-col md:min-w-full flex flex-col list-none">
-        <li class="items-center">
-          <a [routerLink]="['/dataAnnotation']"
-             class="text-xs uppercase py-3 font-bold block"
-             routerLinkActive
-             #adminDashboard="routerLinkActive"
-             [ngClass]="
-              adminDashboard.isActive
-                ? 'text-blue-600 hover:text-blue-700'
-                : 'text-blueGray-500 hover:text-blueGray-500'
-            ">
-            <i class="fas fa-database mr-2 text-sm"
-               [ngClass]="
-                adminDashboard.isActive ? 'opacity-75' : 'text-blueGray-500'
-              "></i>
-            Data Annotation
-          </a>
-        </li>
-      </ul>
 
     </div>
   </div>

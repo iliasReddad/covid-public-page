@@ -14,9 +14,17 @@ export class UserService {
     return this.http.get(API_URL + 'all')
   }
 
+  dowlond(): Observable<any> {
+    return this.http.get(API_URL + 'export')
+  }
+
   deleteuser(Username: string): Observable<any> {
     return this.http.delete(API_URL + `delete/${Username}`);
     }
+
+    changeStatues(Username: string): Observable<any> {
+      return this.http.get(API_URL + `change/${Username}`);
+      }
 
   
 }

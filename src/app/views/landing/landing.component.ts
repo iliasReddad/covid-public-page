@@ -70,7 +70,6 @@ export class LandingComponent implements OnInit {
       };  
       });
       
-      console.log("largest "+this.StatsdominantTopic + " "+this.dominantTopic);
 
      
 

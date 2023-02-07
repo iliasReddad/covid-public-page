@@ -1,4 +1,14 @@
-import { DataAnnotationComponent } from './data-annotation/data-annotation.component';
+import { PermGuardGuard } from './perm-guard.guard';
+import { ContactSMComponent } from './views/admin/contact-sm/contact-sm.component';
+import { SentimentSMComponent } from './views/admin/sentiment-sm/sentiment-sm.component';
+import { TopicSMComponent } from './views/admin/topic-sm/topic-sm.component';
+import { ServiceSMComponent } from './views/admin/service-sm/service-sm.component';
+import { AboutSMComponent } from './views/admin/about-sm/about-sm.component';
+import { HomeSMComponent } from './views/admin/home-sm/home-sm.component';
+import { TopicStatsComponent } from './views/admin/topic-stats/topic-stats.component';
+import { TopicListComponent } from './views/admin/topic-list/topic-list.component';
+import { SentimentalStatsComponent } from './views/admin/sentimental-stats/sentimental-stats.component';
+import { DataAnnotationComponent } from './components/data-annotation/data-annotation.component';
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 import { AuthGuard } from "./auth.guard";
@@ -18,17 +28,47 @@ import { RegisterComponent } from "./views/auth/register/register.component";
 import { IndexComponent } from "./views/index/index.component";
 import { LandingComponent } from "./views/landing/landing.component";
 import { ProfileComponent } from "./views/profile/profile.component";
+import { SentTablesComponentComponent } from './views/admin/sent-tables-component/sent-tables-component.component';
+import { DataAnnotComponent } from './views/admin/data-annot/data-annot.component';
+import { TopicChartComponent } from './views/admin/topic-chart/topic-chart.component';
+import { SentChartComponent } from './views/admin/sent-chart/sent-chart.component';
 
 const routes: Routes = [
- 
+
   {
     path: "admin",
-    component: AdminComponent,
+    component: AdminComponent, 
+    canActivate:[AuthGuard],
     children: [
-      { path: "dashboard", component: DashboardComponent , canActivate:[AuthGuard]},
-      { path: "USER_MANAGEMENT", component: SettingsComponent , canActivate:[AuthGuard]},
-      { path: "tables", component: TablesComponent ,canActivate:[AuthGuard] },
-      { path: "maps", component: MapsComponent },
+      { path: "dashboard", component: DashboardComponent ,} ,
+
+      //USERS
+      { path: "USER_MANAGEMENT", component: SettingsComponent , canActivate: [PermGuardGuard] },
+      { path: "tables", component: TablesComponent ,  canActivate: [PermGuardGuard]  },
+
+      //SENTIMENT ANALYSIS
+      { path: "Sentimentstables", component: SentTablesComponentComponent },
+      { path: "SentimentstStates", component: SentimentalStatsComponent },
+      { path: "SentimentstChart", component: SentChartComponent },
+
+      //TOPIC ANALYSIS
+      { path: "Topictables", component: TopicListComponent },
+      { path: "TopicStates", component: TopicStatsComponent },
+      { path: "TopicChart", component: TopicChartComponent },
+
+      //VISITOR PAGE MANAGEMENT
+      { path: "HomeSM", component: HomeSMComponent },
+      { path: "AboutSM", component: AboutSMComponent },
+      { path: "ServiceSM", component: ServiceSMComponent },
+      { path: "TopicSM", component: TopicSMComponent },
+      { path: "SentimentSM", component: SentimentSMComponent },
+      { path: 'ContactSM', component: ContactSMComponent },
+
+
+
+      { path: "dataAnnotation", component: DataAnnotComponent  },
+
+      { path: "maps", component: MapsComponent,  },
       { path: "", redirectTo: "dashboard", pathMatch: "full" },
     ],
   },
@@ -44,9 +84,9 @@ const routes: Routes = [
   },
   // no layout views
   { path: "profile", component: ProfileComponent },
-  { path: "dataAnnotation", component: DataAnnotationComponent },
   { path: "", component: LandingComponent },
   { path: "**", redirectTo: "", pathMatch: "full" },
+
 
 ];
 
@@ -54,4 +94,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
